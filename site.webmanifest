@@ -1,0 +1,16 @@
+{
+  "name": "Dual Play — games.munna.dev",
+  "short_name": "Dual Play",
+  "description": "Four classic games in one Android app: Tic Tac Toe, Ludo, Dots and Boxes and Bagh-Bandi. Play offline vs smart bots, pass & play, or 2–4 players over Wi-Fi.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#0e0f13",
+  "background_color": "#0e0f13",
+  "icons": [
+    { "src": "/assets/favicon.svg", "type": "image/svg+xml", "sizes": "any" },
+    { "src": "/assets/icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/assets/icon-512.png", "type": "image/png", "sizes": "512x512" },
+    { "src": "/assets/maskable-512.png", "type": "image/png", "sizes": "512x512", "purpose": "maskable" }
+  ]
+}
