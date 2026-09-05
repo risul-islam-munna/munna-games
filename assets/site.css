@@ -506,6 +506,7 @@ p, li, h1, h2, h3, summary { overflow-wrap: break-word; }
 .legal h2 { font-size: clamp(1.3rem, 1.1rem + 1vw, 1.7rem); margin: 2.4rem 0 0.8rem; }
 .legal h3 { margin: 1.6rem 0 0.5rem; }
 .legal p, .legal li { color: var(--text-muted); }
+.legal p + p { margin-top: 0.9rem; }
 .legal ul, .legal ol { padding-left: 1.3rem; display: grid; gap: 0.4rem; margin: 0.6rem 0; }
 .legal a { color: var(--accent); }
 .summary-box {
