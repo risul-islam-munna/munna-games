@@ -1,64 +1,78 @@
-# Dual Play — marketing site (`games.munna.dev`)
+# games.munna.dev — games by Risul Islam Munna
 
-Static marketing + legal site for the **Dual Play** Android game app. Plain HTML/CSS/JS —
-no build step, no framework, no dependencies to install. Deploy the folder as-is.
+Static site for **games.munna.dev**: a hub landing page plus a self-contained marketing +
+legal site for each game. Plain HTML/CSS/JS — no build step, no framework, no
+dependencies. Deploy the folder as-is.
 
-This repo is **separate from the app's source code** on purpose. It contains only public
-marketing content and can live in a public repo.
+Separate from any app's source code — this repo is only public marketing content.
 
-## Pages
+## Structure
 
-| File | URL | Purpose |
-|---|---|---|
-| `index.html` | `/` | Landing page — hero, games, features, how Wi-Fi play works, FAQ |
-| `about/index.html` | `/about/` | About the app and the developer |
-| `contact/index.html` | `/contact/` | Contact form + email + socials |
-| `terms/index.html` | `/terms/` | Terms & Conditions |
-| `privacy/index.html` | `/privacy/` | Privacy Policy — **use this URL in Google Play Console** |
-| `404.html` | (host 404) | Friendly not-found page |
+```
+/                       hub — lists the games, principles, developer
+  index.html
+  assets/               ONE shared design system (site.css, site.js, favicon, icons, hub og-cover)
+  404.html  robots.txt  sitemap.xml  site.webmanifest  CNAME  .nojekyll
 
-Shared assets: `assets/site.css`, `assets/site.js`, icons, `assets/og-cover.png`.
-SEO plumbing: `sitemap.xml`, `robots.txt`, `site.webmanifest`, per-page canonical +
-Open Graph + Twitter tags + JSON-LD.
-Hosting helpers: `CNAME` (GitHub Pages custom domain), `.nojekyll` (skip Jekyll).
+/dual-play/             one game = one folder, fully self-contained
+  index.html            landing
+  about/index.html
+  contact/index.html    email + socials (no form)
+  terms/index.html
+  privacy/index.html    ← this URL goes in Google Play Console
+  assets/og-cover.png   game-specific share image
+  site.webmanifest
+```
 
-The Contact page is email + social links only — no form, nothing to configure.
+| URL | Purpose |
+|---|---|
+| `/` | Hub — game grid, principles, developer |
+| `/dual-play/` | Dual Play landing (hero, games, features, Wi-Fi, FAQ) |
+| `/dual-play/about/` | About the app + developer |
+| `/dual-play/contact/` | Email + social links |
+| `/dual-play/terms/` | Terms & Conditions |
+| `/dual-play/privacy/` | **Privacy Policy — the Play Console URL** |
+
+SEO plumbing on every page: canonical + Open Graph + Twitter + JSON-LD, plus
+`sitemap.xml` / `robots.txt` / `site.webmanifest` at the root.
+
+## Adding a new game
+
+1. `cp -r dual-play <new-game>` (or copy the parts you need).
+2. Find-and-replace inside `<new-game>/`: `dual-play` → `<new-game>`, and the Dual Play
+   copy/branding with the new game's.
+3. Update canonical / `og:url` / JSON-LD `@id`s to `https://games.munna.dev/<new-game>/…`.
+4. Add a card to the hub `index.html` (`#games` grid) and a row to `sitemap.xml`.
+5. Give it its own `assets/og-cover.png` and `site.webmanifest`.
+
+The shared look comes from `/assets/site.css`; per-game accent colours are just a
+`--ga` custom property on the game card.
 
 ## Local preview
 
-The folder is already served by Laravel Herd at **`https://munna-games.test/`**.
-Any static server works too, e.g. `python3 -m http.server` from this directory
-(then browse `http://localhost:8000/`).
+Served by Laravel Herd at **`https://munna-games.test/`**. Any static server works too
+(`python3 -m http.server` from this directory). Links are root-absolute, so preview from a
+server — not by opening files directly.
 
-Links use root-absolute paths (`/about/`, `/assets/...`), so preview from a server —
-not by double-clicking the HTML files.
+## Before Dual Play goes to the Play Store — fill these in
 
-## Before you publish — fill these in
+Search `dual-play/` for `TODO`:
 
-Search the project for `REPLACE_ME` and `TODO`. The list:
-
-1. **Google Play link.** Every "Get on Google Play" button uses `href="#"` with
-   `aria-disabled="true"`. Once the listing is live, set `href` to the Play URL and remove
-   `aria-disabled`. Also update `installUrl` in the JSON-LD block in `index.html`.
-2. *(nothing — the Contact page is a `mailto:` link + socials, no backend.)*
-3. **Effective dates.** `terms/index.html` and `privacy/index.html` both show
-   `6 September 2026` — change to the real publication date.
-4. **Minimum Android version.** `index.html` FAQ has a `TODO` for the exact minimum
-   Android/API level (from the app's `build.gradle.kts`).
-5. **Target audience / Families.** `privacy/index.html` §10 has a `TODO` to align the
-   children's-privacy wording with your Play Console "Target audience and content" answers.
-6. **Social share image.** `assets/og-cover.png` is a generated placeholder. Replace it
-   with a 1200×630 image using a real app screenshot when you have store assets. Keep the
-   filename or update the `og:image` / `twitter:image` URLs on all pages.
-7. *(Optional)* **Site analytics.** No analytics script is included. If you want one, add
-   it in each page's `<head>`. Use a property that's separate from the portfolio's.
-
-## Content source of truth
-
-App facts (games, modes, bot tiers, Wi-Fi/voice behaviour, "no account", ads + Firebase)
-were taken from the Dual Play codebase. Developer facts (name, role, Bee Hook, links) come
-from the portfolio at <https://munna.dev>. Keep both in sync if the app or bio changes.
+1. **Google Play link.** Every "Get on Google Play" button is `href="#"` +
+   `aria-disabled="true"`. Set the real URL and drop `aria-disabled`; also update
+   `installUrl` in the JSON-LD in `dual-play/index.html`.
+2. **Effective dates.** `dual-play/terms/index.html` and `dual-play/privacy/index.html`
+   show `6 September 2026` — set the real publication date.
+3. **Minimum Android version.** `dual-play/index.html` FAQ has a `TODO` for the exact
+   minimum Android/API level.
+4. **Target audience / Families.** `dual-play/privacy/index.html` §10 `TODO` — align with
+   the Play Console "Target audience and content" answers.
+5. **Share image.** `dual-play/assets/og-cover.png` is generated art — swap for one with a
+   real screenshot when store assets exist.
+6. *(Optional)* site analytics — no script is included; add one in `<head>` if wanted,
+   using a property separate from the portfolio's.
 
 ## Deploy
 
-See [`DEPLOY.md`](DEPLOY.md).
+See [`DEPLOY.md`](DEPLOY.md). Live on GitHub Pages at `games.munna.dev`; domain via
+Cloudflare DNS.

@@ -71,7 +71,8 @@ Save. DNS usually propagates in a couple of minutes on Cloudflare.
 2. Tick **Enforce HTTPS**.
 3. Test:
    - `https://games.munna.dev/`
-   - `https://games.munna.dev/about/` · `/contact/` · `/terms/` · `/privacy/`
+   - `https://games.munna.dev/dual-play/` and `/dual-play/about/` · `/contact/` ·
+     `/terms/` · `/privacy/`
    - `https://games.munna.dev/robots.txt` · `/sitemap.xml`
    - a made-up path (e.g. `/nope`) → the styled 404 page
    - `http://games.munna.dev/` → redirects to `https://`
@@ -94,7 +95,7 @@ on GitHub's own certificate.
 
 The Contact page is a `mailto:hello@munna.dev` link plus social links — no form, no
 backend, nothing to set up. (If you ever want a form, the simplest add is a Google Form
-`<iframe>` in `contact/index.html`; it stores responses in Sheets and has its own spam
+`<iframe>` in `dual-play/contact/index.html`; it stores responses in Sheets, own spam
 filtering.)
 
 ## 7. Google Search Console
@@ -102,17 +103,18 @@ filtering.)
 1. Add a property for `games.munna.dev`. Easiest here: **Domain** property → it gives you
    one `TXT` record to add in Cloudflare DNS for `munna.dev`.
 2. Submit `https://games.munna.dev/sitemap.xml`.
-3. **Rich Results Test** on `/` and `/about/` → expect `MobileApplication`, `FAQPage`,
-   `BreadcrumbList`, `Person` with no errors.
+3. **Rich Results Test** on `/` and `/dual-play/` → expect `Person` + `ItemList` on the
+   hub, and `MobileApplication`, `FAQPage`, `BreadcrumbList`, `Person` on Dual Play, with
+   no errors.
 4. Check the share card in the Facebook Sharing Debugger / LinkedIn Post Inspector.
 
 ## 8. Google Play Console
 
-- **App content → Privacy policy** → `https://games.munna.dev/privacy/`
-- **App content → Data safety** — match `privacy/index.html`: App activity + App
+- **App content → Privacy policy** → `https://games.munna.dev/dual-play/privacy/`
+- **App content → Data safety** — match `dual-play/privacy/index.html`: App activity + App
   info/performance (analytics + crash logs via Firebase); Device or other IDs
   (advertising via AdMob); not linked to identity by you; not sold.
-- Store listing → website: `https://games.munna.dev/`
+- Store listing → website: `https://games.munna.dev/dual-play/`
 
 ## 9. After the app is live on Play
 

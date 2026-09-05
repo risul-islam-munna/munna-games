@@ -206,6 +206,7 @@ p, li, h1, h2, h3, summary { overflow-wrap: break-word; }
   padding-left: 0.34em;
 }
 .wordmark b { font-weight: 700; color: var(--text); }
+.wordmark.sm { letter-spacing: 0.16em; font-size: 0.9rem; padding-left: 0.16em; }
 .wordmark span {
   background: linear-gradient(90deg, #7db9ff, #a855f7, #7db9ff);
   background-size: 220% auto;
@@ -379,6 +380,19 @@ p, li, h1, h2, h3, summary { overflow-wrap: break-word; }
   background: rgba(255,255,255,.02);
 }
 .gc-facts li b { color: #fff; font-weight: 700; }
+
+/* hub game-card extras */
+.game-card .gc-cta { display: inline-block; margin-top: 1.15rem; font-family: var(--font-display); font-weight: 600; }
+.hub-status {
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  font-family: var(--font-display); font-size: 0.72rem; font-weight: 600;
+  padding: 0.3rem 0.7rem; border-radius: 999px;
+  border: 1px solid var(--border-strong); color: var(--text-muted);
+  background: rgba(255,255,255,.02);
+}
+.hub-status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--amber); }
+.hub-status.live::before { background: var(--green); }
+.card.soon { display: grid; place-content: center; text-align: center; border-style: dashed; color: var(--text-dim); min-height: 180px; }
 
 /* ---- Icon chip (features, contact methods) ------------------- */
 .fi {
