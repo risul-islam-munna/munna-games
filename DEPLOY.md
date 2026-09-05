@@ -9,9 +9,7 @@ HTTPS certificate.
 ## 0. Fill placeholders first
 
 Do the checklist in [`README.md`](README.md#before-you-publish--fill-these-in)
-(`REPLACE_ME` / `TODO`). At minimum for a first deploy: the Terms/Privacy dates. The
-contact form can be wired up after the site is live — see
-[`google-apps-script/SETUP.md`](google-apps-script/SETUP.md).
+(`REPLACE_ME` / `TODO`). At minimum for a first deploy: the Terms/Privacy dates.
 
 ---
 
@@ -92,22 +90,12 @@ Once the GitHub cert is issued and the site loads over HTTPS:
 If anything breaks after proxying, flip the record back to grey — the site keeps working
 on GitHub's own certificate.
 
-## 6. Contact form (Google Sheet + spam protection)
+## 6. Contact
 
-Follow [`google-apps-script/SETUP.md`](google-apps-script/SETUP.md). Summary:
-
-1. **Cloudflare Turnstile** → Add widget for `games.munna.dev` → get **Site key** +
-   **Secret key**.
-2. New **Google Sheet** → **Extensions → Apps Script** → paste
-   [`google-apps-script/Code.gs`](google-apps-script/Code.gs) → set `NOTIFY_EMAIL` and
-   `TURNSTILE_SECRET` → **Deploy → Web app** (*Execute as: Me*, *Access: Anyone*) → copy
-   the `/exec` URL.
-3. In [`contact/index.html`](contact/index.html): set `data-sitekey` (Turnstile **Site
-   key**) and `data-endpoint` (the `/exec` URL). Commit + push.
-4. Submit a test message → row appears in the sheet + you get an email.
-
-Protection stack: honeypot field · 3.5 s minimum fill time · Cloudflare Turnstile
-server-side check · length caps. Rejected messages are dropped silently.
+The Contact page is a `mailto:hello@munna.dev` link plus social links — no form, no
+backend, nothing to set up. (If you ever want a form, the simplest add is a Google Form
+`<iframe>` in `contact/index.html`; it stores responses in Sheets and has its own spam
+filtering.)
 
 ## 7. Google Search Console
 

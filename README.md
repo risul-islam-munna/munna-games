@@ -21,7 +21,8 @@ Shared assets: `assets/site.css`, `assets/site.js`, icons, `assets/og-cover.png`
 SEO plumbing: `sitemap.xml`, `robots.txt`, `site.webmanifest`, per-page canonical +
 Open Graph + Twitter tags + JSON-LD.
 Hosting helpers: `CNAME` (GitHub Pages custom domain), `.nojekyll` (skip Jekyll).
-Contact form backend: [`google-apps-script/`](google-apps-script/SETUP.md).
+
+The Contact page is email + social links only — no form, nothing to configure.
 
 ## Local preview
 
@@ -39,12 +40,7 @@ Search the project for `REPLACE_ME` and `TODO`. The list:
 1. **Google Play link.** Every "Get on Google Play" button uses `href="#"` with
    `aria-disabled="true"`. Once the listing is live, set `href` to the Play URL and remove
    `aria-disabled`. Also update `installUrl` in the JSON-LD block in `index.html`.
-2. **Contact form.** `contact/index.html` posts to a Google Apps Script web app that
-   stores each message in a Google Sheet and emails you, protected by Cloudflare
-   Turnstile + a honeypot. Two placeholders to fill (`data-endpoint` and `data-sitekey`
-   in the form, plus `TURNSTILE_SECRET` in the script). Full steps:
-   [`google-apps-script/SETUP.md`](google-apps-script/SETUP.md). Until then the form shows
-   an "email me instead" message and the `mailto:` link works.
+2. *(nothing — the Contact page is a `mailto:` link + socials, no backend.)*
 3. **Effective dates.** `terms/index.html` and `privacy/index.html` both show
    `6 September 2026` — change to the real publication date.
 4. **Minimum Android version.** `index.html` FAQ has a `TODO` for the exact minimum
