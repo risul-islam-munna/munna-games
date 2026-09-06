@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-09-06T12:00:00Z",
+  "updatedAt": "2026-09-07T12:00:00Z",
 
   "apps": {
     "dualplay": {
@@ -19,6 +19,8 @@
       "id": "welcome-2026-09",
       "audience": ["*"],
       "platform": "all",
+      "regions": ["*"],
+      "trigger": "launch",
       "title": "Welcome to Dual Play 🎮",
       "body": "Four board games, offline pass-and-play or over Wi-Fi. Have fun!",
       "imageUrl": "https://games.munna.dev/app-config/img/welcome.png",
@@ -29,6 +31,35 @@
       "expireAt": "2026-12-31T00:00:00Z",
       "maxImpressions": 2,
       "minIntervalHours": 48
+    },
+    {
+      "id": "usa-launch-2026-09-10",
+      "audience": ["dualplay"],
+      "regions": ["US"],
+      "startAtLocal": "2026-09-10T15:00",
+      "expireAt": "2026-09-24T00:00:00Z",
+      "title": "New in Dual Play, USA! 🇺🇸",
+      "body": "Fresh boards and a weekend tournament — tap in.",
+      "imageUrl": "https://games.munna.dev/app-config/img/usa-launch.png",
+      "linkUrl": "https://games.munna.dev/events/usa-launch",
+      "linkLabel": "See what's new",
+      "priority": 20,
+      "maxImpressions": 1,
+      "minIntervalHours": 0
+    },
+    {
+      "id": "flash-sale-remove-ads",
+      "audience": ["dualplay"],
+      "trigger": "push",
+      "title": "1 hour: Remove Ads is 50% off",
+      "body": "Tap to grab it before the timer runs out.",
+      "imageUrl": "https://games.munna.dev/app-config/img/flash-sale.png",
+      "linkUrl": "https://games.munna.dev/store/remove-ads",
+      "linkLabel": "Open the store",
+      "priority": 50,
+      "expireAt": "2026-12-31T00:00:00Z",
+      "maxImpressions": 3,
+      "minIntervalHours": 0
     },
     {
       "id": "ludo-weekend-cup",
@@ -56,18 +87,6 @@
       "priority": 5,
       "startAt": "2026-09-06T00:00:00Z",
       "expireAt": "2026-12-31T00:00:00Z",
-      "maxImpressions": 1,
-      "minIntervalHours": 0
-    },
-    {
-      "id": "ios-testflight-notice-2026-09",
-      "audience": ["dualplay"],
-      "platform": "ios",
-      "title": "iOS build is in TestFlight",
-      "body": "The App Store release is a few days out. Thanks for testing early!",
-      "priority": 5,
-      "startAt": "2026-09-06T00:00:00Z",
-      "expireAt": "2026-10-15T00:00:00Z",
       "maxImpressions": 1,
       "minIntervalHours": 0
     }
