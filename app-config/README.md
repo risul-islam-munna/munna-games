@@ -70,9 +70,11 @@ A single-element list (`["android"]`) works too; unknown values fall back to
 | `maxImpressions` | `1` | show at most this many times, ever, on a device |
 | `minIntervalHours` | `0` | minimum gap between two showings on a device |
 
-All of `audience`, `platform`, `regions`, `trigger`, and every date bound are
-**AND**ed — an item shows only when it passes them all. When both a UTC bound
-and its `…Local` twin are set, both must have passed.
+`audience`, `platform`, `regions` and every date bound are **AND**ed — an item
+reaches a device only when it passes them all, and when both a UTC bound and its
+`…Local` twin are set, both must have passed. `trigger` doesn't filter *whether*
+a device gets the item, only *how* it surfaces (feed on sync vs. feed + nudge on
+push).
 
 ### `regions` targeting
 
@@ -131,38 +133,53 @@ push payload can be tiny — the title/body/image/link all live here in
 ```
 
 When that message lands (foreground, or a tapped notification), the app looks
-`flash-sale-remove-ads` up in the synced set and shows its modal. De-duping is
-per FCM message, so re-sending the same `announcementId` next week shows it
-again; `maxImpressions` still caps a single burst. If the id isn't synced yet
-(device hasn't fetched the new `config.json`), the app falls back to whatever
-`title` / `body` / `imageUrl` you also put in the message's `data`.
+`flash-sale-remove-ads` up in the synced set, marks it **unread**, and drops a
+dismissible snackbar that points at the feed. De-duping is per FCM message, so
+re-sending the same `announcementId` next week notifies again. If the id isn't
+synced yet (device hasn't fetched the new `config.json`) it falls back to
+whatever `title` / `body` / `imageUrl` you also put in the message's `data`,
+otherwise it just waits for the next sync to pick the item up.
 
 Use it for genuinely time-critical, "right now" moments (a flash sale, a live
-event starting) where a scheduled launch gate is too slow or too early.
+event starting) where waiting for the next app launch is too slow.
 
-## How the device handles it
+## How the player sees announcements
 
-On each launch, when there is connectivity, `RemoteConfigService.sync()`:
+**Nothing interrupts the app.** There is no launch modal. Announcements live in
+an in-app **"What's New"** feed, opened from the drawer:
+
+- The drawer's menu button and its "What's New" row show an **unread badge**
+  while there are items the player hasn't opened.
+- Opening the feed lists every current announcement (newest / highest priority
+  first), image and all, and clears the badge.
+- A `linkUrl` opens in an **in-app browser tab** (Android Custom Tabs / iOS
+  `SFSafariViewController`) — the player never leaves the app for the standalone
+  browser.
+- Items are never deleted by the player; they clear themselves on `expireAt`
+  (this is unchanged).
+
+The only things that still take over the screen are the **force-update** (rare,
+intentional) and **optional-update** dialogs.
+
+## What the device does on each launch
+
+When there is connectivity, `RemoteConfigService.sync()`:
 
 1. Fetches `config.json` (time-boxed to 4 s; the last good copy stands if it
    fails).
 2. Keeps only announcements whose `audience`, `platform` **and** `regions` match
-   this install (a `trigger: "push"` item is kept too, but held back for the
-   push path).
+   this install. `trigger: "push"` items are kept too — they're just held out of
+   the launch snackbar until an FCM message names them.
 3. Merges them into the on-device DB (`SharedPreferences`), **preserving**
-   per-announcement impression counts and last-shown time.
+   per-announcement impression / read state.
 4. Downloads each `imageUrl` into an offline image cache
    (`<cache>/announcement_images/`).
 5. Deletes local entries + cached images that the server removed, or that are
    past `expireAt` + 7 days, keeping at most the 50 newest.
+6. Recomputes the unread count that drives the drawer badge.
 
-Offline launches skip step 1 and use whatever was last synced — so an
-announcement authored today is shown (image and all) when the user opens the
-app offline tomorrow.
-
-The lobby shows, in order: force-update → optional-update nudge → the single
-highest-priority eligible **launch** announcement → any FCM message (an inline
-one, or a `trigger: "push"` item resolved by `announcementId`).
+Offline launches skip step 1 and use whatever was last synced — the feed and the
+badge still work.
 
 ## Testing
 
@@ -179,5 +196,8 @@ one, or a `trigger: "push"` item resolved by `announcementId`).
 - **`startAtLocal`:** set it a few minutes ahead → nothing; relaunch after that
   minute passes → it appears, and it would appear at that same wall-clock time
   in any other timezone.
-- **`trigger: "push"`:** it should *not* appear on launch. Send an FCM message
-  to topic `all` with `data.announcementId` set to its id → the modal appears.
+- **Feed:** add an item with a new `id`, `startAt` in the past → the drawer
+  shows an unread badge; opening "What's New" lists it and clears the badge.
+- **`trigger: "push"`:** it should *not* raise the badge on its own. Send an FCM
+  message to topic `all` with `data.announcementId` set to its id → the badge
+  lights and a "View" snackbar appears.
