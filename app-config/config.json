@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 2,
+  "updatedAt": "2026-09-06T12:00:00Z",
+
+  "apps": {
+    "dualplay": {
+      "androidAppId": "dev.munna.games.dualplay",
+      "iosAppId": "dev.munna.games.dualplay",
+      "minSupportedVersion": "0.1.0",
+      "latestVersion": "0.1.0",
+      "forceUpdate": false,
+      "androidUpdateUrl": "https://play.google.com/store/apps/details?id=dev.munna.games.dualplay",
+      "iosUpdateUrl": "https://apps.apple.com/app/id0000000000"
+    }
+  },
+
+  "announcements": [
+    {
+      "id": "welcome-2026-09",
+      "audience": ["*"],
+      "platform": "all",
+      "title": "Welcome to Dual Play 🎮",
+      "body": "Four board games, offline pass-and-play or over Wi-Fi. Have fun!",
+      "imageUrl": "https://games.munna.dev/app-config/img/welcome.png",
+      "linkUrl": "",
+      "linkLabel": "",
+      "priority": 0,
+      "startAt": "2026-09-06T00:00:00Z",
+      "expireAt": "2026-12-31T00:00:00Z",
+      "maxImpressions": 2,
+      "minIntervalHours": 48
+    },
+    {
+      "id": "ludo-weekend-cup",
+      "audience": ["dualplay"],
+      "platform": "all",
+      "title": "Weekend Ludo Cup",
+      "body": "Best-of-three all weekend. Winners get a shout-out in the next update.",
+      "imageUrl": "https://games.munna.dev/app-config/img/ludo-cup.png",
+      "linkUrl": "https://games.munna.dev/events/ludo-cup",
+      "linkLabel": "Details",
+      "priority": 10,
+      "startAt": "2026-09-12T00:00:00Z",
+      "expireAt": "2026-09-15T00:00:00Z",
+      "maxImpressions": 3,
+      "minIntervalHours": 12
+    },
+    {
+      "id": "android-rate-us-2026-09",
+      "audience": ["dualplay"],
+      "platform": "android",
+      "title": "Enjoying Dual Play?",
+      "body": "A quick rating on Google Play helps a lot. Thank you!",
+      "linkUrl": "https://play.google.com/store/apps/details?id=dev.munna.games.dualplay",
+      "linkLabel": "Rate on Play Store",
+      "priority": 5,
+      "startAt": "2026-09-06T00:00:00Z",
+      "expireAt": "2026-12-31T00:00:00Z",
+      "maxImpressions": 1,
+      "minIntervalHours": 0
+    },
+    {
+      "id": "ios-testflight-notice-2026-09",
+      "audience": ["dualplay"],
+      "platform": "ios",
+      "title": "iOS build is in TestFlight",
+      "body": "The App Store release is a few days out. Thanks for testing early!",
+      "priority": 5,
+      "startAt": "2026-09-06T00:00:00Z",
+      "expireAt": "2026-10-15T00:00:00Z",
+      "maxImpressions": 1,
+      "minIntervalHours": 0
+    }
+  ]
+}
