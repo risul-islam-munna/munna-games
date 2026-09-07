@@ -611,6 +611,13 @@ p, li, h1, h2, h3, summary { overflow-wrap: break-word; }
 button.store-badge { font-family: var(--font-display); cursor: pointer; }
 
 .ios-dialog {
+  /* The site reset (* { margin: 0 }) removes the UA "margin: auto" that
+     centres a modal <dialog>, so centre it explicitly with a transform. */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
   border: 0; padding: 0; background: transparent;
   width: calc(100% - 2rem); max-width: 540px;
   color: var(--text);
@@ -621,6 +628,8 @@ button.store-badge { font-family: var(--font-display); cursor: pointer; }
 }
 .ios-panel {
   position: relative;
+  max-height: calc(100dvh - 2rem);
+  overflow-y: auto;
   background: var(--surface); border: 1px solid var(--border-strong);
   border-radius: var(--r-lg); box-shadow: var(--shadow);
   padding: clamp(1.4rem, 1rem + 2vw, 2.1rem);
@@ -647,5 +656,8 @@ button.store-badge { font-family: var(--font-display); cursor: pointer; }
 }
 .ios-close:hover { color: var(--text); border-color: var(--border-strong); }
 .ios-dialog[open] { animation: ios-pop .18s ease; }
-@keyframes ios-pop { from { transform: translateY(10px); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes ios-pop {
+  from { transform: translate(-50%, -50%) translateY(10px); opacity: 0; }
+  to   { transform: translate(-50%, -50%); opacity: 1; }
+}
 @media (prefers-reduced-motion: reduce) { .ios-dialog[open] { animation: none; } }
