@@ -606,3 +606,46 @@ p, li, h1, h2, h3, summary { overflow-wrap: break-word; }
   background: var(--surface-3); color: #fff; padding: 0.7rem 1rem; border-radius: 0 0 10px 0;
 }
 .skip-link:focus { left: 0; }
+
+/* ---- Store badges + iOS install dialog -------------------------------- */
+button.store-badge { font-family: var(--font-display); cursor: pointer; }
+
+.ios-dialog {
+  border: 0; padding: 0; background: transparent;
+  width: calc(100% - 2rem); max-width: 540px;
+  color: var(--text);
+}
+.ios-dialog::backdrop {
+  background: rgba(6, 7, 10, .72);
+  backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+}
+.ios-panel {
+  position: relative;
+  background: var(--surface); border: 1px solid var(--border-strong);
+  border-radius: var(--r-lg); box-shadow: var(--shadow);
+  padding: clamp(1.4rem, 1rem + 2vw, 2.1rem);
+}
+.ios-panel h2 {
+  font-family: var(--font-display); font-size: 1.28rem;
+  margin-bottom: .5rem; padding-right: 2rem;
+}
+.ios-panel p { color: var(--text-muted); font-size: .95rem; }
+.ios-panel ol { margin: 1rem 0 .3rem; padding-left: 1.2rem; display: grid; gap: .7rem; }
+.ios-panel li { font-size: .93rem; }
+.ios-panel li strong { color: var(--text); }
+.ios-panel code {
+  background: var(--surface-3); padding: .08em .4em;
+  border-radius: 6px; font-size: .86em;
+}
+.ios-panel .ios-note { margin-top: 1rem; font-size: .86rem; color: var(--text-dim); }
+.ios-close {
+  position: absolute; top: .6rem; right: .6rem;
+  width: 2rem; height: 2rem; display: grid; place-items: center;
+  background: var(--surface-3); border: 1px solid var(--border);
+  border-radius: 999px; color: var(--text-muted);
+  font-size: 1.2rem; line-height: 1; cursor: pointer;
+}
+.ios-close:hover { color: var(--text); border-color: var(--border-strong); }
+.ios-dialog[open] { animation: ios-pop .18s ease; }
+@keyframes ios-pop { from { transform: translateY(10px); opacity: 0; } to { transform: none; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .ios-dialog[open] { animation: none; } }

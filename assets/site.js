@@ -31,6 +31,26 @@
     window.addEventListener("scroll", onScroll, { passive: true });
   }
 
+  /* ---- iOS install dialog ---- */
+  var iosDialog = document.getElementById("ios-dialog");
+  if (iosDialog) {
+    document.querySelectorAll("[data-open-ios]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        if (typeof iosDialog.showModal === "function") iosDialog.showModal();
+        else iosDialog.setAttribute("open", "");
+      });
+    });
+    iosDialog.querySelectorAll("[data-close]").forEach(function (btn) {
+      btn.addEventListener("click", function () { iosDialog.close(); });
+    });
+    iosDialog.addEventListener("click", function (e) {
+      var b = iosDialog.getBoundingClientRect();
+      var inside = e.clientX >= b.left && e.clientX <= b.right &&
+                   e.clientY >= b.top && e.clientY <= b.bottom;
+      if (!inside) iosDialog.close();
+    });
+  }
+
   /* ---- scroll reveal ---- */
   var reveals = document.querySelectorAll(".reveal");
   if (!reduceMotion && "IntersectionObserver" in window) {

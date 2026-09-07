@@ -64,7 +64,7 @@
       "@type": "MobileApplication",
       "@id": "https://games.munna.dev/dual-play/#app",
       "name": "Dual Play",
-      "operatingSystem": "ANDROID",
+      "operatingSystem": "ANDROID, iOS",
       "applicationCategory": "GameApplication",
       "description": "Dual Play bundles Tic Tac Toe, Ludo, Dots and Boxes and Bagh-Bandi. Every game plays offline versus adjustable bots, two-player pass-and-play on one device, or 2–4 players over local Wi-Fi with optional in-match voice chat. No account or sign-up.",
       "author": { "@id": "https://games.munna.dev/dual-play/#person" },
@@ -80,13 +80,13 @@
         { "@type": "Question", "name": "Is Dual Play free?",
           "acceptedAnswer": { "@type": "Answer", "text": "Yes. Dual Play is free to download and play. It is supported by ads, and there is no paid account or subscription." } },
         { "@type": "Question", "name": "Do I need an internet connection to play?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. Playing against a bot or passing one phone between two players works fully offline. Wi-Fi multiplayer needs the two-to-four devices on the same Wi-Fi network or hotspot, but no internet. An internet connection is only used to load ads." } },
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Playing against a bot or passing one phone between two players works fully offline. Wi-Fi multiplayer needs the two-to-four devices on the same Wi-Fi network or hotspot, but no internet. An internet connection is only used to load ads and to fetch in-app announcements." } },
         { "@type": "Question", "name": "How many players are supported?",
           "acceptedAnswer": { "@type": "Answer", "text": "Tic Tac Toe, Dots and Boxes and Bagh-Bandi are for one or two players. Ludo supports two, three or four players. Local Wi-Fi rooms hold up to four devices." } },
         { "@type": "Question", "name": "Is there voice chat?",
           "acceptedAnswer": { "@type": "Answer", "text": "Yes. During a Wi-Fi match you can turn on in-match voice chat. It runs directly between the devices on your Wi-Fi, the microphone starts muted, and nothing is recorded." } },
         { "@type": "Question", "name": "Does Dual Play collect my data?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Your game profile, settings and match history stay on your device. The app shows ads through Google AdMob and collects anonymised usage and crash data through Google Firebase. Full details are in the Privacy Policy." } },
+          "acceptedAnswer": { "@type": "Answer", "text": "Your game profile, settings and match history stay on your device. The app shows ads through Google AdMob and uses Google Firebase Cloud Messaging for broadcast announcements. It does not use a separate analytics or crash-reporting service. Full details are in the Privacy Policy." } },
         { "@type": "Question", "name": "Does the app send notifications?",
           "acceptedAnswer": { "@type": "Answer", "text": "It can — occasional messages about new games, updates, gameplay tips, and the odd promotion or offer. The same message goes to every device with notifications on; nothing is targeted to you, and no messaging token is collected. On Android 13 and newer the app asks permission first, and you can turn notifications off any time in your phone settings for Dual Play without affecting the games." } },
         { "@type": "Question", "name": "Does Wi-Fi play use my mobile data?",
@@ -136,7 +136,7 @@
       <a href="/dual-play/#how">Wi-Fi play</a>
       <a href="/dual-play/about/">About</a>
       <a href="/dual-play/contact/">Contact</a>
-      <a class="btn btn-primary" href="#" aria-disabled="true" title="Coming soon on Google Play">Get on Google&nbsp;Play</a>
+      <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=dev.munna.games.dualplay" target="_blank" rel="noopener">Get on Google&nbsp;Play</a>
     </nav>
   </div>
 </header>
@@ -151,10 +151,14 @@
         <h1>Classic games. <span class="grad">Real opponents.</span> Zero setup.</h1>
         <p class="lede">Dual Play is Tic&nbsp;Tac&nbsp;Toe, Ludo, Dots&nbsp;and&nbsp;Boxes and Bagh-Bandi in one download. Play offline against bots that actually think, pass the phone to a friend, or pair 2–4 devices over Wi-Fi and talk while you play. No account. No feed. No clutter.</p>
         <div class="btn-row">
-          <a class="store-badge" href="#" aria-disabled="true" title="Coming soon on Google Play">
+          <a class="store-badge" href="https://play.google.com/store/apps/details?id=dev.munna.games.dualplay" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d9ff" d="M3.6 2.1 13 11.5 3.9 20.6a1.7 1.7 0 0 1-.3-1V3a1.7 1.7 0 0 1 0-.9z"/><path fill="#00f076" d="M14.1 12.6 4.6 22a1.6 1.6 0 0 0 1.7 0l11.2-6.4z"/><path fill="#ffd800" d="M20.9 10.7 17.5 8.8l-3.6 3.6 3.6 3.6 3.4-2a1.7 1.7 0 0 0 0-3.3z"/><path fill="#ff3a44" d="M4.6 2 14.1 11.4l3.4-3.4L6.3 1.6a1.6 1.6 0 0 0-1.7.4z"/></svg>
-            <span><span class="sb-top">Coming soon on</span><span class="sb-main">Google Play</span></span>
+            <span><span class="sb-top">Get it on</span><span class="sb-main">Google Play</span></span>
           </a>
+          <button class="store-badge" type="button" data-open-ios aria-haspopup="dialog" aria-controls="ios-dialog">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M16.37 1.43c0 1.13-.46 2.22-1.22 3.01-.81.86-2.15 1.53-3.27 1.44-.13-1.09.43-2.24 1.15-2.99.81-.85 2.24-1.49 3.34-1.46zM20.9 17.14c-.55 1.27-.81 1.83-1.52 2.95-1 1.56-2.4 3.52-4.14 3.53-1.55.02-1.95-1.01-4.05-1s-2.53 1.02-4.09 1c-1.74-.03-3.06-1.79-4.06-3.35-2.8-4.42-3.09-9.6-1.37-12.36 1.22-1.96 3.15-3.11 4.96-3.11 1.85 0 3.01 1.02 4.53 1.02 1.48 0 2.38-1.02 4.52-1.02 1.61 0 3.32.88 4.54 2.4-3.99 2.19-3.34 7.88.15 9.95z"/></svg>
+            <span><span class="sb-top">Also on</span><span class="sb-main">iPhone &amp; iPad</span></span>
+          </button>
           <a class="btn btn-ghost" href="#games">Explore the games</a>
         </div>
         <ul class="chips">
@@ -445,7 +449,7 @@
         </details>
         <details>
           <summary>Do I need internet to play?</summary>
-          <div class="faq-body"><p>No. Playing a bot or passing one phone between two players is completely offline. Wi-Fi multiplayer needs the devices on the same Wi-Fi network or hotspot, but still no internet connection. Internet is only used to load ads.</p></div>
+          <div class="faq-body"><p>No. Playing a bot or passing one phone between two players is completely offline. Wi-Fi multiplayer needs the devices on the same Wi-Fi network or hotspot, but still no internet connection. Internet is only used to load ads and to fetch in-app announcements.</p></div>
         </details>
         <details>
           <summary>Does Wi-Fi play use my mobile data?</summary>
@@ -453,7 +457,7 @@
         </details>
         <details>
           <summary>What data does the app collect?</summary>
-          <div class="faq-body"><p>Your game profile, settings and match history stay on your device and are removed when you uninstall. The app does show ads via Google AdMob and collects anonymised usage and crash data via Google Firebase to fix bugs. The full breakdown is in the <a href="/dual-play/privacy/">Privacy Policy</a>.</p></div>
+          <div class="faq-body"><p>Your game profile, settings and match history stay on your device and are removed when you uninstall. The app does show ads via Google AdMob and uses Firebase Cloud Messaging to deliver broadcast announcements. It does not include a separate analytics or crash-reporting service. The full breakdown is in the <a href="/dual-play/privacy/">Privacy Policy</a>.</p></div>
         </details>
         <details>
           <summary>Does the app send notifications?</summary>
@@ -480,12 +484,16 @@
     <div class="wrap">
       <div class="cta-band reveal">
         <h2>Bring it to your next game night</h2>
-        <p class="lede">Dual Play is heading to the Google Play Store. Check back here for the link.</p>
+        <p class="lede">Dual Play is on Google Play for Android. iPhone and iPad users can install it too.</p>
         <div class="btn-row">
-          <a class="store-badge" href="#" aria-disabled="true" title="Coming soon on Google Play">
+          <a class="store-badge" href="https://play.google.com/store/apps/details?id=dev.munna.games.dualplay" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d9ff" d="M3.6 2.1 13 11.5 3.9 20.6a1.7 1.7 0 0 1-.3-1V3a1.7 1.7 0 0 1 0-.9z"/><path fill="#00f076" d="M14.1 12.6 4.6 22a1.6 1.6 0 0 0 1.7 0l11.2-6.4z"/><path fill="#ffd800" d="M20.9 10.7 17.5 8.8l-3.6 3.6 3.6 3.6 3.4-2a1.7 1.7 0 0 0 0-3.3z"/><path fill="#ff3a44" d="M4.6 2 14.1 11.4l3.4-3.4L6.3 1.6a1.6 1.6 0 0 0-1.7.4z"/></svg>
-            <span><span class="sb-top">Coming soon on</span><span class="sb-main">Google Play</span></span>
+            <span><span class="sb-top">Get it on</span><span class="sb-main">Google Play</span></span>
           </a>
+          <button class="store-badge" type="button" data-open-ios aria-haspopup="dialog" aria-controls="ios-dialog">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M16.37 1.43c0 1.13-.46 2.22-1.22 3.01-.81.86-2.15 1.53-3.27 1.44-.13-1.09.43-2.24 1.15-2.99.81-.85 2.24-1.49 3.34-1.46zM20.9 17.14c-.55 1.27-.81 1.83-1.52 2.95-1 1.56-2.4 3.52-4.14 3.53-1.55.02-1.95-1.01-4.05-1s-2.53 1.02-4.09 1c-1.74-.03-3.06-1.79-4.06-3.35-2.8-4.42-3.09-9.6-1.37-12.36 1.22-1.96 3.15-3.11 4.96-3.11 1.85 0 3.01 1.02 4.53 1.02 1.48 0 2.38-1.02 4.52-1.02 1.61 0 3.32.88 4.54 2.4-3.99 2.19-3.34 7.88.15 9.95z"/></svg>
+            <span><span class="sb-top">Also on</span><span class="sb-main">iPhone &amp; iPad</span></span>
+          </button>
           <a class="btn btn-ghost" href="/dual-play/contact/">Ask a question</a>
         </div>
       </div>
@@ -546,6 +554,22 @@
     </div>
   </div>
 </footer>
+
+<dialog id="ios-dialog" class="ios-dialog" aria-labelledby="ios-dialog-title">
+  <div class="ios-panel">
+    <button class="ios-close" type="button" data-close aria-label="Close">&times;</button>
+    <h2 id="ios-dialog-title">Dual Play on iPhone &amp; iPad</h2>
+    <p>Dual Play isn't on the Apple App Store. iOS has no "download the file and tap to install" like Android, so the iPhone / iPad build is shared with you directly. Follow whichever matches the link you were given:</p>
+    <ol>
+      <li><strong>Open the build link.</strong> The current iOS build is in a Google&nbsp;Drive folder:
+        <a href="https://drive.google.com/" target="_blank" rel="noopener">drive.google.com/&hellip;</a>
+        <em>— temporary placeholder; the real link is coming soon.</em></li>
+      <li><strong>If it's a TestFlight invite</strong> (a <code>testflight.apple.com</code> link): open it on your iPhone or iPad, install Apple's free <strong>TestFlight</strong> app when asked, then tap <em>Install</em> for Dual Play inside TestFlight. Works on any device, nothing to plug in.</li>
+      <li><strong>If it's an <code>.ipa</code> file:</strong> your device must be registered on the build first. Send your device UDID to <a href="mailto:hello@munna.dev?subject=Dual%20Play%20iOS%20access">hello@munna.dev</a> and you'll get a build that installs on it.</li>
+    </ol>
+    <p class="ios-note">A full App Store release may come later. Stuck? <a href="/dual-play/contact/">Contact us</a>.</p>
+  </div>
+</dialog>
 
 </body>
 </html>
