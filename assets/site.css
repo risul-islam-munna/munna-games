@@ -628,6 +628,7 @@ button.store-badge { font-family: var(--font-display); cursor: pointer; }
 }
 .ios-panel {
   position: relative;
+  max-height: calc(100vh - 2rem);
   max-height: calc(100dvh - 2rem);
   overflow-y: auto;
   background: var(--surface); border: 1px solid var(--border-strong);
