@@ -1,0 +1,16 @@
+{
+  "name": "Bricks Crusher",
+  "short_name": "Bricks Crusher",
+  "description": "A neon Arkanoid-style brick breaker for Android — in development, not yet published.",
+  "start_url": "/bricks-crusher/",
+  "scope": "/bricks-crusher/",
+  "display": "standalone",
+  "theme_color": "#0e0f13",
+  "background_color": "#0e0f13",
+  "icons": [
+    { "src": "/assets/favicon.svg", "type": "image/svg+xml", "sizes": "any" },
+    { "src": "/assets/icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/assets/icon-512.png", "type": "image/png", "sizes": "512x512" },
+    { "src": "/assets/maskable-512.png", "type": "image/png", "sizes": "512x512", "purpose": "maskable" }
+  ]
+}

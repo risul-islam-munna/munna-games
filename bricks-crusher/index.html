@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bricks Crusher — Neon Arkanoid Brick Breaker (In Development)</title>
+<meta name="description" content="Bricks Crusher is a neon Arkanoid-style brick breaker for Android, built solo by Md. Risul Islam Munna. Paddle-and-ball action, five brick types, six power-ups, a star-rated level campaign and a skins store. Currently in development — not yet published.">
+<link rel="canonical" href="https://games.munna.dev/bricks-crusher/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0e0f13">
+<meta name="author" content="Md. Risul Islam Munna">
+<meta name="keywords" content="Bricks Crusher, brick breaker game, Arkanoid style game, Android game in development, indie game Dhaka, Risul Islam Munna">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bricks Crusher">
+<meta property="og:title" content="Bricks Crusher — Neon brick breaker. In development.">
+<meta property="og:description" content="Paddle, ball and a wall of bricks — reinforced, explosive, power-up-carrying. Six power-ups, a star-rated level campaign and a skins store. In active development, not yet published.">
+<meta property="og:url" content="https://games.munna.dev/bricks-crusher/">
+<meta property="og:image" content="https://games.munna.dev/bricks-crusher/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Bricks Crusher — a neon Arkanoid-style brick breaker, in development">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bricks Crusher — Neon brick breaker. In development.">
+<meta name="twitter:description" content="Paddle, ball, a wall of bricks. Power-ups, a star-rated campaign, a skins store. In active development — not yet published.">
+<meta name="twitter:image" content="https://games.munna.dev/bricks-crusher/assets/og-cover.png">
+
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/bricks-crusher/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<script>document.documentElement.classList.add('js')</script>
+<script defer src="/assets/site.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://games.munna.dev/bricks-crusher/#website",
+      "url": "https://games.munna.dev/bricks-crusher/",
+      "name": "Bricks Crusher",
+      "description": "A neon Arkanoid-style brick breaker for Android, currently in development.",
+      "publisher": { "@id": "https://games.munna.dev/bricks-crusher/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://games.munna.dev/bricks-crusher/#person",
+      "name": "Md. Risul Islam Munna",
+      "url": "https://munna.dev",
+      "jobTitle": "Full Stack Developer & Entrepreneur",
+      "sameAs": [
+        "https://github.com/risul-islam-munna",
+        "https://www.linkedin.com/in/risul-islam-munna/",
+        "https://www.facebook.com/munna.dev.bd/"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://games.munna.dev/bricks-crusher/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "Is Bricks Crusher out yet?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Not yet. Bricks Crusher is in active development and is not published on Google Play or the App Store. This page tracks its progress." } },
+        { "@type": "Question", "name": "What kind of game is it?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A neon Arkanoid-style brick breaker: bounce a ball off a paddle to clear walls of bricks, collect power-ups, and clear hand-built levels for a star rating." } },
+        { "@type": "Question", "name": "Will it be free?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, the plan is free-to-play supported by ads, the same model as Dual Play. Cosmetic paddle and ball skins are unlockable with an in-game currency or a rewarded ad — never pay-to-win." } },
+        { "@type": "Question", "name": "Which platform will it launch on?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Android first. An iOS build may follow later, the same way Dual Play's did." } },
+        { "@type": "Question", "name": "How can I follow progress?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Check back on this page, follow the developer on GitHub, or get in touch — there is no mailing list or waitlist yet." } }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://games.munna.dev/" },
+        { "@type": "ListItem", "position": 2, "name": "Bricks Crusher", "item": "https://games.munna.dev/bricks-crusher/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/bricks-crusher/" aria-label="Bricks Crusher home">
+      <svg viewBox="0 0 64 64" width="30" height="30" aria-hidden="true" fill="none">
+        <rect x="3" y="3" width="58" height="58" rx="14" fill="#0e0f13" stroke="#3c4150"/>
+        <rect x="12" y="14" width="12" height="7" rx="1.5" fill="#00e5ff"/>
+        <rect x="26" y="14" width="12" height="7" rx="1.5" fill="#e040fb"/>
+        <rect x="40" y="14" width="12" height="7" rx="1.5" fill="#ffc400"/>
+        <rect x="19" y="24" width="12" height="7" rx="1.5" fill="#76ff03"/>
+        <rect x="33" y="24" width="12" height="7" rx="1.5" fill="#00e5ff"/>
+        <circle cx="32" cy="40" r="3.2" fill="#fff"/>
+        <rect x="20" y="49" width="24" height="6" rx="3" fill="#8ec2ff"/>
+      </svg>
+      <span class="wordmark"><b>BRICKS</b>&nbsp;<span>CRUSHER</span></span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/>
+      </svg>
+    </button>
+
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      <a href="/bricks-crusher/#overview">Overview</a>
+      <a href="/bricks-crusher/#features">Gameplay</a>
+      <a href="/bricks-crusher/#roadmap">Roadmap</a>
+      <a href="/bricks-crusher/#faq">FAQ</a>
+      <a class="btn btn-ghost" href="/">All games</a>
+    </nav>
+  </div>
+</header>
+
+<div class="dev-banner">🚧 <b>In development</b> — Bricks Crusher is not yet published. This page tracks real progress, not a release date.</div>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="overview">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">One paddle · one ball · a wall to clear</p>
+        <h1>Break every brick. <span class="grad">Chase the streak.</span></h1>
+        <p class="lede">Bricks Crusher is a neon Arkanoid-style brick breaker — the classic paddle-and-ball formula, rebuilt with reinforced and explosive bricks, six power-ups, and a hand-built level campaign that rates every run in stars. It's the second game from the studio behind Dual Play, and it's still being built.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#features">See what's playable so far</a>
+          <a class="btn btn-ghost" href="/dual-play/">Play Dual Play, out now</a>
+        </div>
+        <ul class="chips">
+          <li><b>In</b>&nbsp;development</li>
+          <li>Not yet <b>published</b></li>
+          <li>Free-to-play <b>planned</b></li>
+          <li>Android <b>first</b></li>
+        </ul>
+      </div>
+
+      <div class="phone-wrap" aria-hidden="true">
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="pm-word">BRICKS <span>CRUSHER</span></div>
+            <div class="pm-hello">
+              <span class="pm-ring">M</span>
+              <span>Level 7 · Neon Row<small>★★☆ · in playtesting</small></span>
+            </div>
+            <div class="pm-banner">In development — new levels &amp; power-ups land every build</div>
+            <div class="pm-label">Brick wall preview</div>
+            <div class="bc-wall">
+              <span class="c1"></span><span class="c2"></span><span class="c1"></span><span class="ghost"></span><span class="c3"></span>
+              <span class="c2"></span><span class="ghost"></span><span class="c1"></span><span class="c4"></span><span class="c2"></span>
+              <span class="c3"></span><span class="c1"></span><span class="c2"></span><span class="c1"></span><span class="ghost"></span>
+            </div>
+            <div class="bc-court">
+              <div class="bc-ball"></div>
+              <div class="bc-paddle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAMEPLAY / FEATURES -->
+  <section class="section" id="features">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Gameplay taking shape</p>
+        <h2>What's already playable</h2>
+        <p class="lede">Bricks Crusher isn't a concept — the core systems below are built and being played in internal testing right now.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card feature reveal">
+          <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="7" height="4" rx="1"/><rect x="11" y="4" width="7" height="4" rx="1"/><rect x="7" y="10" width="7" height="4" rx="1"/><circle cx="12" cy="20" r="1.4" fill="currentColor"/><path d="M4 20h16"/></svg></div>
+          <h3>Five kinds of brick</h3>
+          <p>Normal, reinforced multi-hit bricks, indestructible blockers, explosive bricks that chain into their neighbours, and power-up carriers. Every wall plays differently.</p>
+        </div>
+        <div class="card feature reveal d1">
+          <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 9 9M12 21a9 9 0 0 1-9-9" opacity=".5"/></svg></div>
+          <h3>Six power-ups</h3>
+          <p>Multi-ball, fireball, laser paddle, magnet catch, an aim guide, and an extra life. Power-ups drop from carrier bricks — grab them mid-rally to swing a level.</p>
+        </div>
+        <div class="card feature reveal d2">
+          <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2.5 14.9 8.6l6.7 1-4.8 4.7 1.1 6.7L12 17.9 5.9 21l1.1-6.7L2.4 9.6l6.7-1z"/></svg></div>
+          <h3>Star-rated level campaign</h3>
+          <p>Hand-built levels, each scored on completion, moves used and time taken for a one-, two- or three-star result. New levels are being added as the campaign grows.</p>
+        </div>
+        <div class="card feature reveal">
+          <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <h3>Skins store</h3>
+          <p>Unlock ball and paddle colour skins with an in-game currency earned by playing, or a rewarded ad instead — purely cosmetic, never a gameplay edge.</p>
+        </div>
+        <div class="card feature reveal d1">
+          <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M9 21h6"/><line x1="3" y1="3" x2="21" y2="21"/></svg></div>
+          <h3>Offline, no account</h3>
+          <p>Progress, stars and skins save to your device. No sign-up, same principle as Dual Play — an internet connection is only needed for ads and announcements.</p>
+        </div>
+        <div class="card feature reveal d2">
+          <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor" stroke="none"/></svg></div>
+          <h3>Light &amp; dark</h3>
+          <p>Follows the system theme or locks light or dark, matching the rest of the app family. Small detail, but it's already in place.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section class="section" id="roadmap">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Honest status</p>
+        <h2>Roadmap to launch</h2>
+        <p class="lede">No release date yet — this list will move as it moves, not before.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card reveal">
+          <p class="hub-status live" style="margin-bottom:.9rem;">Built</p>
+          <h3>Core physics &amp; scoring</h3>
+          <p class="muted">Paddle-and-ball bounce math, collisions, combos and level win/lose conditions are implemented and being played internally.</p>
+        </div>
+        <div class="card reveal d1">
+          <p class="hub-status live" style="margin-bottom:.9rem;">Built</p>
+          <h3>Bricks, power-ups &amp; store</h3>
+          <p class="muted">All five brick types, all six power-ups, and the Diamonds-based skins store are implemented end to end.</p>
+        </div>
+        <div class="card reveal d2">
+          <p class="hub-status" style="margin-bottom:.9rem;">In progress</p>
+          <h3>Level campaign</h3>
+          <p class="muted">A first batch of hand-built levels exists and plays; more are being designed and balanced before launch.</p>
+        </div>
+        <div class="card reveal">
+          <p class="hub-status" style="margin-bottom:.9rem;">In progress</p>
+          <h3>Polish &amp; playtesting</h3>
+          <p class="muted">Feel, difficulty curve, audio and visual effects are being refined against real playtest sessions.</p>
+        </div>
+        <div class="card reveal d1">
+          <p class="hub-status" style="margin-bottom:.9rem;">Planned</p>
+          <h3>Ads &amp; announcements</h3>
+          <p class="muted">Rewarded-ad skin unlocks and the same broadcast-announcement system as Dual Play, wired in ahead of release.</p>
+        </div>
+        <div class="card reveal d2">
+          <p class="hub-status" style="margin-bottom:.9rem;">Planned</p>
+          <h3>Google Play launch</h3>
+          <p class="muted">Android first. An iOS build may follow later, the same way Dual Play's did.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAKER -->
+  <section class="section-tight">
+    <div class="wrap split">
+      <div class="reveal">
+        <p class="eyebrow">Made in Dhaka</p>
+        <h2>The same developer, a second game</h2>
+        <p class="muted">Bricks Crusher is built solo by <strong>Md. Risul Islam Munna</strong>, the developer behind <a href="/dual-play/">Dual Play</a> and founder of the e-commerce SaaS platform Bee&nbsp;Hook. Same principles carried over: offline-first, no accounts, fair systems, no dark patterns — this time applied to a fast, arcade-style game.</p>
+        <p style="margin-top:1.1rem;"><a href="https://munna.dev" rel="noopener">Read more about the developer →</a></p>
+      </div>
+      <div class="card maker-card reveal d1">
+        <div class="mc-badge">M</div>
+        <div>
+          <p class="mc-name">Md. Risul Islam Munna</p>
+          <p class="muted" style="margin:.2rem 0 .8rem;">Full Stack Developer &amp; Entrepreneur · Dhaka, Bangladesh</p>
+          <p><a href="https://munna.dev" rel="noopener">munna.dev</a> · <a href="https://github.com/risul-islam-munna" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/risul-islam-munna/" rel="noopener">LinkedIn</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Good to know</p>
+        <h2>Frequently asked questions</h2>
+      </div>
+      <div class="faq reveal">
+        <details open>
+          <summary>Is Bricks Crusher out yet?</summary>
+          <div class="faq-body"><p>Not yet. It's in active development and isn't published on Google Play or the App Store. This page tracks real progress, updated as the game moves forward — not a promised release date.</p></div>
+        </details>
+        <details>
+          <summary>What kind of game is it?</summary>
+          <div class="faq-body"><p>A neon Arkanoid-style brick breaker. Bounce a ball off a paddle to clear walls of bricks — some reinforced, some explosive, some carrying power-ups — across a campaign of hand-built levels, each rated in stars.</p></div>
+        </details>
+        <details>
+          <summary>Will it be free?</summary>
+          <div class="faq-body"><p>The plan is free-to-play, supported by ads, the same model as Dual Play. Paddle and ball skins are cosmetic-only, unlockable with an in-game currency or a rewarded ad — never pay-to-win.</p></div>
+        </details>
+        <details>
+          <summary>Which platform will it launch on?</summary>
+          <div class="faq-body"><p>Android first. An iOS build may follow later, the same way Dual Play's did.</p></div>
+        </details>
+        <details>
+          <summary>How can I follow progress?</summary>
+          <div class="faq-body"><p>Check back on this page, follow along on <a href="https://github.com/risul-islam-munna" rel="noopener">GitHub</a>, or reach out directly — there's no mailing list or waitlist for this one yet.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-tight">
+    <div class="wrap">
+      <div class="cta-band reveal">
+        <h2>Not ready to play yet — but almost there</h2>
+        <p class="lede">Bricks Crusher is still in development. While it's being finished, Dual Play is already out on Google Play.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="/dual-play/">Play Dual Play now</a>
+          <a class="btn btn-ghost" href="mailto:hello@munna.dev?subject=Bricks%20Crusher">Get in touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="f-brand">
+        <a class="brand" href="/bricks-crusher/" aria-label="Bricks Crusher home">
+          <svg viewBox="0 0 64 64" width="28" height="28" aria-hidden="true" fill="none">
+            <rect x="3" y="3" width="58" height="58" rx="14" fill="#0e0f13" stroke="#3c4150"/>
+            <rect x="12" y="14" width="12" height="7" rx="1.5" fill="#00e5ff"/>
+            <rect x="26" y="14" width="12" height="7" rx="1.5" fill="#e040fb"/>
+            <rect x="40" y="14" width="12" height="7" rx="1.5" fill="#ffc400"/>
+            <rect x="19" y="24" width="12" height="7" rx="1.5" fill="#76ff03"/>
+            <rect x="33" y="24" width="12" height="7" rx="1.5" fill="#00e5ff"/>
+            <circle cx="32" cy="40" r="3.2" fill="#fff"/>
+            <rect x="20" y="49" width="24" height="6" rx="3" fill="#8ec2ff"/>
+          </svg>
+          <span class="wordmark"><b>BRICKS</b>&nbsp;<span>CRUSHER</span></span>
+        </a>
+        <p>A neon Arkanoid-style brick breaker — in development, not yet published. Second game from the studio behind Dual Play.</p>
+        <div class="socials">
+          <a href="https://github.com/risul-islam-munna" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg></a>
+          <a href="https://www.linkedin.com/in/risul-islam-munna/" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="https://www.facebook.com/munna.dev.bd/" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Bricks Crusher</h4>
+        <ul>
+          <li><a href="/bricks-crusher/#overview">Overview</a></li>
+          <li><a href="/bricks-crusher/#features">Gameplay</a></li>
+          <li><a href="/bricks-crusher/#roadmap">Roadmap</a></li>
+          <li><a href="/bricks-crusher/#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>More</h4>
+        <ul>
+          <li><a href="/">All games</a></li>
+          <li><a href="/dual-play/">Dual Play — out now</a></li>
+          <li><a href="https://munna.dev" rel="noopener">Developer · munna.dev</a></li>
+          <li><a href="https://github.com/risul-islam-munna" rel="noopener">GitHub ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>&copy; <span data-year>2026</span> Md. Risul Islam Munna · Bricks Crusher</span>
+      <span>games.munna.dev · in development, not yet published</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

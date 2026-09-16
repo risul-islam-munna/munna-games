@@ -23,10 +23,11 @@
   --accent:      #b79bff;          /* inline links / icons on dark */
   --accent-ink:  #0b1220;
 
-  --ttt:  #7d52d1;
-  --ludo: #2d9c68;
-  --dab:  #2a9d8f;
-  --bagh: #e76f51;
+  --ttt:    #7d52d1;
+  --ludo:   #2d9c68;
+  --dab:    #2a9d8f;
+  --bagh:   #e76f51;
+  --bricks: #00b8d9;
   --green:#2d9c68;
   --amber:#e0a03d;
 
@@ -393,6 +394,30 @@ p, li, h1, h2, h3, summary { overflow-wrap: break-word; }
 .hub-status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--amber); }
 .hub-status.live::before { background: var(--green); }
 .card.soon { display: grid; place-content: center; text-align: center; border-style: dashed; color: var(--text-dim); min-height: 180px; }
+
+/* in-development status banner (thin strip under the header) */
+.dev-banner {
+  display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+  flex-wrap: wrap; text-align: center;
+  font-family: var(--font-display); font-weight: 600; font-size: 0.85rem;
+  color: #ffdcae;
+  padding: 0.65rem var(--pad);
+  background: color-mix(in srgb, var(--amber) 14%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--amber) 30%, transparent);
+}
+.dev-banner b { color: #fff; }
+
+/* ---- Bricks Crusher phone-mock extras ------------------------- */
+.bc-wall { display: grid; grid-template-columns: repeat(5, 1fr); gap: 5px; }
+.bc-wall span { display: block; aspect-ratio: 2.2 / 1; border-radius: 4px; }
+.bc-wall span.c1 { background: color-mix(in srgb, #00e5ff 72%, transparent); }
+.bc-wall span.c2 { background: color-mix(in srgb, #e040fb 66%, transparent); }
+.bc-wall span.c3 { background: color-mix(in srgb, #ffc400 66%, transparent); }
+.bc-wall span.c4 { background: color-mix(in srgb, #76ff03 60%, transparent); }
+.bc-wall span.ghost { background: rgba(255,255,255,.05); border: 1px dashed var(--border-strong); }
+.bc-court { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 14px; padding-bottom: 4px; }
+.bc-ball { width: 9px; height: 9px; border-radius: 50%; background: #fff; box-shadow: 0 0 10px 2px rgba(255,255,255,.55); }
+.bc-paddle { width: 64px; height: 9px; border-radius: 999px; background: linear-gradient(90deg, #00e5ff, #7c4dff); }
 
 /* ---- Icon chip (features, contact methods) ------------------- */
 .fi {

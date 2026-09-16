@@ -1,10 +1,13 @@
 {
 	"folders": [
 		{
-			"path": "../../Development/FlutterProjects/munna_games"
+			"path": "."
 		},
 		{
-			"path": "."
+			"path": "../../Development/FlutterProjects/dual_play_games"
+		},
+		{
+			"path": "../../Development/FlutterProjects/bricks_crusher"
 		}
 	],
 	"settings": {}
