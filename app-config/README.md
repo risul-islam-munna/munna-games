@@ -10,9 +10,11 @@ https://games.munna.dev/app-config/img/<your images>
 
 Drop announcement images into `img/` and reference them by that full URL.
 
-The Dual Play app fetches `config.json` on **every launch** (see the Flutter
-repo's `app/lib/game_catalog.dart` → `kRemoteConfigUrl`) and syncs it into a
-small on-device database. No app release is needed to change announcements or
+Both apps fetch `config.json` on **every launch** and sync it into a small
+on-device database: Dual Play (key `dualplay`, Flutter repo's
+`app/lib/game_catalog.dart` → `kRemoteConfigUrl`) and Bricks Crusher (key
+`brickscrusher`, `lib/src/app_config.dart` → `kRemoteConfigUrl`). Debug builds
+read `dev-config.json` instead, so testing never affects real users. No app release is needed to change announcements or
 push a force-update — just edit `config.json` (and the images beside it) and
 commit; GitHub Pages redeploys the site.
 
@@ -31,7 +33,7 @@ Netlify all do this automatically for a `.json` file.
 | `forceUpdate` | `true` ⇒ block regardless of version numbers |
 | `androidUpdateUrl` / `iosUpdateUrl` | store link the "Update now" button opens |
 
-The running app knows its own key (`kAppKey`, currently `dualplay`), version
+The running app knows its own key (`kAppKey`: `dualplay` or `brickscrusher`), version
 (`kAppVersion`) and platform, and picks its own entry.
 
 #### `platform` targeting
@@ -53,9 +55,14 @@ A single-element list (`["android"]`) works too; unknown values fall back to
 
 ### `announcements` — a flat list; each item is targeted and scheduled
 
+> **Set `audience` on every item.** `["*"]` means *every app*, so an item meant
+> for one game must name it (`["dualplay"]` / `["brickscrusher"]`) or the other
+> game's players will see it too.
+
 | field | default | meaning |
 |---|---|---|
 | `id` | — (required) | stable id; impression counting is per id, per device |
+| `enabled` | `true` | `false` keeps the item in the file but out of every feed — an on/off switch (e.g. a store promo before the listing is live) |
 | `audience` | `["*"]` | `["*"]` = every app, or a list of app keys / app ids |
 | `platform` | `"all"` | `"all"`, `"android"` or `"ios"` — which OS sees it |
 | `regions` | `["*"]` | ISO-3166 country codes (`["US"]`); matched against the device region. See below |
@@ -75,6 +82,28 @@ reaches a device only when it passes them all, and when both a UTC bound and its
 `…Local` twin are set, both must have passed. `trigger` doesn't filter *whether*
 a device gets the item, only *how* it surfaces (feed on sync vs. feed + nudge on
 push).
+
+### Cross-promotion (each game advertises the other)
+
+Two games, two directions, one announcement per platform so the button opens
+the right store:
+
+| id | shown in | opens | switch |
+|---|---|---|---|
+| `promo-bricks-crusher-android` / `-ios` | Dual Play | Bricks Crusher on Google Play / App Store | off in `config.json` until Bricks Crusher is published: `enabled: false` **and** `startAt: 2099-01-01` (the date keeps it hidden in Dual Play builds that predate the `enabled` switch). To go live set `enabled: true` and `startAt` to the release date. `dev-config.json` has it on so you can test |
+| `promo-dual-play-android` / `-ios` | Bricks Crusher | Dual Play on Google Play / App Store | Android on; iOS off until an App Store listing exists |
+| `rate-dual-play-2026-09` | Dual Play | rate Dual Play on Google Play | on |
+| `rate-bricks-crusher-2026-09` | Bricks Crusher | rate Bricks Crusher on Google Play | `enabled: false` in `config.json` until the game is published (its Play link doesn't exist yet); on in `dev-config.json` |
+
+Tapping the **banner image** or the button opens the store app directly
+(`play.google.com` / `apps.apple.com` links open the Play Store / App Store, not
+an in-app browser). The banners are `img/promo-bricks-crusher.png` and
+`img/promo-dual-play.png` — **placeholders**: replace those files (1200×630
+works well; keep the file names, or edit `imageUrl`) and commit. Devices cache
+the image per URL, so if you replace a file but keep its name, add a version
+suffix to `imageUrl` (e.g. `…/promo-bricks-crusher.png?v=2`) to make them
+re-download it. To go live: set `enabled` to `true`, replace the `iosUpdateUrl` /
+App Store placeholder ids, and commit.
 
 ### `regions` targeting
 
@@ -146,7 +175,9 @@ event starting) where waiting for the next app launch is too slow.
 ## How the player sees announcements
 
 **Nothing interrupts the app.** There is no launch modal. Announcements live in
-an in-app **"What's New"** feed, opened from the drawer:
+an in-app **"What's New"** feed, opened from the drawer (Bricks Crusher has the
+same drawer entry, plus **Check for Updates**, which compares its build against
+`apps.brickscrusher` above):
 
 - The drawer's menu button and its "What's New" row show an **unread badge**
   while there are items the player hasn't opened.

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-09-18T00:00:00Z",
+  "updatedAt": "2026-09-21T00:00:00Z",
 
   "apps": {
     "dualplay": {
@@ -16,13 +16,26 @@
       "forceUpdate": false,
       "androidUpdateUrl": "https://play.google.com/store/apps/details?id=dev.munna.games.dualplay",
       "iosUpdateUrl": "https://apps.apple.com/app/id0000000000"
+    },
+
+    "brickscrusher": {
+      "androidAppId": "dev.munna.games.bricks_crusher",
+      "iosAppId": "dev.munna.games.bricks_crusher",
+      "minSupportedBuildNumber": 1,
+      "latestBuildNumber": 1,
+      "versions": {
+        "1": "0.1.0"
+      },
+      "forceUpdate": false,
+      "androidUpdateUrl": "https://play.google.com/store/apps/details?id=dev.munna.games.bricks_crusher",
+      "iosUpdateUrl": "https://apps.apple.com/app/id0000000000"
     }
   },
 
   "announcements": [
     {
       "id": "rate-dual-play-2026-09",
-      "audience": ["*"],
+      "audience": ["dualplay"],
       "platform": "android",
       "regions": ["*"],
       "trigger": "launch",
@@ -35,6 +48,95 @@
       "expireAt": "2027-03-31T00:00:00Z",
       "maxImpressions": 3,
       "minIntervalHours": 72
+    },
+    {
+      "id": "bricks-crusher-welcome-2026-09",
+      "audience": ["brickscrusher"],
+      "platform": "all",
+      "regions": ["*"],
+      "trigger": "launch",
+      "title": "Welcome to Bricks Crusher",
+      "body": "100 levels, Split and Burst power-ups, a Lucky Wheel and a 6-day daily reward are all in. New levels and features land with every update. Thanks for playing!",
+      "linkUrl": "https://games.munna.dev/bricks-crusher/",
+      "linkLabel": "Visit the game page",
+      "priority": 5,
+      "startAt": "2026-09-20T00:00:00Z",
+      "expireAt": "2027-03-31T00:00:00Z"
+    },
+    {
+      "id": "promo-bricks-crusher-android",
+      "enabled": false,
+      "audience": ["dualplay"],
+      "platform": "android",
+      "regions": ["*"],
+      "trigger": "launch",
+      "title": "Try Bricks Crusher",
+      "body": "Smash walls of neon bricks, catch Split and Burst power-ups, and climb 100 levels. The new game from the makers of Dual Play.",
+      "imageUrl": "https://games.munna.dev/app-config/img/promo-bricks-crusher.png",
+      "linkUrl": "https://play.google.com/store/apps/details?id=dev.munna.games.bricks_crusher",
+      "linkLabel": "Get it on Google Play",
+      "priority": 8,
+      "startAt": "2099-01-01T00:00:00Z"
+    },
+    {
+      "id": "promo-bricks-crusher-ios",
+      "enabled": false,
+      "audience": ["dualplay"],
+      "platform": "ios",
+      "regions": ["*"],
+      "trigger": "launch",
+      "title": "Try Bricks Crusher",
+      "body": "Smash walls of neon bricks, catch Split and Burst power-ups, and climb 100 levels. The new game from the makers of Dual Play.",
+      "imageUrl": "https://games.munna.dev/app-config/img/promo-bricks-crusher.png",
+      "linkUrl": "https://apps.apple.com/app/id0000000000",
+      "linkLabel": "Download on the App Store",
+      "priority": 8,
+      "startAt": "2099-01-01T00:00:00Z"
+    },
+    {
+      "id": "promo-dual-play-android",
+      "enabled": true,
+      "audience": ["brickscrusher"],
+      "platform": "android",
+      "regions": ["*"],
+      "trigger": "launch",
+      "title": "Play Dual Play too",
+      "body": "Four classic games in one app: Tic Tac Toe, Ludo, Dots and Boxes and Bagh-Bandi. Play offline against bots or over Wi-Fi with friends.",
+      "imageUrl": "https://games.munna.dev/app-config/img/promo-dual-play.png",
+      "linkUrl": "https://play.google.com/store/apps/details?id=dev.munna.games.dualplay",
+      "linkLabel": "Get it on Google Play",
+      "priority": 8,
+      "startAt": "2026-09-20T00:00:00Z"
+    },
+    {
+      "id": "promo-dual-play-ios",
+      "enabled": false,
+      "audience": ["brickscrusher"],
+      "platform": "ios",
+      "regions": ["*"],
+      "trigger": "launch",
+      "title": "Play Dual Play too",
+      "body": "Four classic games in one app: Tic Tac Toe, Ludo, Dots and Boxes and Bagh-Bandi. Play offline against bots or over Wi-Fi with friends.",
+      "imageUrl": "https://games.munna.dev/app-config/img/promo-dual-play.png",
+      "linkUrl": "https://apps.apple.com/app/id0000000000",
+      "linkLabel": "Download on the App Store",
+      "priority": 8,
+      "startAt": "2026-09-20T00:00:00Z"
+    },
+    {
+      "id": "rate-bricks-crusher-2026-09",
+      "enabled": false,
+      "audience": ["brickscrusher"],
+      "platform": "android",
+      "regions": ["*"],
+      "trigger": "launch",
+      "title": "Enjoying Bricks Crusher?",
+      "body": "If the game has been fun, a quick rating on Google Play means a lot to a solo developer. Thank you!",
+      "linkUrl": "https://play.google.com/store/apps/details?id=dev.munna.games.bricks_crusher",
+      "linkLabel": "Rate on Google Play",
+      "priority": 10,
+      "startAt": "2026-09-20T00:00:00Z",
+      "expireAt": "2027-03-31T00:00:00Z"
     }
   ]
 }

@@ -22,6 +22,17 @@ Separate from any app's source code — this repo is only public marketing conte
   privacy/index.html    ← this URL goes in Google Play Console
   assets/og-cover.png   game-specific share image
   site.webmanifest
+
+/bricks-crusher/        second game — landing plus the pages the app's About drawer links to
+  index.html            landing (in development)
+  contact/index.html    Help & Support
+  terms/index.html      Terms & Conditions
+  privacy/index.html    Privacy Policy
+  assets/og-cover.png
+  site.webmanifest
+
+/app-config/            hosted JSON the apps fetch on launch (What's New feed, update check)
+  config.json           production      dev-config.json   debug builds
 ```
 
 | URL | Purpose |
@@ -32,6 +43,11 @@ Separate from any app's source code — this repo is only public marketing conte
 | `/dual-play/contact/` | Email + social links |
 | `/dual-play/terms/` | Terms & Conditions |
 | `/dual-play/privacy/` | **Privacy Policy — the Play Console URL** |
+| `/bricks-crusher/` | Bricks Crusher landing (in development) |
+| `/bricks-crusher/contact/` | Bricks Crusher Help & Support (opened from the app's drawer) |
+| `/bricks-crusher/terms/` | Bricks Crusher Terms & Conditions (opened from the app's drawer) |
+| `/bricks-crusher/privacy/` | **Bricks Crusher Privacy Policy — the Play Console URL** |
+| `/app-config/config.json` | Per-app announcements + update rules (`dualplay`, `brickscrusher`) |
 
 SEO plumbing on every page: canonical + Open Graph + Twitter + JSON-LD, plus
 `sitemap.xml` / `robots.txt` / `site.webmanifest` at the root.
