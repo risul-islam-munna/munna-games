@@ -23,9 +23,10 @@
       "androidAppId": "dev.munna.games.bricks_crusher",
       "iosAppId": "dev.munna.games.bricks_crusher",
       "minSupportedBuildNumber": 1,
-      "latestBuildNumber": 1,
+      "latestBuildNumber": 2,
       "versions": {
-        "1": "0.1.0"
+        "1": "0.1.0",
+        "2": "1.0.0"
       },
       "forceUpdate": false,
       "androidUpdateUrl": "https://play.google.com/store/apps/details?id=dev.munna.games.bricks_crusher",
