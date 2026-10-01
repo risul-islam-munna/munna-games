@@ -1,7 +1,7 @@
 {
   "name": "Bricks Crusher",
   "short_name": "Bricks Crusher",
-  "description": "A neon Arkanoid-style brick breaker for Android — in development, not yet published.",
+  "description": "A neon Arkanoid-style brick breaker for Android — free to play, out now on Google Play.",
   "start_url": "/bricks-crusher/",
   "scope": "/bricks-crusher/",
   "display": "standalone",

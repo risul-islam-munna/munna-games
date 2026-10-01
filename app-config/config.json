@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-09-21T00:00:00Z",
+  "updatedAt": "2026-10-01T00:00:00Z",
 
   "apps": {
     "dualplay": {
@@ -68,7 +68,7 @@
     },
     {
       "id": "promo-bricks-crusher-android",
-      "enabled": false,
+      "enabled": true,
       "audience": ["dualplay"],
       "platform": "android",
       "regions": ["*"],
@@ -79,7 +79,8 @@
       "linkUrl": "https://play.google.com/store/apps/details?id=dev.munna.games.bricks_crusher",
       "linkLabel": "Get it on Google Play",
       "priority": 8,
-      "startAt": "2099-01-01T00:00:00Z"
+      "startAt": "2026-10-01T00:00:00Z",
+      "expireAt": "2027-03-31T00:00:00Z"
     },
     {
       "id": "promo-bricks-crusher-ios",
@@ -128,7 +129,7 @@
     },
     {
       "id": "rate-bricks-crusher-2026-09",
-      "enabled": false,
+      "enabled": true,
       "audience": ["brickscrusher"],
       "platform": "android",
       "regions": ["*"],
