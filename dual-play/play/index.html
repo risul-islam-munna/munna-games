@@ -48,30 +48,78 @@
 
   <title>Play Dual Play Online — Munna Games</title>
   <style>
-    /* Web only: tiny back-links in the empty side margin of the 800px game
-       frame. Hidden unless the viewport is wide enough that they cannot
-       overlap the frame, so game space is never reduced. */
+    /* Web only: "Munna Games" site panel in the empty desktop margin to the
+       left of the 800px game frame. The frame is centred and 800px wide, so the
+       panel's right edge sits a fixed gap left of (50vw - 400px). It only
+       renders when that margin is wide enough, so it never overlaps the game or
+       takes space from it; on narrower windows and phones it is hidden. */
     .mg-nav { display: none; }
-    @media (min-width: 1100px) and (min-height: 480px) {
+    @media (min-width: 1200px) and (min-height: 420px) {
       .mg-nav {
-        display: flex; flex-direction: column; gap: 6px;
-        position: fixed; top: 16px; left: 16px; z-index: 10;
-        font: 600 13px/1.2 system-ui, -apple-system, "Segoe UI", sans-serif;
+        --mg-w: 168px;
+        box-sizing: border-box;
+        display: block;
+        position: fixed; z-index: 10;
+        width: var(--mg-w);
+        right: calc(50vw + 400px + 20px);
+        top: max(24px, calc((100vh - 1280px) / 2 + 24px));
+        padding: 10px;
+        border-radius: 16px;
+        background: rgba(24, 23, 34, .72);
+        border: 1px solid rgba(255, 255, 255, .09);
+        box-shadow: 0 10px 30px -12px rgba(0, 0, 0, .6);
+        -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
       }
+      .mg-nav .mg-brand {
+        display: flex; align-items: center; gap: 8px;
+        padding: 2px 6px 10px; margin-bottom: 6px;
+        border-bottom: 1px solid rgba(255, 255, 255, .08);
+        font-size: 11px; font-weight: 700; letter-spacing: .14em;
+        text-transform: uppercase; color: #9f9bc4;
+      }
+      .mg-nav .mg-brand b { color: #e9e7fb; font-weight: 700; }
+      .mg-nav .mg-brand svg { width: 18px; height: 18px; flex: none; }
       .mg-nav a {
-        color: #c9c6e3; text-decoration: none; padding: 6px 10px;
-        border-radius: 8px; background: rgba(20, 19, 27, .55);
-        border: 1px solid rgba(255, 255, 255, .12);
+        display: flex; align-items: center; gap: 10px;
+        padding: 9px 8px; border-radius: 10px;
+        color: #cfcce9; text-decoration: none;
+        font-size: 14px; font-weight: 600; line-height: 1.2;
+        transition: background-color .15s, color .15s;
       }
-      .mg-nav a:hover, .mg-nav a:focus-visible { color: #fff; border-color: #8ec2ff; }
+      .mg-nav a svg { width: 18px; height: 18px; flex: none; opacity: .85; }
+      .mg-nav a:hover { background: rgba(142, 194, 255, .13); color: #fff; }
+      .mg-nav a:hover svg { opacity: 1; }
+      .mg-nav a:focus-visible { outline: 2px solid #8ec2ff; outline-offset: 1px; color: #fff; }
+      .mg-nav a:active { background: rgba(142, 194, 255, .2); }
     }
   </style>
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
   <nav class="mg-nav" aria-label="Munna Games">
-    <a href="/dual-play/">&larr; Dual Play</a>
-    <a href="/">All games</a>
+    <div class="mg-brand">
+      <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+        <rect x="3" y="3" width="58" height="58" rx="14" fill="#0e0f13" stroke="#3c4150"/>
+        <g stroke="#8ec2ff" stroke-width="3.4" stroke-linecap="round">
+          <line x1="25" y1="12" x2="25" y2="52"/><line x1="39" y1="12" x2="39" y2="52"/>
+          <line x1="12" y1="25" x2="52" y2="25"/><line x1="12" y1="39" x2="52" y2="39"/>
+        </g>
+        <g stroke="#c084fc" stroke-width="4" stroke-linecap="round">
+          <line x1="15" y1="15" x2="21" y2="21"/><line x1="21" y1="15" x2="15" y2="21"/>
+        </g>
+        <circle cx="45.5" cy="45.5" r="4.4" stroke="#8ec2ff" stroke-width="4"/>
+      </svg>
+      <span><b>Munna</b> Games</span>
+    </div>
+    <a href="/dual-play/">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+      Dual Play
+    </a>
+    <a href="/">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></svg>
+      All Games
+    </a>
   </nav>
   <!--
     You can customize the "flutter_bootstrap.js" script.
