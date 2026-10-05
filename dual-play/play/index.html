@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/dual-play/play/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Play Dual Play in your browser: Tic Tac Toe, Ludo, Dots and Boxes, Bagh-Bandi, Wall Block and Memory Match against bots or a friend. Free, no install, no account.">
+  <meta name="theme-color" content="#14131B">
+
+  <!--
+    SEO: the indexable page for this game is the landing page at /dual-play/.
+    This URL is the interactive app only, so keep it out of search results
+    (links on it are still followed) and don't duplicate landing-page content.
+  -->
+  <meta name="robots" content="noindex,follow">
+
+  <!-- Open Graph (link previews when someone shares the play URL) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dual Play">
+  <meta property="og:title" content="Play Dual Play in your browser">
+  <meta property="og:description" content="Seven classic games, free in your browser. No install, no account.">
+  <meta property="og:url" content="https://games.munna.dev/dual-play/play/">
+  <meta property="og:image" content="https://games.munna.dev/dual-play/assets/og-cover.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Dual Play">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Play Dual Play Online — Munna Games</title>
+  <style>
+    /* Web only: tiny back-links in the empty side margin of the 800px game
+       frame. Hidden unless the viewport is wide enough that they cannot
+       overlap the frame, so game space is never reduced. */
+    .mg-nav { display: none; }
+    @media (min-width: 1100px) and (min-height: 480px) {
+      .mg-nav {
+        display: flex; flex-direction: column; gap: 6px;
+        position: fixed; top: 16px; left: 16px; z-index: 10;
+        font: 600 13px/1.2 system-ui, -apple-system, "Segoe UI", sans-serif;
+      }
+      .mg-nav a {
+        color: #c9c6e3; text-decoration: none; padding: 6px 10px;
+        border-radius: 8px; background: rgba(20, 19, 27, .55);
+        border: 1px solid rgba(255, 255, 255, .12);
+      }
+      .mg-nav a:hover, .mg-nav a:focus-visible { color: #fff; border-color: #8ec2ff; }
+    }
+  </style>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <nav class="mg-nav" aria-label="Munna Games">
+    <a href="/dual-play/">&larr; Dual Play</a>
+    <a href="/">All games</a>
+  </nav>
+  <!--
+    You can customize the "flutter_bootstrap.js" script.
+    This is useful to provide a custom configuration to the Flutter loader
+    or to give the user feedback during the initialization process.
+
+    For more details:
+    * https://docs.flutter.dev/platform-integration/web/initialization
+  -->
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

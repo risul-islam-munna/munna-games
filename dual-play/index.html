@@ -90,6 +90,8 @@
           "acceptedAnswer": { "@type": "Answer", "text": "Your game profile, settings and match history stay on your device. The app shows ads through Google AdMob and uses Google Firebase Cloud Messaging for broadcast announcements. It does not use a separate analytics or crash-reporting service. Full details are in the Privacy Policy." } },
         { "@type": "Question", "name": "Does the app send notifications?",
           "acceptedAnswer": { "@type": "Answer", "text": "It can — occasional messages about new games, updates, gameplay tips, and the odd promotion or offer. The same message goes to every device with notifications on; nothing is targeted to you, and no messaging token is collected. On Android 13 and newer the app asks permission first, and you can turn notifications off any time in your phone settings for Dual Play without affecting the games." } },
+        { "@type": "Question", "name": "Can I play Dual Play in my browser?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Open the browser version at games.munna.dev/dual-play/play/ and play instantly with no install or account. It covers solo play against bots and pass-and-play on one screen. Local Wi-Fi multiplayer and in-match voice chat need the Android app." } },
         { "@type": "Question", "name": "Does Wi-Fi play use my mobile data?",
           "acceptedAnswer": { "@type": "Answer", "text": "No. Wi-Fi multiplayer and voice chat travel directly between devices on the same local network. Only ads use a data connection." } }
       ]
@@ -137,7 +139,8 @@
       <a href="/dual-play/#how">Wi-Fi play</a>
       <a href="/dual-play/about/">About</a>
       <a href="/dual-play/contact/">Contact</a>
-      <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=dev.munna.games.dualplay" target="_blank" rel="noopener">Get on Google&nbsp;Play</a>
+      <a class="btn btn-primary btn-play" href="/dual-play/play/"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>Play now</a>
+      <a class="btn btn-ghost" href="https://play.google.com/store/apps/details?id=dev.munna.games.dualplay" target="_blank" rel="noopener">Google&nbsp;Play</a>
     </nav>
   </div>
 </header>
@@ -152,6 +155,7 @@
         <h1>Classic games. <span class="grad">Real opponents.</span> Zero setup.</h1>
         <p class="lede">Dual Play is Tic&nbsp;Tac&nbsp;Toe, Ludo, Dots&nbsp;and&nbsp;Boxes, Bagh-Bandi, Bagh-Bandi Extended, Wall Block and Memory Match in one download. Play offline against bots that actually think, pass the phone to a friend, or pair 2–4 devices over Wi-Fi and talk while you play. No account. No feed. No clutter.</p>
         <div class="btn-row">
+          <a class="btn btn-primary btn-play" href="/dual-play/play/"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>Play now in your browser</a>
           <a class="store-badge" href="https://play.google.com/store/apps/details?id=dev.munna.games.dualplay" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d9ff" d="M3.6 2.1 13 11.5 3.9 20.6a1.7 1.7 0 0 1-.3-1V3a1.7 1.7 0 0 1 0-.9z"/><path fill="#00f076" d="M14.1 12.6 4.6 22a1.6 1.6 0 0 0 1.7 0l11.2-6.4z"/><path fill="#ffd800" d="M20.9 10.7 17.5 8.8l-3.6 3.6 3.6 3.6 3.4-2a1.7 1.7 0 0 0 0-3.3z"/><path fill="#ff3a44" d="M4.6 2 14.1 11.4l3.4-3.4L6.3 1.6a1.6 1.6 0 0 0-1.7.4z"/></svg>
             <span><span class="sb-top">Get it on</span><span class="sb-main">Google Play</span></span>
@@ -168,6 +172,7 @@
           <li>Light &amp; <b>dark</b></li>
           <li><b>Free</b></li>
         </ul>
+        <p class="web-note">Play instantly in your browser — no installation required. Wi-Fi multiplayer and voice chat are available in the Android app only.</p>
       </div>
 
       <div class="phone-wrap" aria-hidden="true">
@@ -540,6 +545,10 @@
           <div class="faq-body"><p>No. Playing a bot or passing one phone between two players is completely offline. Wi-Fi multiplayer needs the devices on the same Wi-Fi network or hotspot, but still no internet connection. Internet is only used to load ads and to fetch in-app announcements.</p></div>
         </details>
         <details>
+          <summary>Can I play Dual Play in my browser?</summary>
+          <div class="faq-body"><p>Yes — <a href="/dual-play/play/">open the browser version</a> and play instantly, no install or account. It covers solo vs bots and pass-and-play on one screen. Local Wi-Fi multiplayer and in-match voice chat need the Android app.</p></div>
+        </details>
+        <details>
           <summary>Does Wi-Fi play use my mobile data?</summary>
           <div class="faq-body"><p>No. Multiplayer moves and voice chat travel directly between devices on your local network. Only ads use data.</p></div>
         </details>
@@ -572,8 +581,9 @@
     <div class="wrap">
       <div class="cta-band reveal">
         <h2>Bring it to your next game night</h2>
-        <p class="lede">Dual Play is on Google Play for Android. iPhone and iPad users can install it too.</p>
+        <p class="lede">Play it right now in your browser, or install it from Google Play for Android. iPhone and iPad users can install it too.</p>
         <div class="btn-row">
+          <a class="btn btn-primary btn-play" href="/dual-play/play/"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>Play in browser</a>
           <a class="store-badge" href="https://play.google.com/store/apps/details?id=dev.munna.games.dualplay" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d9ff" d="M3.6 2.1 13 11.5 3.9 20.6a1.7 1.7 0 0 1-.3-1V3a1.7 1.7 0 0 1 0-.9z"/><path fill="#00f076" d="M14.1 12.6 4.6 22a1.6 1.6 0 0 0 1.7 0l11.2-6.4z"/><path fill="#ffd800" d="M20.9 10.7 17.5 8.8l-3.6 3.6 3.6 3.6 3.4-2a1.7 1.7 0 0 0 0-3.3z"/><path fill="#ff3a44" d="M4.6 2 14.1 11.4l3.4-3.4L6.3 1.6a1.6 1.6 0 0 0-1.7.4z"/></svg>
             <span><span class="sb-top">Get it on</span><span class="sb-main">Google Play</span></span>

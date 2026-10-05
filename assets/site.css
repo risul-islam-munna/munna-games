@@ -690,3 +690,17 @@ button.store-badge { font-family: var(--font-display); cursor: pointer; }
   to   { transform: translate(-50%, -50%); opacity: 1; }
 }
 @media (prefers-reduced-motion: reduce) { .ios-dialog[open] { animation: none; } }
+
+/* ---- Browser-playable games ------------------------------------------------
+   Reusable for every game: add a .btn-play link to /<slug>/play/ only once that
+   web build is actually deployed. */
+.btn-play svg { width: 1em; height: 1em; flex: none; }
+.gc-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; align-items: center; margin-top: 1.15rem; }
+.gc-actions .btn { padding: 0.6rem 1.05rem; font-size: 0.92rem; }
+.web-note { margin: 1rem 0 0; font-size: 0.85rem; color: var(--text-muted); max-width: 56ch; }
+.gc-badge {
+  display: inline-block; margin-left: .5rem; padding: .1rem .5rem; border-radius: 999px;
+  font-family: var(--font-display); font-size: .68rem; font-weight: 600; letter-spacing: .06em;
+  text-transform: uppercase; vertical-align: middle;
+  color: var(--text); border: 1px solid var(--border, #3c4150); background: var(--surface-2);
+}

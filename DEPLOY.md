@@ -122,6 +122,62 @@ filtering.)
   JSON-LD `installUrl` in `index.html`; remove the `aria-disabled` attribute.
 - `git commit` + `git push` — GitHub Pages redeploys automatically in ~1 minute.
 
+## 10. Browser-playable games (`/<game>/play/`)
+
+Every game follows the same URL convention:
+
+```text
+/<game-slug>/         landing / marketing page   (indexed, SEO)
+/<game-slug>/play/    compiled Flutter Web build (interactive app, noindex)
+```
+
+There is deliberately **no** root-level `/play/` directory.
+
+| Game | Landing page | Web build | Status |
+|---|---|---|---|
+| Dual Play | `/dual-play/` | `/dual-play/play/` | live once pushed |
+| Bricks Crusher | `/bricks-crusher/` | `/bricks-crusher/play/` | not built yet — no Play button on the site |
+
+**Public/private split.** The Flutter repos are private. Only the *compiled* output of
+`flutter build web --release` (`index.html`, `main.dart.js`, `flutter.js`,
+`flutter_bootstrap.js`, `assets/`, `canvaskit/`, `icons/`, `manifest.json`, …) is ever
+copied here. Never copy `app/`, `packages/`, `third_party/` or any `.dart` file.
+
+**Publishing a new Dual Play web build** (from the private repo):
+
+```sh
+cd /Users/munna/Development/FlutterProjects/dual_play_games
+scripts/deploy_web.sh --dry-run   # build + audit, show what rsync would change
+scripts/deploy_web.sh             # build + audit + sync into dual-play/play/
+cd /Users/munna/Herd/munna-games && git status   # review, then commit + push yourself
+```
+
+The script builds with `--base-href /dual-play/play/ --no-web-resources-cdn`, refuses to
+continue if the output contains `.dart`/`.map`/key/credential files or local paths, and
+only ever writes to `<site>/dual-play/play/` (it checks `CNAME`, the landing page and
+that the destination is not a symlink first). It never commits or pushes.
+
+**Local test** — serve the *site root* (not the build folder), because the base href
+needs the `/dual-play/play/` prefix:
+
+```sh
+cd /Users/munna/Herd/munna-games && python3 -m http.server 8765
+# http://localhost:8765/   /dual-play/   /bricks-crusher/   /dual-play/play/
+```
+
+**Adding Bricks Crusher later:** it needs a `web/` platform (`flutter create --platforms web .`),
+the same `web/index.html` treatment (noindex, title), then reuse `deploy_web.sh` with
+`GAME_SLUG=bricks-crusher` and its own app dir. Then add a
+`<a class="btn btn-primary btn-play" href="/bricks-crusher/play/">` to its card in
+`index.html` (there is a marked comment) and to `bricks-crusher/index.html`.
+
+**SEO:** `/dual-play/play/` is `noindex,follow` and is *not* in `sitemap.xml`; the landing
+page stays the single indexable page. Do not add Disallow rules for `/play/` in
+`robots.txt` — crawlers must be able to fetch the page to see `noindex`.
+
+**Caching:** GitHub Pages serves `main.dart.js` with a short cache (~10 min), so a new
+build can take a few minutes to reach returning players.
+
 ---
 
 ### Deploying updates from now on
