@@ -29,11 +29,11 @@
 
   <text x="210" y="228" font-family="'Space Grotesk','Segoe UI',sans-serif" font-size="70" font-weight="700" letter-spacing="14" fill="#ffffff">DUAL <tspan fill="url(#grad)">PLAY</tspan></text>
 
-  <text x="92" y="360" font-family="'Space Grotesk','Segoe UI',sans-serif" font-size="58" font-weight="700" fill="#ffffff">Seven games. One app.</text>
+  <text x="92" y="360" font-family="'Space Grotesk','Segoe UI',sans-serif" font-size="58" font-weight="700" fill="#ffffff">Eight games. One app.</text>
   <text x="92" y="428" font-family="'Space Grotesk','Segoe UI',sans-serif" font-size="58" font-weight="700" fill="#a8adbd">No account, no clutter.</text>
 
   <text x="92" y="500" font-family="'Segoe UI',sans-serif" font-size="27" fill="#a8adbd">Tic Tac Toe &#183; Ludo &#183; Dots and Boxes &#183; Bagh-Bandi</text>
-  <text x="92" y="536" font-family="'Segoe UI',sans-serif" font-size="27" fill="#a8adbd">Bagh-Bandi Extended &#183; Wall Block &#183; Memory Match</text>
+  <text x="92" y="536" font-family="'Segoe UI',sans-serif" font-size="27" fill="#a8adbd">Bagh-Bandi Extended &#183; Wall Block &#183; Memory Match &#183; Shape Crack</text>
   <text x="92" y="588" font-family="'Segoe UI',sans-serif" font-size="26" fill="#71768a">Play offline vs smart bots &#183; pass &amp; play &#183; 2&#8211;4 players over Wi-Fi</text>
 
   <text x="1108" y="588" text-anchor="end" font-family="'Space Grotesk','Segoe UI',sans-serif" font-size="26" font-weight="600" fill="#b79bff">games.munna.dev</text>

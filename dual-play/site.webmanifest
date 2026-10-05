@@ -1,7 +1,7 @@
 {
   "name": "Dual Play",
   "short_name": "Dual Play",
-  "description": "Seven games in one Android app: Tic Tac Toe, Ludo, Dots and Boxes, Bagh-Bandi, Bagh-Bandi Extended, Wall Block and Memory Match. Play offline vs smart bots, pass & play, or 2–4 players over Wi-Fi.",
+  "description": "Eight games in one Android app: Tic Tac Toe, Ludo, Dots and Boxes, Bagh-Bandi, Bagh-Bandi Extended, Wall Block, Memory Match and Shape Crack. Play offline vs smart bots, pass & play, or 2–4 players over Wi-Fi.",
   "start_url": "/dual-play/",
   "scope": "/dual-play/",
   "display": "standalone",

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — Dual Play</title>
-<meta name="description" content="The Dual Play Privacy Policy: no account required, your game data stays on your device, and a plain-language account of the ads (Google AdMob), broadcast announcements (Firebase Cloud Messaging) and configuration the app uses.">
+<meta name="description" content="The Dual Play Privacy Policy: no account required, your game data stays on your device, and a plain-language account of on-device reminders, the rating request, ads (Google AdMob), broadcast announcements (Firebase Cloud Messaging) and configuration the app uses.">
 <link rel="canonical" href="https://games.munna.dev/dual-play/privacy/">
 <meta name="robots" content="index,follow">
 <meta name="theme-color" content="#0e0f13">
@@ -14,12 +14,12 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Dual Play">
 <meta property="og:title" content="Privacy Policy — Dual Play">
-<meta property="og:description" content="No account required. Your game data stays on your device. Plain-language details on the ads, announcements and notifications the app uses.">
+<meta property="og:description" content="No account required. Your game data and reminder state stay on your device. Plain-language details on reminders, the rating request, ads and announcements.">
 <meta property="og:url" content="https://games.munna.dev/dual-play/privacy/">
 <meta property="og:image" content="https://games.munna.dev/dual-play/assets/og-cover.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Dual Play — seven classic and original games in one Android app">
+<meta property="og:image:alt" content="Dual Play — eight classic and original games in one Android app">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Privacy Policy — Dual Play">
@@ -101,30 +101,49 @@
       <div class="legal">
         <h1>Privacy Policy</h1>
         <!-- TODO: on the day of the Play Store release, set this to that date. -->
-        <p class="updated">Last updated: 7 September 2026</p>
+        <p class="updated">Last updated: 6 October 2026</p>
 
         <p>This Privacy Policy explains how the <strong>Dual Play</strong> mobile game app (the "App"), published by <strong>Md. Risul Islam Munna</strong> ("I", "me", "my") of Dhaka, Bangladesh, handles information. It applies to the App only, not to this website's host or to any third-party site the App or its ads may link to. The App is published on Google Play for Android; where an iPhone or iPad build is shared directly (for example through Apple's TestFlight service or as a downloadable file) rather than the Apple App Store, the same practices described here apply to it.</p>
 
         <div class="summary-box">
-          <p><strong>The short version.</strong> Dual Play has no accounts and no login. You can play completely offline. Your player name, settings, and match history stay on your device. The App is free and shows ads through <strong>Google AdMob</strong> — banner ads, occasional full-screen ads between rounds, and optional rewarded ads you choose to watch for an in-game hint. It uses <strong>Google Firebase Cloud Messaging</strong> to deliver broadcast <strong>announcements</strong>, and on launch downloads a small public configuration file from this website. It does <strong>not</strong> use a separate analytics or crash-reporting service, and does not ask for your name, email, contacts, photos, or precise location. You can turn notifications off at any time.</p>
+          <p><strong>The short version.</strong> Dual Play has no accounts and no login. You can play completely offline. Your player name, settings, match history and the small bits of state behind reminders and the rating request <strong>stay on your device</strong>. The App is free and shows ads through <strong>Google AdMob</strong> — banner ads, occasional full-screen ads between rounds, and optional rewarded ads you choose to watch for an in-game hint. It uses <strong>Google Firebase Cloud Messaging</strong> to deliver broadcast <strong>announcements</strong>, and on launch downloads a small public configuration file from this website. If you allow notifications, the App may also schedule <strong>reminders on your device</strong> when you haven't opened it for a while — no server is involved. It does <strong>not</strong> use a separate analytics or crash-reporting service, and does not ask for your name, email, contacts, photos, or precise location. You can turn notifications off at any time.</p>
         </div>
 
         <h2>1. Information stored only on your device</h2>
-        <p>When you first open the App it creates a random local identifier and a random display name for you (which you can change). The App also stores your settings (such as theme and toggles) and your match history — per-game wins, draws, losses, and streaks. This information:</p>
+        <p>The App keeps the following on your device, in its own local storage. None of it is sent to me or to any server I operate:</p>
         <ul>
-          <li>is kept in the App's local storage on your device;</li>
+          <li><strong>Guest identity:</strong> when you first open the App it creates a random local identifier and a random display name for you (which you can change). It is not an account.</li>
+          <li><strong>Settings and preferences:</strong> theme, sound and confetti choices, and game preferences such as your last-used level, difficulty or house rules.</li>
+          <li><strong>Match statistics:</strong> per-game wins, draws, losses and streaks.</li>
+          <li><strong>Reminder state:</strong> when you last opened the App, which reminders are scheduled, and which reminder messages were already shown (see section 2).</li>
+          <li><strong>Rating-request state:</strong> how long you have used the App, when it last asked you to rate it, and your answer (see section 3).</li>
+          <li><strong>Announcement state:</strong> which announcements you have seen, and cached announcement images so they display offline.</li>
+        </ul>
+        <p>This information:</p>
+        <ul>
           <li>is not sent to me or to any server I operate;</li>
           <li>is shared with another player only as needed to run a local match you start (for example, your display name is shown to the opponent you connect to over Wi-Fi); and</li>
           <li>is deleted when you uninstall the App or clear its data.</li>
         </ul>
 
-        <h2>2. Local network (Wi-Fi multiplayer)</h2>
+        <h2>2. Reminders from the App (local notifications)</h2>
+        <p>If you have allowed notifications, Dual Play may remind you to come back and play when you haven't opened the App for a while — for example after about a week, then again after longer gaps (such as around two weeks, a month, and then roughly once a month). Reminders usually arrive in the afternoon, and each time you open the App they are rescheduled from that day.</p>
+        <p>These reminders are created <strong>on your device</strong>. The App works out when you last opened it, asks your phone to show a reminder at a later time, and remembers which reminder messages it has already used so you don't see the same one repeatedly. That information — your last-opened time, the schedule, and which messages were used — is <strong>stored and processed only on your device</strong>. It is <strong>not uploaded</strong> to me, to Firebase or to any other server, and the reminder text is built into the App. No account is needed for reminders.</p>
+        <p>On Android 13 and newer the App asks your permission before it can show any notification (it may ask when it starts, and, if you haven't yet decided, once more after you finish your first match). You are in control: you can turn all notifications, or just reminders, off at any time in <em>Settings → Apps → Dual Play → Notifications</em>. If you deny or revoke permission, your phone simply won't show them, and the games work exactly the same. Uninstalling the App removes the scheduled reminders. To make sure reminders you scheduled survive a phone restart, the App registers to be told when the device finishes starting up (the "run at startup" permission).</p>
+
+        <h2>3. Asking you to rate the App</h2>
+        <p>After you have spent some time in the App — for example after you beat a bot, or finish a game and return to the home screen — Dual Play may occasionally show its own friendly dialog asking whether you would like to rate it. It will not ask more than once a day, and you can choose <em>Rate</em>, <em>Maybe Later</em> or <em>Not Now</em>.</p>
+        <p>If you choose to rate, the App opens Google's in-app review sheet (or, if that is not available, the App's Google Play page). Any rating or review you give is handled by <strong>Google Play</strong> under Google's own terms and privacy policy. <strong>Dual Play does not receive your star rating, your review text, your Google account, or whether you actually submitted a review</strong>, and it cannot look that up.</p>
+        <p>So that the App doesn't keep asking, it remembers <strong>on your device only</strong>: your total time using the App, the date it last asked, that you tapped the rating option (after which it stops asking automatically — this records only that you tapped the button, not that a review was posted), and any "ask me later" delay you chose. This information is not sent to me or to any server. Rating requests are only shown on Android.</p>
+
+        <h2>4. Local network (Wi-Fi multiplayer)</h2>
         <p>If you choose to play a local multiplayer match, the App uses your device's local network access to discover and connect to other players on the same Wi-Fi network or hotspot. This connection is directly between the devices in the match. Game moves and your display name travel over your local network only; they are not routed through, stored on, or visible to any server of mine. Local network access is used solely for this feature.</p>
 
-        <h2>3. Microphone (in-match voice chat)</h2>
-        <p>Voice chat is an optional feature available only during a local Wi-Fi match. If you enable it, the App uses your microphone to send live audio directly to the other device(s) in that match over your local network. The microphone starts muted, you control when it is on, audio is <strong>not recorded, stored, or transmitted to any server</strong>, and the stream ends when the match ends or you turn it off. If you never enable voice chat, the microphone is not used.</p>
+        <h2>5. Microphone (in-match voice chat)</h2>
+        <p>Voice chat is an optional feature available only during a local Wi-Fi match. If you enable it, the App uses your microphone to send live audio to the other device(s) in that match. The microphone starts muted, you control when it is on, audio is <strong>never recorded or stored</strong> (by me or, as far as the App is concerned, by anyone), and the stream ends when the match ends or you turn it off. If you never enable voice chat, the microphone is not used.</p>
+        <p>Voice normally flows directly between the phones on your local network. To help the phones find a working path to each other — which can be needed on some phone hotspots — the voice feature is set up to contact public connection-assistance servers when the device has an internet connection: Google's public STUN servers, and a free public relay service (Open Relay, run by Metered). These services can see technical connection details such as your device's IP address and, if a relay is needed, carry the audio packets (which are encrypted in transit by the WebRTC technology the App uses). I do not operate these services and I do not receive any of this data. This applies only while you use voice chat.</p>
 
-        <h2>4. Advertising — Google AdMob</h2>
+        <h2>6. Advertising — Google AdMob</h2>
         <p>The App is free and is funded by ads served through Google AdMob, a Google service. Ads appear in three forms:</p>
         <ul>
           <li>a small <strong>banner</strong> at the bottom of game screens;</li>
@@ -138,64 +157,80 @@
           <li>coarse, non-precise location inferred from your IP address; and</li>
           <li>ad interaction data (that an ad was shown, viewed, or tapped).</li>
         </ul>
-        <p>This processing is carried out by Google as described in the <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">"How Google uses information from sites or apps that use our services"</a> page and the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>. Where required (for example for users in the EEA, the UK and Switzerland), the App presents a consent choice through Google's User Messaging Platform before personalised ads are shown. You can also limit ad tracking on your device: on Android, <em>Settings → Google → Ads</em> lets you reset or delete your advertising ID and opt out of ad personalisation; on iPhone and iPad, Apple's App Tracking Transparency prompt governs whether the advertising identifier may be used for personalised ads, reviewable under <em>Settings → Privacy &amp; Security → Tracking</em>.</p>
+        <p>This processing is carried out by Google as described in the <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">"How Google uses information from sites or apps that use our services"</a> page and the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>. You can limit ad tracking on your device: on Android, <em>Settings → Google → Ads</em> lets you reset or delete your advertising ID and opt out of ad personalisation; on iPhone and iPad, Apple's App Tracking Transparency prompt governs whether the advertising identifier may be used for personalised ads, reviewable under <em>Settings → Privacy &amp; Security → Tracking</em>.</p>
 
-        <h2>5. Analytics and crash reporting</h2>
-        <p>The App does <strong>not</strong> currently include a third-party usage-analytics or crash-reporting SDK such as Google Analytics for Firebase or Firebase Crashlytics. It does not send events describing how you play (which game you opened, how long a session lasted, and so on) to me or to any analytics service. The only aggregate measurement that takes place is Google's own reporting of ad requests and impressions as part of the AdMob service described in section 4.</p>
+        <h2>7. Analytics and crash reporting</h2>
+        <p>The App does <strong>not</strong> currently include a third-party usage-analytics or crash-reporting SDK such as Google Analytics for Firebase or Firebase Crashlytics. It does not send events describing how you play (which game you opened, how long a session lasted, and so on) to me or to any analytics service. The only aggregate measurement that takes place is Google's own reporting of ad requests and impressions as part of the AdMob service described in section 6.</p>
         <p>If a dedicated analytics or crash-reporting tool is added in a future version, this policy and the Google Play Data safety disclosure will be updated before that version is released.</p>
 
-        <h2>6. Announcements and notifications</h2>
-        <p>The App can show notifications to tell you about new games and updates, share gameplay tips, remind you to come back for another round, and occasionally pass on a promotion or offer. A promotional notification may include a link that opens another app, a store listing, or an external website.</p>
-        <p>Notifications are delivered through <strong>Firebase Cloud Messaging</strong>, a Google service. The <strong>same message is broadcast to every device that has notifications enabled</strong> — the App does not target notifications to you individually, and there is no server of mine that keeps a list of devices. <strong>I do not collect, store, or have access to your device's messaging token.</strong> To route a message to your device, Google (Firebase) processes the technical identifiers it needs, as described in the <a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase Privacy and Security</a> documentation and the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>.</p>
+        <h2>8. Announcements and push notifications</h2>
+        <p>Separately from the on-device reminders in section 2, the App can show notifications to tell you about new games and updates, share gameplay tips, and occasionally pass on a promotion or offer. A promotional notification may include a link that opens another app, a store listing, or an external website.</p>
+        <p>These notifications are delivered through <strong>Firebase Cloud Messaging</strong>, a Google service, which the App initialises when it starts. The <strong>same message is broadcast to every device that has notifications enabled</strong> — the App does not target notifications to you individually, and there is no server of mine that keeps a list of devices. <strong>I do not collect, store, or have access to your device's messaging token.</strong> To route a message to your device, Google (Firebase) processes the technical identifiers it needs, as described in the <a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase Privacy and Security</a> documentation and the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>.</p>
         <p>Links inside a promotional notification may lead to content operated by a third party; I am not responsible for that content or its privacy practices.</p>
-        <p>You are in control: on Android 13 and newer the App asks your permission before it can show any notification, and you can turn notifications off — all of them, or by category — at any time in <em>Settings → Apps → Dual Play → Notifications</em>. Turning them off does not affect the games.</p>
-        <p>Separately from notifications, the App downloads a small <strong>public configuration file</strong> from <code>https://games.munna.dev</code> (this website, a static site) each time it starts. That file carries the text and image links for in-app announcements, plus the current app version used for "update available" prompts. This is a <strong>one-way download</strong>: the App sends no personal data, identifiers or usage information in the request. As with any web request, the site's static host and its content-delivery network may keep standard technical logs (such as IP address, timestamp and browser/user-agent string); those logs are handled by the hosting provider and are not used by me to identify or track you. Announcement images are cached on your device so they still display offline.</p>
+        <p>You can turn these notifications off in the same place as reminders (<em>Settings → Apps → Dual Play → Notifications</em>). Turning them off does not affect the games.</p>
+        <p>The App also downloads a small <strong>public configuration file</strong> from <code>https://games.munna.dev</code> (this website, a static site) each time it starts. That file carries the text and image links for in-app announcements, plus the current app version used for "update available" prompts. This is a <strong>one-way download</strong>: the App sends no personal data, identifiers or usage information in the request. As with any web request, the site's static host and its content-delivery network may keep standard technical logs (such as IP address, timestamp and browser/user-agent string); those logs are handled by the hosting provider and are not used by me to identify or track you. Announcement images are cached on your device so they still display offline.</p>
 
-        <h2>7. Information the App does not collect</h2>
+        <h2>9. Permissions the App asks for</h2>
+        <ul>
+          <li><strong>Internet and network state:</strong> to load ads, the configuration file and announcements, and to run local multiplayer sockets.</li>
+          <li><strong>Wi-Fi state and multicast:</strong> to find nearby players on your Wi-Fi network or hotspot.</li>
+          <li><strong>Microphone and audio settings:</strong> only for in-match voice chat, and only if you turn it on.</li>
+          <li><strong>Notifications:</strong> to show announcements and on-device reminders; you choose whether to allow it.</li>
+          <li><strong>Run at startup:</strong> so reminders you have scheduled keep working after your phone restarts.</li>
+        </ul>
+        <p>The App does not ask for contacts, photos, files, calendar, SMS or precise location.</p>
+
+        <h2>10. Links to other sites and apps</h2>
+        <p>The App's menu links to this website (including the privacy policy, terms and support pages), to the developer's social pages, and to its Google Play listing, and can open the share sheet so you can send a link to the App to a friend. Opening a link takes you to that site or app, which has its own privacy practices. Sharing sends only a link to the App — the App does not read your contacts or choose recipients.</p>
+
+        <h2>11. Information the App does not collect</h2>
         <ul>
           <li>Your name, email address, or phone number.</li>
           <li>Your contacts, photos, files, calendar, or SMS.</li>
           <li>Precise GPS location.</li>
           <li>Account credentials or payment information (the App has no accounts and no in-app purchases).</li>
+          <li>Your Google Play rating, review text or Google account.</li>
           <li>Any profile that identifies you, and no tracking of you across other apps or websites by me.</li>
         </ul>
 
-        <h2>8. How information is used</h2>
+        <h2>12. How information is used</h2>
         <ul>
           <li>To run the games, remember your preferences, and keep your local match record.</li>
           <li>To connect you to other players and enable voice chat when you start a local match.</li>
+          <li>To schedule on-device reminders and avoid repeating the same message, and to avoid asking you to rate the App too often — using only information that stays on your device.</li>
           <li>To show ads that keep the App free, including rewarded ads you opt into for a hint (via Google AdMob).</li>
           <li>To show in-app announcements and "update available" prompts (via the configuration file and Firebase Cloud Messaging).</li>
           <li>To send notifications about new games, updates, tips and occasional offers (via Firebase Cloud Messaging), if you have allowed them.</li>
         </ul>
         <p>I do not sell your information, and I do not use it for any purpose beyond those listed above.</p>
 
-        <h2>9. Data retention</h2>
-        <p>On-device data persists until you delete it, clear the App's data, or uninstall the App. Data processed by Google AdMob and Firebase Cloud Messaging is retained according to Google's own retention policies, linked above. Server logs kept by this website's static host are retained under that provider's policy.</p>
+        <h2>13. Data retention</h2>
+        <p>On-device data persists until you delete it, clear the App's data, or uninstall the App. Data processed by Google AdMob, Firebase Cloud Messaging, Google Play and the voice connection services is retained according to those providers' own policies. Server logs kept by this website's static host are retained under that provider's policy.</p>
 
-        <h2>10. Your choices</h2>
+        <h2>14. Your choices</h2>
         <ul>
-          <li><strong>Ads:</strong> reset or delete your advertising ID and opt out of ad personalisation in your device's Google settings; where a consent prompt is shown, you can decline personalised ads.</li>
-          <li><strong>Notifications:</strong> decline the notification permission when the App asks, or turn notifications off (all of them, or by category) any time in your device's notification settings for Dual Play.</li>
+          <li><strong>Ads:</strong> reset or delete your advertising ID and opt out of ad personalisation in your device's Google settings.</li>
+          <li><strong>Notifications and reminders:</strong> decline the notification permission when the App asks, or turn notifications off (all of them, or by category) any time in your device's notification settings for Dual Play.</li>
+          <li><strong>Rating requests:</strong> choose <em>Not Now</em> to be asked far less often; you are never required to rate the App.</li>
           <li><strong>Ad measurement:</strong> the App integrates no separate analytics SDK; opting out of ad personalisation in your device settings limits what Google associates with ad activity. You can also uninstall the App to stop all processing.</li>
           <li><strong>Permissions:</strong> local network and microphone access are only used for local multiplayer and voice chat; you can decline or revoke them in your device settings without affecting single-player use.</li>
           <li><strong>On-device data:</strong> clear it any time from your device's App settings.</li>
         </ul>
 
-        <h2>11. Children's privacy</h2>
-        <p>The App does not require an account and does not knowingly collect personal information from children. Advertising is configured to request non-personalised or age-appropriate ads where required by Google Play's Families policy and applicable law. If you believe a child has provided personal information through the App, contact me and I will address it.
-        <!-- TODO: confirm the app's target age band / Play "Target audience and content" answers and align this paragraph (e.g. whether the app is in the Designed for Families programme). --></p>
+        <h2>15. Children's privacy</h2>
+        <p>The App does not require an account and does not knowingly collect personal information from children. Ads are served by Google AdMob, which has its own policies for ads shown to younger users. If you believe a child has provided personal information through the App, contact me and I will address it.
+        <!-- TODO: confirm the app's target age band / Play "Target audience and content" answers and align this paragraph (e.g. whether the app is in the Designed for Families programme). Note: the app code does not currently set any child-directed / under-age-of-consent ad request flags. --></p>
 
-        <h2>12. International users</h2>
+        <h2>16. International users</h2>
         <p>The App is operated from Bangladesh. Google's advertising, analytics and messaging services process data on infrastructure located in various countries. By using the App you understand that data handled by those services may be processed outside your country of residence, subject to Google's safeguards.</p>
 
-        <h2>13. Google Play Data safety</h2>
-        <p>This policy is intended to be consistent with the App's <strong>Data safety</strong> disclosure on its Google Play listing. In summary, the data that leaves your device is limited to: device and other identifiers plus coarse, IP-derived location that Google uses to serve and measure ads (Google AdMob), and the technical identifiers Google (Firebase Cloud Messaging) needs to deliver broadcast notifications. The App does not send your on-device profile, match history or settings anywhere, and no analytics or crash-logging tool is integrated. Nothing is linked to your identity by me, and nothing is sold.</p>
+        <h2>17. Google Play Data safety</h2>
+        <p>This policy is intended to be consistent with the App's <strong>Data safety</strong> disclosure on its Google Play listing. In summary, the data that leaves your device is limited to: device and other identifiers plus coarse, IP-derived location that Google uses to serve and measure ads (Google AdMob); the technical identifiers Google (Firebase Cloud Messaging) needs to deliver broadcast notifications; and, only if you use voice chat, connection details such as your IP address that the public connection-assistance services in section 5 see. Your on-device profile, match history, settings, reminder state and rating-request state are processed on your device and are not sent anywhere, and no analytics or crash-logging tool is integrated. Nothing is linked to your identity by me, and nothing is sold.</p>
 
-        <h2>14. Changes to this policy</h2>
+        <h2>18. Changes to this policy</h2>
         <p>I may update this policy as the App changes — for example, if a feature is added or a third-party service changes. When I do, I will update the "Last updated" date above and post the new version at this URL. Material changes may also be noted in the App or its store listing.</p>
 
-        <h2>15. Contact</h2>
+        <h2>19. Contact</h2>
         <p>Questions or requests about privacy? Email <a href="mailto:hello@munna.dev?subject=Dual%20Play%20Privacy">hello@munna.dev</a> or use the <a href="/dual-play/contact/">contact page</a>.</p>
       </div>
     </div>
@@ -220,7 +255,7 @@
           </svg>
           <span class="wordmark"><b>DUAL</b>&nbsp;<span>PLAY</span></span>
         </a>
-        <p>Seven classic and original games in one app — play offline against smart bots, pass &amp; play, or pair up over Wi-Fi with voice chat.</p>
+        <p>Eight classic and original games in one app — play offline against smart bots, pass &amp; play, or pair up over Wi-Fi with voice chat.</p>
         <div class="socials">
           <a href="https://github.com/risul-islam-munna" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg></a>
           <a href="https://www.linkedin.com/in/risul-islam-munna/" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
