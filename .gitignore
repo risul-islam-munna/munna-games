@@ -4,3 +4,14 @@
 .idea/
 node_modules/
 Thumbs.db
+
+# Credentials — never commit (Push Admin uses short-lived tokens only)
+*service-account*.json
+*serviceAccount*.json
+*-firebase-adminsdk-*.json
+*.pem
+*.p8
+*.key
+.env
+.env.*
+access-token*

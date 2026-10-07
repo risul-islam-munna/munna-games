@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dual Play Push Admin</title>
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self' https://fcm.googleapis.com; base-uri 'none'; form-action 'none'">
+<meta name="theme-color" content="#0e0f13">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/push-admin/push-admin.css">
+<script type="module" src="/push-admin/app.js"></script>
+</head>
+<body>
+<main>
+  <h1>Dual Play Push Admin</h1>
+  <p class="lead">This tool does not store Firebase credentials. To send a notification, provide a temporary Google OAuth access token. An unlinked URL is not authentication — the token is the only authorization boundary.</p>
+
+  <div id="env-banner" class="env-banner prod" role="status"></div>
+
+  <div class="grid">
+  <div>
+    <section class="card" aria-labelledby="h-cred">
+      <h2 id="h-cred">1 · Credential</h2>
+      <div class="warn"><strong>Never paste a Firebase service-account private key here.</strong> Use only a short-lived OAuth access token with permission to send Firebase Cloud Messaging messages.</div>
+      <label for="project">Firebase Project ID</label>
+      <input id="project" type="text" autocomplete="off" spellcheck="false" value="dual-play-2026">
+      <label for="token">OAuth Access Token</label>
+      <div class="row">
+        <input id="token" type="password" autocomplete="off" spellcheck="false" data-lpignore="true" data-1p-ignore aria-describedby="token-hint">
+        <button type="button" id="token-show" aria-pressed="false">Show</button>
+        <button type="button" id="token-clear" class="danger">Clear Credential</button>
+      </div>
+      <p class="hint" id="token-hint">Credential stored only in this page's memory. Refreshing the page clears it.</p>
+      <p id="token-msg" class="hint" role="alert"></p>
+    </section>
+
+    <section class="card" aria-labelledby="h-env">
+      <h2 id="h-env">2 · Environment &amp; app</h2>
+      <div class="lbl" id="env-lbl">Environment (selects which hosted config is loaded)</div>
+      <div class="opts" role="radiogroup" aria-labelledby="env-lbl">
+        <label><input type="radio" name="env" value="production" checked> Production</label>
+        <label><input type="radio" name="env" value="development"> Development</label>
+      </div>
+      <p class="hint">Both environments use the same Firebase project and topics — there is no separate dev topic. Environment changes only which config is used to build and preview the message.</p>
+      <div class="lbl">App</div>
+      <div><strong>Dual Play</strong> <code>dev.munna.games.dualplay</code></div>
+      <div id="cfg-status" role="status"></div>
+      <dl class="kv" id="cfg-summary" hidden></dl>
+    </section>
+
+    <section class="card" aria-labelledby="h-msg">
+      <h2 id="h-msg">3 · Notification</h2>
+      <div class="lbl" id="type-lbl">Notification type</div>
+      <div class="opts" role="radiogroup" aria-labelledby="type-lbl">
+        <label><input type="radio" name="type" value="announcement" checked> Announcement</label>
+        <label><input type="radio" name="type" value="update"> Update</label>
+        <label><input type="radio" name="type" value="game"> Game</label>
+      </div>
+
+      <div id="f-announcement">
+        <label for="ann">Announcement (from hosted config)</label>
+        <select id="ann"></select>
+        <div id="ann-preview"></div>
+      </div>
+      <div id="f-update" hidden>
+        <div class="info">No URL is sent. The app resolves the trusted update link from the hosted config, and only shows the prompt if the installed build is older than the latest or below the minimum.</div>
+      </div>
+      <div id="f-game" hidden>
+        <label for="game">Game</label>
+        <select id="game"></select>
+      </div>
+
+      <label for="title">Title <span class="counter" id="title-count"></span></label>
+      <input id="title" type="text" maxlength="200" autocomplete="off">
+      <label for="body">Message <span class="counter" id="body-count"></span></label>
+      <textarea id="body" maxlength="500"></textarea>
+
+      <details>
+        <summary>Advanced: app-side gates</summary>
+        <div class="info">These values do not prevent Android from receiving/showing a system-tray notification. Use FCM topic/condition targeting to control actual delivery.</div>
+        <div class="row">
+          <div><label for="g-min">minBuild</label><input id="g-min" type="text" inputmode="numeric" autocomplete="off"></div>
+          <div><label for="g-max">maxBuild</label><input id="g-max" type="text" inputmode="numeric" autocomplete="off"></div>
+          <div><label for="g-reg">regions (e.g. BD,US)</label><input id="g-reg" type="text" autocomplete="off"></div>
+        </div>
+      </details>
+    </section>
+  </div>
+
+  <div>
+    <section class="card" aria-labelledby="h-aud">
+      <h2 id="h-aud">4 · Audience</h2>
+      <div class="lbl" id="aud-lbl">Audience preset</div>
+      <div class="opts" id="aud-modes" role="radiogroup" aria-labelledby="aud-lbl"></div>
+      <div id="aud-all-warn" class="warn" hidden>This can reach every subscribed Dual Play install, including older app versions.</div>
+
+      <div id="p-country" hidden>
+        <label for="c-search">Countries</label>
+        <input id="c-search" type="search" placeholder="Search country…" autocomplete="off">
+        <div class="list" id="c-list" role="group" aria-label="Countries"></div>
+        <p class="hint">Country targeting uses the device locale region. It does not represent GPS, IP, SIM or Google Play country.</p>
+      </div>
+      <div id="p-build" hidden>
+        <div class="lbl">Builds</div>
+        <div class="list" id="b-list" role="group" aria-label="Builds"></div>
+      </div>
+      <div id="p-tz" hidden>
+        <label for="tz-input">Timezone (IANA id)</label>
+        <div class="row"><input id="tz-input" type="text" list="tz-options" placeholder="Asia/Dhaka" autocomplete="off" spellcheck="false"><button type="button" id="tz-add">Add</button></div>
+        <datalist id="tz-options"></datalist>
+        <div class="chips" id="tz-chips"></div>
+        <p class="hint">Timezone targeting is not scheduling: Send Now delivers immediately to devices in that zone. Scheduled delivery requires a trusted backend/serverless scheduler.</p>
+      </div>
+      <div id="p-device" hidden>
+        <label for="dev-token">FCM registration token of a test device</label>
+        <input id="dev-token" type="password" autocomplete="off" spellcheck="false" data-lpignore="true">
+        <p class="hint">Safest first test. Debug builds log the device token (<code>[push] FCM token: …</code>). Held in memory only.</p>
+      </div>
+      <div id="p-older" hidden>
+        <div class="info" id="older-info"></div>
+      </div>
+
+      <div id="compat" class="warn" hidden></div>
+      <div id="aud-errors"></div>
+      <label for="cond">Generated target</label>
+      <input id="cond" type="text" readonly>
+    </section>
+
+    <section class="card" aria-labelledby="h-prev">
+      <h2 id="h-prev">5 · Preview</h2>
+      <div class="push" aria-label="Notification preview"><div class="app">▲ Dual Play · now</div><div class="t" id="pv-title"></div><div class="b" id="pv-body"></div></div>
+      <dl class="kv" id="pv-meta"></dl>
+      <div id="errors"></div>
+      <div class="row"><div class="lbl">HTTP v1 payload</div><button type="button" id="copy">Copy Payload</button><span id="copy-msg" class="hint" role="status"></span></div>
+      <pre id="payload" tabindex="0"></pre>
+      <p class="hint">Send Now only. Scheduled delivery requires a trusted backend/serverless scheduler.</p>
+      <div class="row">
+        <button type="button" id="dry">Dry run (validate only)</button>
+        <button type="button" id="send" class="primary">Review &amp; Send…</button>
+      </div>
+      <p class="hint">Dry run asks Firebase to validate the payload and token with <code>validate_only</code>; nothing is delivered.</p>
+      <div id="result" role="status" aria-live="polite"></div>
+    </section>
+
+    <section class="card" aria-labelledby="h-log">
+      <h2 id="h-log">Session activity</h2>
+      <p class="hint">This page only. Not an audit log; cleared on reload.</p>
+      <ul class="log" id="log"></ul>
+    </section>
+  </div>
+  </div>
+</main>
+
+<dialog id="confirm" aria-labelledby="cf-title">
+  <h2 id="cf-title"></h2>
+  <div id="cf-body"></div>
+  <div id="cf-typed" hidden>
+    <label for="cf-input">Type <strong>SEND</strong> to confirm sending to everyone</label>
+    <input id="cf-input" type="text" autocomplete="off">
+  </div>
+  <div class="row"><button type="button" id="cf-cancel">Cancel</button><button type="button" id="cf-ok" class="danger">Send Notification</button></div>
+</dialog>
+</body>
+</html>
