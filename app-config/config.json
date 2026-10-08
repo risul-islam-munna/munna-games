@@ -7,7 +7,7 @@
       "androidAppId": "dev.munna.games.dualplay",
       "iosAppId": "dev.munna.games.dualplay",
       "minSupportedBuildNumber": 1,
-      "latestBuildNumber": 9,
+      "latestBuildNumber": 10,
       "versions": {
         "1": "0.1.0",
         "3": "1.0.0",
@@ -16,7 +16,8 @@
         "6": "1.2.0",
         "7": "1.3.0",
         "8": "1.4.0",
-        "9": "1.5.0"
+        "9": "1.5.0",
+        "10": "1.6.0"
       },
       "forceUpdate": false,
       "androidUpdateUrl": "https://play.google.com/store/apps/details?id=dev.munna.games.dualplay",
