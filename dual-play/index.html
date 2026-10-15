@@ -3,27 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dual Play — Free Offline Multiplayer Board Games for Android</title>
-<meta name="description" content="Dual Play packs nine games into one Android app: Tic Tac Toe, Four in a Row, Ludo, Dots and Boxes, Bagh-Bandi, Bagh-Bandi Extended, Wall Block, Memory Match and Shape Crack. Play offline against smart bots, pass &amp; play on one phone, or pair 2–4 devices over Wi-Fi with in-match voice chat. No account, no sign-up.">
+<title>Dual Play — 10 Offline & Multiplayer Games | Play Free</title>
+<meta name="description" content="Play classic and strategy games with Dual Play. Challenge smart bots, play offline with friends, explore local Wi-Fi multiplayer, and unlock achievement ranks.">
 <link rel="canonical" href="https://games.munna.dev/dual-play/">
 <meta name="robots" content="index,follow,max-image-preview:large">
-<meta name="theme-color" content="#0e0f13">
+<meta name="theme-color" content="#090d17">
 <meta name="author" content="Md. Risul Islam Munna">
-<meta name="keywords" content="Dual Play, offline multiplayer games, Ludo app, Tic Tac Toe app, Four in a Row, Dots and Boxes, Bagh-Bandi, Bagh-Bandi Extended, Wall Block, Memory Match, memory matching game, Shape Crack, code breaking puzzle, Quoridor style game, pass and play, local Wi-Fi multiplayer, Android board games">
+<meta name="keywords" content="Dual Play, offline multiplayer games, two player games, local Wi-Fi games, classic board games, Tic Tac Toe, Ludo, Memory Match, Four in a Row, Sholo Guti, Bagh-Bandi, Color Connect, strategy games, achievement ranks, free Android games">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Dual Play">
-<meta property="og:title" content="Dual Play — Nine games. One app. No account, no clutter.">
-<meta property="og:description" content="Tic Tac Toe, Four in a Row, Ludo, Dots and Boxes, Bagh-Bandi, Bagh-Bandi Extended, Wall Block, Memory Match and Shape Crack. Play offline vs smart bots, pass &amp; play, or 2–4 players over Wi-Fi with voice chat.">
+<meta property="og:title" content="Dual Play — 10 games. Smart bots. Eight achievement ranks.">
+<meta property="og:description" content="Play classic and strategy games with Dual Play. Challenge smart bots, play offline with friends, explore local Wi-Fi multiplayer, and unlock achievement ranks.">
 <meta property="og:url" content="https://games.munna.dev/dual-play/">
 <meta property="og:image" content="https://games.munna.dev/dual-play/assets/og-cover.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Dual Play — nine classic and original games in one Android app">
+<meta property="og:image:alt" content="Dual Play — ten classic and strategy games in one app">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Dual Play — Nine games. One app.">
-<meta name="twitter:description" content="Offline board games with smart bots, pass &amp; play, and 2–4 player Wi-Fi multiplayer + voice chat. No account.">
+<meta name="twitter:title" content="Dual Play — 10 games. Smart bots. Eight achievement ranks.">
+<meta name="twitter:description" content="Offline games with smart bots, same-device play, local Wi-Fi multiplayer and achievement ranks. No account.">
 <meta name="twitter:image" content="https://games.munna.dev/dual-play/assets/og-cover.png">
 
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
@@ -33,8 +33,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap">
 <link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/dual-play/assets/landing.css">
+<link rel="preload" as="image" href="/dual-play/assets/app/home.webp" type="image/webp">
 <script>document.documentElement.classList.add('js')</script>
 <script defer src="/assets/site.js"></script>
+<script defer src="/dual-play/assets/landing.js"></script>
 
 <script type="application/ld+json">
 {
@@ -45,8 +48,10 @@
       "@id": "https://games.munna.dev/dual-play/#website",
       "url": "https://games.munna.dev/dual-play/",
       "name": "Dual Play",
-      "description": "Nine classic and original games in one offline-first Android app.",
-      "publisher": { "@id": "https://games.munna.dev/dual-play/#person" }
+      "description": "Ten classic and strategy games in one offline-first Android app, with bots, same-device play, local Wi-Fi multiplayer and achievement ranks.",
+      "publisher": {
+        "@id": "https://games.munna.dev/dual-play/#person"
+      }
     },
     {
       "@type": "Person",
@@ -65,49 +70,157 @@
       "@type": "MobileApplication",
       "@id": "https://games.munna.dev/dual-play/#app",
       "name": "Dual Play",
-      "operatingSystem": "ANDROID, iOS",
+      "operatingSystem": "ANDROID",
       "applicationCategory": "GameApplication",
-      "description": "Dual Play bundles nine games: Tic Tac Toe, Four in a Row, Ludo, Dots and Boxes, Bagh-Bandi, Bagh-Bandi Extended, Wall Block, Memory Match and Shape Crack. Every game plays offline — solo against adjustable bots (or a generated puzzle in Shape Crack), two-player pass-and-play on one device, or over local Wi-Fi (up to four players in Ludo, two in every other game) with optional in-match voice chat. No account or sign-up.",
-      "author": { "@id": "https://games.munna.dev/dual-play/#person" },
-      "publisher": { "@id": "https://games.munna.dev/dual-play/#person" },
+      "description": "Dual Play bundles ten games: Tic Tac Toe, Four in a Row, Memory Match, Ludo, Dots and Boxes, Color Connect, Wall Block, Shape Crack, Sholo Guti and Bagh-Bandi. Play offline against adjustable bots, take turns on one device, or connect over local Wi-Fi with optional voice chat. Earn a rating and progress through eight achievement ranks. No account required.",
+      "author": {
+        "@id": "https://games.munna.dev/dual-play/#person"
+      },
+      "publisher": {
+        "@id": "https://games.munna.dev/dual-play/#person"
+      },
       "image": "https://games.munna.dev/dual-play/assets/og-cover.png",
-      "screenshot": "https://games.munna.dev/dual-play/assets/og-cover.png",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      "screenshot": "https://games.munna.dev/dual-play/assets/app/home.webp",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=dev.munna.games.dualplay",
+      "installUrl": "https://play.google.com/store/apps/details?id=dev.munna.games.dualplay",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
     },
     {
       "@type": "FAQPage",
       "@id": "https://games.munna.dev/dual-play/#faq",
       "mainEntity": [
-        { "@type": "Question", "name": "Is Dual Play free?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Dual Play is free to download and play. It is supported by ads, and there is no paid account or subscription." } },
-        { "@type": "Question", "name": "Do I need an internet connection to play?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. Playing against a bot or passing one phone between two players works fully offline. Wi-Fi multiplayer needs the two-to-four devices on the same Wi-Fi network or hotspot, but no internet. An internet connection is only used to load ads and to fetch in-app announcements." } },
-        { "@type": "Question", "name": "How many players are supported?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Tic Tac Toe, Four in a Row, Dots and Boxes, Bagh-Bandi, Bagh-Bandi Extended, Wall Block, Memory Match and Shape Crack are for one or two players. Ludo supports two, three or four players, with an optional 2v2 Team Match at four. Local Wi-Fi rooms hold up to four devices." } },
-        { "@type": "Question", "name": "Is there voice chat?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. During a Wi-Fi match you can turn on in-match voice chat. It runs directly between the devices on your Wi-Fi, the microphone starts muted, and nothing is recorded." } },
-        { "@type": "Question", "name": "Does Dual Play collect my data?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Your game profile, settings, match history and the small bits of state behind reminders and the occasional rating request stay on your device. The app shows ads through Google AdMob and uses Google Firebase Cloud Messaging for broadcast announcements. It does not use a separate analytics or crash-reporting service. Full details are in the Privacy Policy." } },
-        { "@type": "Question", "name": "Does the app send notifications?",
-          "acceptedAnswer": { "@type": "Answer", "text": "It can. There are two kinds. Occasional broadcast messages about new games, updates, gameplay tips and the odd offer: the same message goes to every device with notifications on, nothing is targeted to you, and no messaging token is collected. And, if you allow notifications, friendly reminders that the app schedules on your own phone when you haven't opened it for a while — no server and no account are involved, and the information behind them stays on your device. On Android 13 and newer the app asks permission first, and you can turn notifications off any time in your phone settings for Dual Play without affecting the games." } },
-        { "@type": "Question", "name": "Can I play Dual Play in my browser?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Open the browser version at games.munna.dev/dual-play/play/ and play instantly with no install or account. It covers solo play against bots and pass-and-play on one screen. Local Wi-Fi multiplayer and in-match voice chat need the Android app." } },
-        { "@type": "Question", "name": "Does Wi-Fi play use my mobile data?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. Wi-Fi multiplayer moves travel directly between devices on the same local network, and voice chat normally does too (it may briefly use a public connection-assistance service to set up on some hotspots). Ads use a data connection." } }
+        {
+          "@type": "Question",
+          "name": "How many games are available in Dual Play?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ten: Tic Tac Toe, Four in a Row, Memory Match, Ludo, Dots and Boxes, Color Connect, Wall Block, Shape Crack, Sholo Guti and Bagh-Bandi. The Android app has all ten. The browser version currently covers nine of them — Color Connect is in the Android app."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Dual Play free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — free to download and play. It is supported by ads. There is no paid account, no subscription and no premium games locked away."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I play without an internet connection?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Playing against a bot or passing one phone between two players works fully offline. Wi-Fi multiplayer needs the devices on the same Wi-Fi network or hotspot, but still no internet connection. Internet is only used to load ads and to fetch in-app announcements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I play with friends on the same device?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Every game has a same-device mode where players take turns on one screen. In Color Connect, one player builds a puzzle and hands the phone over for the other to solve."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does local Wi-Fi multiplayer work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Put the devices on the same Wi-Fi network or a phone hotspot. One player hosts a game, the others open the same game and see the host in a list, then tap to join. Ludo rooms hold up to four devices; every other game is two players. Wi-Fi multiplayer is in the Android app."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Dual Play support voice chat?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, in supported Wi-Fi matches on the Android app. Voice runs directly between the devices on your network, the microphone starts muted and audio is never recorded or stored. On some hotspots the connection may briefly use a public connection-assistance service to get started. Color Connect Wi-Fi games do not have voice chat."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are Achievement Ranks?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Eight ranks — Rookie, Explorer, Challenger, Skilled Player, Expert, Master, Champion and Legend — that reflect your overall rating from 0 to 100. Higher ranks also ask you to explore more of the games, so progress comes from variety as well as wins."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I improve my rating?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Win matches against the bots, try harder difficulty levels (they are worth more) and play more of the games in the collection. Only matches against bots and puzzle solves count toward your rating; Wi-Fi and same-device matches are for fun and do not change it. Ranks follow your current performance, so they can move down as well as up."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I share my achievements?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. From the Achievement & Performance screen you can create a shareable card showing your rank, rating and key stats, then send it through any app on your phone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is an account required?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. There is nothing to sign up for. Your profile, settings, ratings and match history are stored on your device."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I play in my browser?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — open the browser version and play instantly, no install. It covers solo play against bots and pass-and-play for nine of the ten games. Wi-Fi multiplayer, voice chat, Color Connect, achievement ranks and performance tracking are in the Android app."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which platforms are supported?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dual Play is available for Android on Google Play, and you can play the browser version on any modern desktop or mobile browser. There is no iPhone or iPad release at the moment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Dual Play collect personal information?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your game profile, settings, match history and rating stay on your device. The app shows ads through Google AdMob and uses Firebase Cloud Messaging for broadcast announcements; it does not include a separate analytics or crash-reporting service. Full details are in the Privacy Policy."
+          }
+        }
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://games.munna.dev/" },
-        { "@type": "ListItem", "position": 2, "name": "Dual Play", "item": "https://games.munna.dev/dual-play/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://games.munna.dev/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Dual Play",
+          "item": "https://games.munna.dev/dual-play/"
+        }
       ]
     }
   ]
 }
 </script>
 </head>
-<body>
+<body class="dp">
 <a class="skip-link" href="#main">Skip to content</a>
 
 <header class="site-header">
@@ -135,6 +248,7 @@
 
     <nav class="nav" id="primary-nav" aria-label="Primary">
       <a href="/dual-play/#games">Games</a>
+      <a href="/dual-play/#ranks">Ranks</a>
       <a href="/dual-play/#features">Features</a>
       <a href="/dual-play/#how">Wi-Fi play</a>
       <a href="/dual-play/about/">About</a>
@@ -148,23 +262,17 @@
 <main id="main">
 
   <!-- HERO -->
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <p class="eyebrow">Nine games · one small app</p>
-        <h1>Classic games. <span class="grad">Real opponents.</span> Zero setup.</h1>
-        <p class="lede">Dual Play is Tic&nbsp;Tac&nbsp;Toe, Four&nbsp;in&nbsp;a&nbsp;Row, Ludo, Dots&nbsp;and&nbsp;Boxes, Bagh-Bandi, Bagh-Bandi Extended, Wall Block, Memory Match and Shape Crack in one download. Play offline against bots that actually think, pass the phone to a friend, or pair 2–4 devices over Wi-Fi and talk while you play. No account. No feed. No clutter.</p>
+  <section class="dp-hero">
+    <div class="wrap dp-hero-grid">
+      <div class="dp-hero-copy">
+        <p class="eyebrow">10 games. One epic playground.</p>
+        <h1>Classic Games. <span class="grad">Smarter Challenges.</span> More Ways to Win.</h1>
+        <p class="dp-hero-sub">Play Solo. Challenge Friends. Climb the Ranks.</p>
+        <p class="lede">Discover 10 classic and strategy games in one place. Challenge smart bots, play with friends on the same device, or connect over local Wi-Fi. Earn rating points, unlock achievement ranks, and share your gaming progress.</p>
         <div class="btn-row">
-          <a class="btn btn-primary btn-play" href="/dual-play/play/"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>Play now in your browser</a>
-          <a class="store-badge" href="https://play.google.com/store/apps/details?id=dev.munna.games.dualplay" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d9ff" d="M3.6 2.1 13 11.5 3.9 20.6a1.7 1.7 0 0 1-.3-1V3a1.7 1.7 0 0 1 0-.9z"/><path fill="#00f076" d="M14.1 12.6 4.6 22a1.6 1.6 0 0 0 1.7 0l11.2-6.4z"/><path fill="#ffd800" d="M20.9 10.7 17.5 8.8l-3.6 3.6 3.6 3.6 3.4-2a1.7 1.7 0 0 0 0-3.3z"/><path fill="#ff3a44" d="M4.6 2 14.1 11.4l3.4-3.4L6.3 1.6a1.6 1.6 0 0 0-1.7.4z"/></svg>
-            <span><span class="sb-top">Get it on</span><span class="sb-main">Google Play</span></span>
-          </a>
-          <button class="store-badge" type="button" data-open-ios aria-haspopup="dialog" aria-controls="ios-dialog">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M16.37 1.43c0 1.13-.46 2.22-1.22 3.01-.81.86-2.15 1.53-3.27 1.44-.13-1.09.43-2.24 1.15-2.99.81-.85 2.24-1.49 3.34-1.46zM20.9 17.14c-.55 1.27-.81 1.83-1.52 2.95-1 1.56-2.4 3.52-4.14 3.53-1.55.02-1.95-1.01-4.05-1s-2.53 1.02-4.09 1c-1.74-.03-3.06-1.79-4.06-3.35-2.8-4.42-3.09-9.6-1.37-12.36 1.22-1.96 3.15-3.11 4.96-3.11 1.85 0 3.01 1.02 4.53 1.02 1.48 0 2.38-1.02 4.52-1.02 1.61 0 3.32.88 4.54 2.4-3.99 2.19-3.34 7.88.15 9.95z"/></svg>
-            <span><span class="sb-top">Also on</span><span class="sb-main">iPhone &amp; iPad</span></span>
-          </button>
-          <a class="btn btn-ghost" href="#games">Explore the games</a>
+          <a class="btn btn-primary btn-play" href="/dual-play/play/"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>Play Now — Free</a>
+          <a class="store-badge" href="https://play.google.com/store/apps/details?id=dev.munna.games.dualplay" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d9ff" d="M3.6 2.1 13 11.5 3.9 20.6a1.7 1.7 0 0 1-.3-1V3a1.7 1.7 0 0 1 0-.9z"/><path fill="#00f076" d="M14.1 12.6 4.6 22a1.6 1.6 0 0 0 1.7 0l11.2-6.4z"/><path fill="#ffd800" d="M20.9 10.7 17.5 8.8l-3.6 3.6 3.6 3.6 3.4-2a1.7 1.7 0 0 0 0-3.3z"/><path fill="#ff3a44" d="M4.6 2 14.1 11.4l3.4-3.4L6.3 1.6a1.6 1.6 0 0 0-1.7.4z"/></svg><span><span class="sb-top">Get it on</span><span class="sb-main">Google Play</span></span></a>
+          <a class="btn btn-ghost" href="#games">Explore All Games</a>
         </div>
         <ul class="chips">
           <li><b>No</b>&nbsp;sign-up</li>
@@ -172,423 +280,482 @@
           <li>Light &amp; <b>dark</b></li>
           <li><b>Free</b></li>
         </ul>
-        <p class="web-note">Play instantly in your browser — no installation required. Wi-Fi multiplayer and voice chat are available in the Android app only.</p>
+        <p class="web-note">Play instantly in your browser — nine games, bots and pass &amp; play. Wi-Fi multiplayer, voice chat, Color Connect and achievement ranks are in the Android app.</p>
       </div>
 
-      <div class="phone-wrap" aria-hidden="true">
-        <div class="phone">
-          <div class="phone-screen">
-            <div class="pm-word">DUAL <span>PLAY</span></div>
-            <div class="pm-hello">
-              <span class="pm-ring">M</span>
-              <span>Hi, Munna<small>Guest · no account</small></span>
-            </div>
-            <div class="pm-banner">Grab a friend — pass &amp; play or pair over Wi-Fi</div>
-            <div class="pm-label">Choose a game</div>
-            <div class="pm-board">
-              <div class="pm-tiles">
-                <div class="pm-tile"><b>Tic Tac Toe</b>9 levels</div>
-                <div class="pm-tile"><b>Four in a Row</b>5 board sizes</div>
-                <div class="pm-tile"><b>Ludo</b>2–4 players</div>
-                <div class="pm-tile"><b>Dots &amp; Boxes</b>3 board sizes</div>
-                <div class="pm-tile"><b>Bagh-Bandi</b>Tiger vs 7</div>
-                <div class="pm-tile"><b>Bagh-Bandi Extended</b>16 vs 16</div>
-                <div class="pm-tile"><b>Wall Block</b>Race &amp; block</div>
-                <div class="pm-tile"><b>Memory Match</b>20 levels</div>
-                <div class="pm-tile"><b>Shape Crack</b>Crack the code</div>
-              </div>
-            </div>
-          </div>
+      <div class="dp-hero-visual">
+        <div class="dp-phone-glow" aria-hidden="true"></div>
+        <figure class="dp-phone">
+          <img src="/dual-play/assets/app/home.webp" width="560" height="1156" alt="The Dual Play home screen: a rating card showing the Explorer rank above a grid of game cards with artwork for Tic Tac Toe, Four in a Row, Memory Match and Ludo" fetchpriority="high" decoding="async">
+        </figure>
+        <div class="dp-float dp-float-ttt" aria-hidden="true"><img class="" src="/dual-play/assets/games/tic-tac-toe.webp" width="96" height="96" alt="Tic Tac Toe artwork from the Dual Play app" decoding="async"><span>Tic Tac Toe</span></div>
+        <div class="dp-float dp-float-ludo" aria-hidden="true"><img class="" src="/dual-play/assets/games/ludo.webp" width="96" height="96" alt="Ludo artwork from the Dual Play app" decoding="async"><span>Ludo · 2–4</span></div>
+        <div class="dp-float dp-float-rank" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg>
+          <span><b>Legend</b><small>Rank 8 of 8</small></span>
+        </div>
+        <div class="dp-float dp-float-rating" aria-hidden="true">
+          <span class="dp-ring"><b>13</b></span>
+          <span><b>Explorer</b><small>Next: Challenger</small></span>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- FEATURED GAMES -->
+  <section class="dp-section dp-featured" id="featured">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Your next favorite game</p>
+        <h2>One App. Endless Friendly Rivalries.</h2>
+        <p class="lede">From quick-thinking puzzles to timeless board-game battles, Dual Play brings your favorite challenges together.</p>
+      </div>
+      <ul class="dp-featured-grid">
+        <li class="reveal"><a class="dp-feat-card" href="#game-tic-tac-toe" style="--ga:True">
+          <img class="dp-art" src="/dual-play/assets/games/tic-tac-toe.webp" width="420" height="420" alt="Tic Tac Toe artwork from the Dual Play app" loading="lazy" decoding="async">
+          <span class="dp-feat-name">Tic Tac Toe</span>
+          <span class="dp-feat-line">9 levels · Infinity mode</span>
+        </a></li>
+        <li class="reveal"><a class="dp-feat-card" href="#game-ludo" style="--ga:True">
+          <img class="dp-art" src="/dual-play/assets/games/ludo.webp" width="420" height="420" alt="Ludo artwork from the Dual Play app" loading="lazy" decoding="async">
+          <span class="dp-feat-name">Ludo</span>
+          <span class="dp-feat-line">2–4 players · Team Match</span>
+        </a></li>
+        <li class="reveal"><a class="dp-feat-card" href="#game-memory-match" style="--ga:True">
+          <img class="dp-art" src="/dual-play/assets/games/memory-match.webp" width="420" height="420" alt="Memory Match artwork from the Dual Play app" loading="lazy" decoding="async">
+          <span class="dp-feat-name">Memory Match</span>
+          <span class="dp-feat-line">20 levels · memory duels</span>
+        </a></li>
+        <li class="reveal"><a class="dp-feat-card" href="#game-four-in-a-row" style="--ga:True">
+          <img class="dp-art" src="/dual-play/assets/games/four-in-a-row.webp" width="420" height="420" alt="Four in a Row artwork from the Dual Play app" loading="lazy" decoding="async">
+          <span class="dp-feat-name">Four in a Row</span>
+          <span class="dp-feat-line">5 board sizes · smart bots</span>
+        </a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENT & RANK GALLERY -->
+  <section class="dp-section dp-ranks" id="ranks" aria-labelledby="ranks-title">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Your journey to greatness</p>
+        <h2 id="ranks-title">Play. Earn Points. Rise Through the Ranks.</h2>
+        <p class="lede">Every match is part of your journey. Track your gaming performance, earn rating points, unlock new achievement ranks, and share your progress with friends.</p>
+        <p class="dp-ranks-sub">From Rookie to Legend, discover eight distinctive achievement ranks designed to celebrate your progress.</p>
+      </div>
+    </div>
+
+    <div class="dp-carousel" role="region" aria-roledescription="carousel" aria-label="Achievement ranks, Rookie to Legend">
+      <div class="dp-carousel-bar wrap">
+        <p class="dp-carousel-status" id="rank-status" aria-live="polite">Rank 1 of 8 · Rookie</p>
+        <div class="dp-carousel-ctrls">
+          <button type="button" class="dp-ctrl" data-rank-prev aria-label="Previous rank"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button type="button" class="dp-ctrl" data-rank-next aria-label="Next rank"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+      </div>
+      <div class="dp-viewport" id="rank-viewport" tabindex="0" aria-label="Rank cards. Use the left and right arrow keys to move between ranks.">
+        <ol class="dp-track">
+          <li class="dp-slide" data-index="0" data-key="rookie">
+            <button type="button" class="dp-rank-card" data-open-rank="0" aria-label="Rookie, rank 1 of 8. Sample card, rating 0 out of 100. Open larger preview.">
+              <img src="/dual-play/assets/ranks/rookie-480.webp" width="480" height="727" alt="Sample Dual Play achievement card for the Rookie rank, showing a rating of 0 out of 100, 0 matches, 0 wins and 0 of 10 games explored" decoding="async">
+            </button>
+            <p class="dp-rank-label"><span class="dp-rank-no">1</span> Rookie</p>
+          </li>
+          <li class="dp-slide" data-index="1" data-key="explorer">
+            <button type="button" class="dp-rank-card" data-open-rank="1" aria-label="Explorer, rank 2 of 8. Sample card, rating 13 out of 100. Open larger preview.">
+              <img src="/dual-play/assets/ranks/explorer-480.webp" width="480" height="727" alt="Sample Dual Play achievement card for the Explorer rank, showing a rating of 13 out of 100, 12 matches, 5 wins and 6 of 10 games explored" decoding="async">
+            </button>
+            <p class="dp-rank-label"><span class="dp-rank-no">2</span> Explorer</p>
+          </li>
+          <li class="dp-slide" data-index="2" data-key="challenger">
+            <button type="button" class="dp-rank-card" data-open-rank="2" aria-label="Challenger, rank 3 of 8. Sample card, rating 25 out of 100. Open larger preview.">
+              <img src="/dual-play/assets/ranks/challenger-480.webp" width="480" height="727" alt="Sample Dual Play achievement card for the Challenger rank, showing a rating of 25 out of 100, 30 matches, 14 wins and 7 of 10 games explored" decoding="async">
+            </button>
+            <p class="dp-rank-label"><span class="dp-rank-no">3</span> Challenger</p>
+          </li>
+          <li class="dp-slide" data-index="3" data-key="skilled-player">
+            <button type="button" class="dp-rank-card" data-open-rank="3" aria-label="Skilled Player, rank 4 of 8. Sample card, rating 40 out of 100. Open larger preview.">
+              <img src="/dual-play/assets/ranks/skilled-player-480.webp" width="480" height="727" alt="Sample Dual Play achievement card for the Skilled Player rank, showing a rating of 40 out of 100, 65 matches, 35 wins and 8 of 10 games explored" loading="lazy" decoding="async">
+            </button>
+            <p class="dp-rank-label"><span class="dp-rank-no">4</span> Skilled Player</p>
+          </li>
+          <li class="dp-slide" data-index="4" data-key="expert">
+            <button type="button" class="dp-rank-card" data-open-rank="4" aria-label="Expert, rank 5 of 8. Sample card, rating 55 out of 100. Open larger preview.">
+              <img src="/dual-play/assets/ranks/expert-480.webp" width="480" height="727" alt="Sample Dual Play achievement card for the Expert rank, showing a rating of 55 out of 100, 110 matches, 68 wins and 10 of 10 games explored" loading="lazy" decoding="async">
+            </button>
+            <p class="dp-rank-label"><span class="dp-rank-no">5</span> Expert</p>
+          </li>
+          <li class="dp-slide" data-index="5" data-key="master">
+            <button type="button" class="dp-rank-card" data-open-rank="5" aria-label="Master, rank 6 of 8. Sample card, rating 70 out of 100. Open larger preview.">
+              <img src="/dual-play/assets/ranks/master-480.webp" width="480" height="727" alt="Sample Dual Play achievement card for the Master rank, showing a rating of 70 out of 100, 180 matches, 125 wins and 10 of 10 games explored" loading="lazy" decoding="async">
+            </button>
+            <p class="dp-rank-label"><span class="dp-rank-no">6</span> Master</p>
+          </li>
+          <li class="dp-slide" data-index="6" data-key="champion">
+            <button type="button" class="dp-rank-card" data-open-rank="6" aria-label="Champion, rank 7 of 8. Sample card, rating 85 out of 100. Open larger preview.">
+              <img src="/dual-play/assets/ranks/champion-480.webp" width="480" height="727" alt="Sample Dual Play achievement card for the Champion rank, showing a rating of 85 out of 100, 300 matches, 225 wins and 10 of 10 games explored" loading="lazy" decoding="async">
+            </button>
+            <p class="dp-rank-label"><span class="dp-rank-no">7</span> Champion</p>
+          </li>
+          <li class="dp-slide" data-index="7" data-key="legend">
+            <button type="button" class="dp-rank-card" data-open-rank="7" aria-label="Legend, rank 8 of 8. Sample card, rating 95 out of 100. Open larger preview.">
+              <img src="/dual-play/assets/ranks/legend-480.webp" width="480" height="727" alt="Sample Dual Play achievement card for the Legend rank, showing a rating of 95 out of 100, 500 matches, 400 wins and 10 of 10 games explored" loading="lazy" decoding="async">
+            </button>
+            <p class="dp-rank-label"><span class="dp-rank-no">8</span> Legend</p>
+          </li>
+        </ol>
+      </div>
+      <p class="dp-sample-note wrap">Sample achievement previews rendered by the real app with illustrative statistics — not real players. Tap a card to enlarge it.</p>
+    </div>
+
+    <div class="wrap">
+      <div class="dp-cta-line reveal">
+        <a class="btn btn-primary" href="#performance">Discover the Ranking System</a>
+      </div>
+    </div>
+  </section>
+
+  <dialog id="rank-dialog" class="dp-dialog" aria-labelledby="rank-dialog-title">
+    <div class="dp-dialog-panel">
+      <button class="dp-dialog-close" type="button" data-rank-close aria-label="Close preview">&times;</button>
+      <div class="dp-dialog-body">
+        <img id="rank-dialog-img" src="" alt="" width="1080" height="1635">
+        <div class="dp-dialog-text">
+          <p class="eyebrow" id="rank-dialog-count">Rank 1 of 8</p>
+          <h3 id="rank-dialog-title">Rookie</h3>
+          <p id="rank-dialog-desc"></p>
+          <p class="dp-dialog-sample" id="rank-dialog-sample"></p>
+          <div class="dp-dialog-nav">
+            <button type="button" class="btn btn-ghost" data-rank-dprev>&larr; Previous</button>
+            <button type="button" class="btn btn-ghost" data-rank-dnext>Next &rarr;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
 
   <!-- GAMES -->
-  <section class="section" id="games">
+  <section class="dp-section" id="games">
     <div class="wrap">
       <div class="section-head reveal">
-        <p class="eyebrow">The line-up</p>
-        <h2>Nine games worth keeping on your phone</h2>
-        <p class="lede">Each one is the full game — not a demo. Every title plays solo (against adjustable bots, or a generated puzzle in Shape Crack), two-player on a single device, or over local Wi-Fi.</p>
+        <p class="eyebrow">The full line-up</p>
+        <h2>10 Games. Countless Ways to Play.</h2>
+        <p class="lede">Explore timeless classics, strategic board games, memory challenges, and clever puzzles — all designed for quick fun and competitive play.</p>
+      </div>
+      <div class="dp-games-grid">
+        <article class="dp-game reveal" id="game-tic-tac-toe" style="--ga:#9875e8">
+          <img class="dp-game-art" src="/dual-play/assets/games/tic-tac-toe.webp" width="420" height="420" alt="Tic Tac Toe artwork from the Dual Play app" loading="lazy" decoding="async">
+          <div class="dp-game-body">
+            <h3>Tic Tac Toe</h3>
+            <p class="dp-game-line">Beyond the classic 3×3: nine levels climb to an 11×11 board, each with its own named challenger.</p>
+            <ul class="dp-game-hl"><li>9 levels, 3×3 up to 11×11</li><li>Infinity mode: your oldest mark vanishes</li><li>Top bot is perfect minimax</li></ul>
+            <dl class="dp-game-meta">
+              <div><dt>Players</dt><dd>1–2 players</dd></div>
+              <div><dt>Modes</dt><dd>vs Bot · Pass &amp; play · Wi-Fi</dd></div>
+            </dl>
+            <a class="btn btn-ghost dp-game-cta" href="/dual-play/play/"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>Play in browser</a>
+          </div>
+        </article>
+        <article class="dp-game reveal" id="game-four-in-a-row" style="--ga:#438cff">
+          <img class="dp-game-art" src="/dual-play/assets/games/four-in-a-row.webp" width="420" height="420" alt="Four in a Row artwork from the Dual Play app" loading="lazy" decoding="async">
+          <div class="dp-game-body">
+            <h3>Four in a Row</h3>
+            <p class="dp-game-line">Drop your discs, plan ahead and connect four before your opponent does.</p>
+            <ul class="dp-game-hl"><li>5 board sizes, 6×5 up to 10×9</li><li>Easy, Medium and Hard bots</li><li>Hard looks several moves ahead</li></ul>
+            <dl class="dp-game-meta">
+              <div><dt>Players</dt><dd>1–2 players</dd></div>
+              <div><dt>Modes</dt><dd>vs Bot · Pass &amp; play · Wi-Fi</dd></div>
+            </dl>
+            <a class="btn btn-ghost dp-game-cta" href="/dual-play/play/"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>Play in browser</a>
+          </div>
+        </article>
+        <article class="dp-game reveal" id="game-memory-match" style="--ga:#e7b33e">
+          <img class="dp-game-art" src="/dual-play/assets/games/memory-match.webp" width="420" height="420" alt="Memory Match artwork from the Dual Play app" loading="lazy" decoding="async">
+          <div class="dp-game-body">
+            <h3>Memory Match</h3>
+            <p class="dp-game-line">Flip cards, remember what was revealed and collect matching pairs before your rival.</p>
+            <ul class="dp-game-hl"><li>20 levels, 2×2 up to 8×10</li><li>A match earns another turn</li><li>Bots only remember cards they have seen</li></ul>
+            <dl class="dp-game-meta">
+              <div><dt>Players</dt><dd>1–2 players</dd></div>
+              <div><dt>Modes</dt><dd>vs Bot · Pass &amp; play · Wi-Fi</dd></div>
+            </dl>
+            <a class="btn btn-ghost dp-game-cta" href="/dual-play/play/"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>Play in browser</a>
+          </div>
+        </article>
+        <article class="dp-game reveal" id="game-ludo" style="--ga:#34b27a">
+          <img class="dp-game-art" src="/dual-play/assets/games/ludo.webp" width="420" height="420" alt="Ludo artwork from the Dual Play app" loading="lazy" decoding="async">
+          <div class="dp-game-body">
+            <h3>Ludo</h3>
+            <p class="dp-game-line">Roll the dice and race your tokens home — alone, with friends or in a 2v2 Team Match.</p>
+            <ul class="dp-game-hl"><li>2–4 players, Team Match 2v2</li><li>House-rule toggles for sixes and exact finishes</li><li>Rookie, Scrapper and Tactician bots</li></ul>
+            <dl class="dp-game-meta">
+              <div><dt>Players</dt><dd>2–4 players</dd></div>
+              <div><dt>Modes</dt><dd>vs Bot · Pass &amp; play · Wi-Fi</dd></div>
+            </dl>
+            <a class="btn btn-ghost dp-game-cta" href="/dual-play/play/"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>Play in browser</a>
+          </div>
+        </article>
+        <article class="dp-game reveal" id="game-dots-and-boxes" style="--ga:#21b5a5">
+          <img class="dp-game-art" src="/dual-play/assets/games/dots-and-boxes.webp" width="420" height="420" alt="Dots and Boxes artwork from the Dual Play app" loading="lazy" decoding="async">
+          <div class="dp-game-body">
+            <h3>Dots and Boxes</h3>
+            <p class="dp-game-line">Connect the dots, claim boxes and outsmart your opponent one clever line at a time.</p>
+            <ul class="dp-game-hl"><li>3 board sizes: 3×3, 4×4, 6×6</li><li>Go again when you close a box</li><li>Master bot counts chains and double-crosses</li></ul>
+            <dl class="dp-game-meta">
+              <div><dt>Players</dt><dd>1–2 players</dd></div>
+              <div><dt>Modes</dt><dd>vs Bot · Pass &amp; play · Wi-Fi</dd></div>
+            </dl>
+            <a class="btn btn-ghost dp-game-cta" href="/dual-play/play/"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>Play in browser</a>
+          </div>
+        </article>
+        <article class="dp-game reveal" id="game-color-connect" style="--ga:#e5604f">
+          <img class="dp-game-art" src="/dual-play/assets/games/color-connect.webp" width="420" height="420" alt="Color Connect artwork from the Dual Play app" loading="lazy" decoding="async">
+          <div class="dp-game-body">
+            <h3>Color Connect</h3>
+            <p class="dp-game-line">Join matching colours with clever paths — solve a 50-level campaign or set a puzzle for a friend.</p>
+            <ul class="dp-game-hl"><li>50-level campaign plus Random puzzles</li><li>Build a custom puzzle and challenge a friend</li><li>Colour-blind friendly endpoint markers</li></ul>
+            <dl class="dp-game-meta">
+              <div><dt>Players</dt><dd>1–2 players</dd></div>
+              <div><dt>Modes</dt><dd>Solo · Friends · Wi-Fi</dd></div>
+            </dl>
+            <a class="btn btn-ghost dp-game-cta" href="https://play.google.com/store/apps/details?id=dev.munna.games.dualplay" target="_blank" rel="noopener">Get it on Google Play</a>
+          </div>
+        </article>
+        <article class="dp-game reveal" id="game-wall-block" style="--ga:#df5a9b">
+          <img class="dp-game-art" src="/dual-play/assets/games/wall-block.webp" width="420" height="420" alt="Wall Block artwork from the Dual Play app" loading="lazy" decoding="async">
+          <div class="dp-game-body">
+            <h3>Wall Block</h3>
+            <p class="dp-game-line">Race to the far edge while placing walls to slow your rival down.</p>
+            <ul class="dp-game-hl"><li>9×9 board, 10 walls each</li><li>A wall can never seal off every route</li><li>Easy, Medium and Hard bots</li></ul>
+            <dl class="dp-game-meta">
+              <div><dt>Players</dt><dd>1–2 players</dd></div>
+              <div><dt>Modes</dt><dd>vs Bot · Pass &amp; play · Wi-Fi</dd></div>
+            </dl>
+            <a class="btn btn-ghost dp-game-cta" href="/dual-play/play/"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>Play in browser</a>
+          </div>
+        </article>
+        <article class="dp-game reveal" id="game-shape-crack" style="--ga:#7d8dff">
+          <img class="dp-game-art" src="/dual-play/assets/games/shape-crack.webp" width="420" height="420" alt="Shape Crack artwork from the Dual Play app" loading="lazy" decoding="async">
+          <div class="dp-game-body">
+            <h3>Shape Crack</h3>
+            <p class="dp-game-line">Break the hidden shape code using logic, clues and deduction.</p>
+            <ul class="dp-game-hl"><li>Pick Easy, Medium or Hard</li><li>Two clues per guess</li><li>Over Wi-Fi each code stays private</li></ul>
+            <dl class="dp-game-meta">
+              <div><dt>Players</dt><dd>1–2 players</dd></div>
+              <div><dt>Modes</dt><dd>vs Puzzle · Pass &amp; play · Wi-Fi</dd></div>
+            </dl>
+            <a class="btn btn-ghost dp-game-cta" href="/dual-play/play/"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>Play in browser</a>
+          </div>
+        </article>
+        <article class="dp-game reveal" id="game-sholo-guti" style="--ga:#e9a15b">
+          <img class="dp-game-art" src="/dual-play/assets/games/sholo-guti.webp" width="420" height="420" alt="Sholo Guti artwork from the Dual Play app" loading="lazy" decoding="async">
+          <div class="dp-game-body">
+            <h3>Sholo Guti</h3>
+            <p class="dp-game-line">A traditional strategy game: two armies of 16 on a 42-point board where every jump can turn the game.</p>
+            <ul class="dp-game-hl"><li>16 vs 16 on a 42-point board</li><li>Step to an empty point or jump to capture</li><li>Optional Multi-Capture house rule</li></ul>
+            <dl class="dp-game-meta">
+              <div><dt>Players</dt><dd>1–2 players</dd></div>
+              <div><dt>Modes</dt><dd>vs Bot · Pass &amp; play · Wi-Fi</dd></div>
+            </dl>
+            <a class="btn btn-ghost dp-game-cta" href="/dual-play/play/"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>Play in browser</a>
+          </div>
+        </article>
+        <article class="dp-game reveal" id="game-bagh-bandi" style="--ga:#e8794f">
+          <img class="dp-game-art" src="/dual-play/assets/games/bagh-bandi.webp" width="420" height="420" alt="Bagh-Bandi artwork from the Dual Play app" loading="lazy" decoding="async">
+          <div class="dp-game-body">
+            <h3>Bagh-Bandi</h3>
+            <p class="dp-game-line">Take the Tiger or the Soldiers in a traditional hunt on a 13-point hourglass board.</p>
+            <ul class="dp-game-hl"><li>Tiger vs 7 Soldiers</li><li>Wildly different from each side</li><li>Hard bot runs alpha-beta minimax</li></ul>
+            <dl class="dp-game-meta">
+              <div><dt>Players</dt><dd>1–2 players</dd></div>
+              <div><dt>Modes</dt><dd>vs Bot · Pass &amp; play · Wi-Fi</dd></div>
+            </dl>
+            <a class="btn btn-ghost dp-game-cta" href="/dual-play/play/"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>Play in browser</a>
+          </div>
+        </article>
+      </div>
+      <p class="dp-games-note reveal">Browser play covers nine games (everything except Color Connect). Wi-Fi multiplayer and voice chat need the Android app.</p>
+    </div>
+  </section>
+
+  <!-- PERFORMANCE -->
+  <section class="dp-section dp-perf" id="performance">
+    <div class="wrap dp-perf-grid">
+      <div class="dp-perf-copy reveal">
+        <p class="eyebrow">Player performance</p>
+        <h2>Every Match Tells Your Story.</h2>
+        <p class="lede">Follow your progress, improve your rating, discover new games, and see how far your skills can take you.</p>
+        <ul class="dp-metrics">
+          <li><b>Rating score</b><span>Your overall standing from 0 to 100, averaged across all ten games.</span></li>
+          <li><b>Current rank</b><span>One of eight ranks, based on your rating and the games you have explored.</span></li>
+          <li><b>Matches played &amp; won</b><span>Your rated matches against bots and how many you won.</span></li>
+          <li><b>Games explored</b><span>How many of the ten games you have played against a bot.</span></li>
+          <li><b>Best rating</b><span>The highest rating you have ever reached — it only goes up.</span></li>
+          <li><b>Rank progress</b><span>How close you are to the next rank, and what is still missing.</span></li>
+        </ul>
       </div>
 
-      <div class="games-grid">
-
-        <article class="game-card reveal" style="--ga: var(--ttt);">
-          <div class="gc-head">
-            <div class="game-preview">
-              <svg viewBox="0 0 64 64" fill="none" stroke-linecap="round" aria-hidden="true">
-                <g stroke="currentColor" stroke-width="2" opacity="0.3" color="#7d52d1">
-                  <line x1="24" y1="9" x2="24" y2="55"/><line x1="40" y1="9" x2="40" y2="55"/>
-                  <line x1="9" y1="24" x2="55" y2="24"/><line x1="9" y1="40" x2="55" y2="40"/>
-                </g>
-                <g stroke="#8ec2ff" stroke-width="3.6">
-                  <line class="gp-stroke" pathLength="1" x1="13" y1="13" x2="21" y2="21"/>
-                  <line class="gp-stroke s2" pathLength="1" x1="21" y1="13" x2="13" y2="21"/>
-                </g>
-                <circle class="gp-stroke s3" pathLength="1" cx="48" cy="32" r="7" stroke="#c084fc" stroke-width="3.6"/>
-                <line class="gp-win" pathLength="1" x1="10" y1="49" x2="54" y2="49" stroke="#2d9c68" stroke-width="3.6"/>
-              </svg>
-            </div>
-            <div>
-              <h3>Tic Tac Toe</h3>
-              <p class="gc-tag">9 levels · up to 11×11 · Infinity mode</p>
-            </div>
+      <div class="dp-dash reveal" role="img" aria-label="Sample performance dashboard: Explorer rank, rating 13 out of 100, 12 matches, 6 of 10 games explored, next rank Challenger">
+        <p class="dp-dash-tag">Sample preview</p>
+        <div class="dp-dash-top">
+          <span class="dp-ring dp-ring-lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z" fill="currentColor"/></svg></span>
+          <div>
+            <p class="dp-dash-score"><b>13</b><span>/100</span> <em>Explorer</em></p>
+            <div class="dp-bar" aria-hidden="true"><i style="width:13%"></i></div>
+            <p class="dp-dash-next">Next: Challenger — earn 12 more rating points and explore more games</p>
           </div>
-          <p>A 9-level ladder that grows from 3×3 to an 11×11 board needing five in a row, each rung with its own named challenger. Flip on <strong>Infinity mode</strong> and your oldest mark vanishes on every move — so a draw is impossible. The top bot is perfect minimax and will never lose.</p>
-          <ul class="gc-facts">
-            <li><b>1–2</b> players</li>
-            <li>vs bot · pass &amp; play · Wi-Fi</li>
-            <li>Random → <b>perfect minimax</b></li>
-          </ul>
-        </article>
-
-        <article class="game-card reveal d1" style="--ga: var(--four);">
-          <div class="gc-head">
-            <div class="game-preview">
-              <svg viewBox="0 0 64 64" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="6" y="10" width="52" height="44" rx="8" fill="#0d0e13" stroke="#3b82f6" stroke-width="2.6"/>
-                <g fill="#1b2a48">
-                  <circle cx="18" cy="22" r="4.4"/><circle cx="30" cy="22" r="4.4"/><circle cx="42" cy="22" r="4.4"/>
-                  <circle cx="18" cy="34" r="4.4"/><circle cx="30" cy="34" r="4.4"/>
-                </g>
-                <circle cx="42" cy="34" r="4.4" fill="#ee6a82"/>
-                <circle cx="18" cy="46" r="4.4" fill="#5cdccb"/><circle cx="30" cy="46" r="4.4" fill="#ee6a82"/><circle cx="42" cy="46" r="4.4" fill="#5cdccb"/><circle cx="54" cy="46" r="4.4" fill="#ee6a82"/>
-              </svg>
-            </div>
-            <div>
-              <h3>Four in a Row</h3>
-              <p class="gc-tag">5 board sizes · 6×5 up to 10×9 · drop &amp; connect four</p>
-            </div>
-          </div>
-          <p>The classic gravity game. Take turns dropping a disc into a column — it falls to the lowest free slot — and be first to line up <strong>four in a row</strong>, across, up or on either diagonal. Five boards grow from a quick 6×5 to a roomy 10×9, and every size has Easy, Medium and Hard bots (Hard looks several moves ahead and never misses an obvious threat). Play the app, pass the phone to a friend, or pair two devices over Wi-Fi.</p>
-          <ul class="gc-facts">
-            <li><b>1–2</b> players</li>
-            <li>vs bot · pass &amp; play · Wi-Fi</li>
-            <li>Easy · Medium · <b>Hard</b> bot</li>
-          </ul>
-        </article>
-
-        <article class="game-card reveal d1" style="--ga: var(--ludo);">
-          <div class="gc-head">
-            <div class="game-preview">
-              <svg viewBox="0 0 64 64" aria-hidden="true">
-                <g class="gp-die">
-                  <rect x="15" y="15" width="34" height="34" rx="8" fill="#0d0e13" stroke="#2d9c68" stroke-width="2.6"/>
-                  <g fill="#2d9c68">
-                    <g class="gp-face a"><circle cx="32" cy="32" r="3.4"/></g>
-                    <g class="gp-face b"><circle cx="24" cy="24" r="3.4"/><circle cx="40" cy="40" r="3.4"/><circle cx="32" cy="32" r="3.4"/></g>
-                    <g class="gp-face c">
-                      <circle cx="23" cy="23" r="3.2"/><circle cx="41" cy="23" r="3.2"/>
-                      <circle cx="23" cy="41" r="3.2"/><circle cx="41" cy="41" r="3.2"/>
-                      <circle cx="32" cy="32" r="3.2"/>
-                    </g>
-                  </g>
-                </g>
-              </svg>
-            </div>
-            <div>
-              <h3>Ludo</h3>
-              <p class="gc-tag">2–4 players · Team Match · house rules</p>
-            </div>
-          </div>
-          <p>The board-game night staple, tuned for phones. Race on your own, or switch to <strong>Team Match</strong> for a 2v2 — Blue and Green against Red and Yellow — against bots, with friends on one phone, or over Wi-Fi. Teammates never capture each other, and a team wins only when both partners are home. Pin-shaped pieces, a 3D rolling die, player names around the board, and a lone legal move plays itself. House-rule toggles cover sixes, exact finishes and an extra roll when a piece reaches home. The Hard bot spreads its tokens, guards blocks and hunts captures.</p>
-          <ul class="gc-facts">
-            <li><b>1–4</b> players</li>
-            <li>vs bot · pass &amp; play · Wi-Fi</li>
-            <li>Rookie · Scrapper · <b>Tactician</b></li>
-          </ul>
-        </article>
-
-        <article class="game-card reveal d2" style="--ga: var(--dab);">
-          <div class="gc-head">
-            <div class="game-preview">
-              <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
-                <g fill="#2a9d8f">
-                  <circle cx="16" cy="16" r="2.6"/><circle cx="32" cy="16" r="2.6"/><circle cx="48" cy="16" r="2.6"/>
-                  <circle cx="16" cy="32" r="2.6"/><circle cx="32" cy="32" r="2.6"/><circle cx="48" cy="32" r="2.6"/>
-                  <circle cx="16" cy="48" r="2.6"/><circle cx="32" cy="48" r="2.6"/><circle cx="48" cy="48" r="2.6"/>
-                </g>
-                <g stroke="#2a9d8f" stroke-width="3.4" stroke-linecap="round">
-                  <line class="gp-stroke" pathLength="1" x1="16" y1="16" x2="32" y2="16"/>
-                  <line class="gp-stroke s2" pathLength="1" x1="32" y1="16" x2="32" y2="32"/>
-                  <line class="gp-stroke s3" pathLength="1" x1="32" y1="32" x2="16" y2="32"/>
-                  <line class="gp-win" pathLength="1" x1="16" y1="32" x2="16" y2="16"/>
-                </g>
-                <rect class="gp-box" x="18" y="18" width="12" height="12" rx="2" fill="#2a9d8f"/>
-              </svg>
-            </div>
-            <div>
-              <h3>Dots and Boxes</h3>
-              <p class="gc-tag">Small · Classic · Large boards</p>
-            </div>
-          </div>
-          <p>Join the dots, close a box, go again. Pick a quick 3×3, the standard 4×4, or a tactical 6×6 grid. The Hard bot isn't just greedy — it counts chains and plays the real <strong>double-cross</strong>, handing you two boxes to keep control of the endgame.</p>
-          <ul class="gc-facts">
-            <li><b>1–2</b> players</li>
-            <li>vs bot · friend · Wi-Fi</li>
-            <li>Rookie · Sharp · <b>chain-aware Master</b></li>
-          </ul>
-        </article>
-
-        <article class="game-card reveal d3" style="--ga: var(--bagh);">
-          <div class="gc-head">
-            <div class="game-preview">
-              <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
-                <g stroke="#e76f51" stroke-width="2" opacity="0.45">
-                  <line x1="14" y1="47" x2="50" y2="47"/><line x1="14" y1="47" x2="32" y2="15"/><line x1="50" y1="47" x2="32" y2="15"/>
-                  <line x1="23" y1="31" x2="41" y2="31"/>
-                </g>
-                <g fill="#e76f51" opacity="0.5">
-                  <circle cx="14" cy="47" r="3"/><circle cx="50" cy="47" r="3"/><circle cx="32" cy="15" r="3"/><circle cx="41" cy="31" r="3"/>
-                </g>
-                <circle class="gp-cap" cx="23" cy="31" r="4.6" fill="#8ec2ff"/>
-                <circle class="gp-hop" cx="14" cy="47" r="7.5" fill="#e76f51"/>
-              </svg>
-            </div>
-            <div>
-              <h3>Bagh-Bandi</h3>
-              <p class="gc-tag">Tiger vs 7 Soldiers · asymmetric hunt</p>
-            </div>
-          </div>
-          <p>A traditional South Asian hunt game on a 13-point hourglass board. One side is the Tiger, leaping over Soldiers to eat them; the other is seven Soldiers trying to pen the Tiger until it can't move. Wildly different to play from each side. Hard bot runs alpha-beta minimax.</p>
-          <ul class="gc-facts">
-            <li><b>1–2</b> players</li>
-            <li>vs bot · pass &amp; play · Wi-Fi</li>
-            <li>Cub · Hunter · <b>minimax Shikari</b></li>
-          </ul>
-        </article>
-
-        <article class="game-card reveal" style="--ga: var(--bagh2);">
-          <div class="gc-head">
-            <div class="game-preview">
-              <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
-                <g stroke="#d4a017" stroke-width="2" opacity="0.35">
-                  <line x1="12" y1="20" x2="52" y2="20"/>
-                  <line x1="12" y1="32" x2="52" y2="32"/>
-                  <line x1="12" y1="44" x2="52" y2="44"/>
-                  <line x1="20" y1="12" x2="20" y2="52"/>
-                  <line x1="32" y1="12" x2="32" y2="52"/>
-                  <line x1="44" y1="12" x2="44" y2="52"/>
-                </g>
-                <g fill="#2d9c68">
-                  <circle cx="20" cy="20" r="3.4"/><circle cx="32" cy="20" r="3.4"/><circle cx="44" cy="20" r="3.4"/>
-                </g>
-                <g fill="#e76f51">
-                  <circle cx="20" cy="44" r="3.4"/><circle cx="44" cy="44" r="3.4"/>
-                </g>
-                <circle class="gp-hop" cx="32" cy="44" r="5.4" fill="#e76f51"/>
-              </svg>
-            </div>
-            <div>
-              <h3>Bagh-Bandi Extended</h3>
-              <p class="gc-tag">42-point board · 16 vs 16 armies</p>
-            </div>
-          </div>
-          <p>The symmetric sibling of Bagh-Bandi: two equal armies of 16 face off on a bigger 42-node board. Step to an empty connected node, or jump an adjacent enemy piece to capture it — never your own. Switch on the Multi-Capture house rule and a piece can chain jumps in one turn. Eliminate every enemy piece, or leave them with no legal move, to win.</p>
-          <ul class="gc-facts">
-            <li><b>1–2</b> players</li>
-            <li>vs bot · pass &amp; play · Wi-Fi</li>
-            <li>Easy · Medium · <b>Hard</b> bot</li>
-          </ul>
-        </article>
-
-        <article class="game-card reveal d1" style="--ga: var(--wall);">
-          <div class="gc-head">
-            <div class="game-preview">
-              <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
-                <g stroke="currentColor" stroke-width="2" opacity="0.3" color="#5b8def">
-                  <line x1="24" y1="9" x2="24" y2="55"/><line x1="40" y1="9" x2="40" y2="55"/>
-                  <line x1="9" y1="24" x2="55" y2="24"/><line x1="9" y1="40" x2="55" y2="40"/>
-                </g>
-                <circle cx="32" cy="14" r="6" fill="#5b8def"/>
-                <circle cx="32" cy="50" r="6" fill="#ffd166"/>
-                <line class="gp-stroke" pathLength="1" x1="14" y1="32" x2="30" y2="32" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
-                <line class="gp-win" pathLength="1" x1="34" y1="32" x2="50" y2="32" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div>
-              <h3>Wall Block</h3>
-              <p class="gc-tag">9×9 board · 10 walls each · race to the far edge</p>
-            </div>
-          </div>
-          <p>A Quoridor-style race to the opposite edge. On your turn, step your pawn one square, or spend a wall to slow your rival down — walls are two squares long, and the engine never lets a placement seal off every route to the goal. First pawn to reach the far edge wins.</p>
-          <ul class="gc-facts">
-            <li><b>1–2</b> players</li>
-            <li>vs bot · pass &amp; play · Wi-Fi</li>
-            <li>Easy · Medium · <b>Hard</b> bot</li>
-          </ul>
-        </article>
-
-        <article class="game-card reveal d2" style="--ga: var(--memory);">
-          <div class="gc-head">
-            <div class="game-preview">
-              <svg viewBox="0 0 64 64" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="8" y="14" width="22" height="30" rx="5" fill="#0d0e13" stroke="#e0609a" stroke-width="2.6"/>
-                <path class="gp-stroke" pathLength="1" d="M19 21.5l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5-3.6-3.5 5-.7z" stroke="#ffd166" stroke-width="2.2"/>
-                <rect x="34" y="20" width="22" height="30" rx="5" fill="#0d0e13" stroke="#e0609a" stroke-width="2.6" opacity="0.55"/>
-                <path d="M45 30.5v.4c0 2-3 2-3 4.6M45 39.5h.01" stroke="#e0609a" stroke-width="2.6" opacity="0.7"/>
-              </svg>
-            </div>
-            <div>
-              <h3>Memory Match</h3>
-              <p class="gc-tag">20 levels · 2×2 up to 8×10 · a memory duel</p>
-            </div>
-          </div>
-          <p>Flip two hidden cards. Find a matching pair and it's yours — plus another turn. Miss, and both cards flip back for your rival to try. The player with the most pairs when the board is clear wins, so the whole game is about <strong>remembering what's been revealed</strong>. Twenty boards grow from a quick 2×2 to a full 8×10, and the bots play fair: they only remember the cards they've actually seen.</p>
-          <ul class="gc-facts">
-            <li><b>1–2</b> players</li>
-            <li>vs bot · pass &amp; play · Wi-Fi</li>
-            <li>Easy · Medium · <b>Hard</b> bot</li>
-          </ul>
-        </article>
-
-        <article class="game-card reveal d3" style="--ga: var(--shape);">
-          <div class="gc-head">
-            <div class="game-preview">
-              <svg viewBox="0 0 64 64" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <g stroke="#6c7cff" stroke-width="2.4" opacity="0.5">
-                  <rect x="6" y="12" width="14" height="14" rx="4"/><rect x="25" y="12" width="14" height="14" rx="4"/><rect x="44" y="12" width="14" height="14" rx="4"/>
-                </g>
-                <circle cx="13" cy="19" r="4.2" fill="#e8735f"/>
-                <path d="M32 14.8l4.6 8h-9.2z" fill="#f2cb4f"/>
-                <rect x="47.4" y="15.4" width="7.2" height="7.2" rx="1.6" fill="#5cc9a7"/>
-                <g stroke="#6c7cff" stroke-width="2.2" opacity="0.4">
-                  <rect x="6" y="34" width="14" height="14" rx="4"/><rect x="25" y="34" width="14" height="14" rx="4"/><rect x="44" y="34" width="14" height="14" rx="4"/>
-                </g>
-                <path class="gp-stroke" pathLength="1" d="M10 41.5l2.6 2.8 4.6-5.4" stroke="#2d9c68" stroke-width="3"/>
-                <circle cx="32" cy="41" r="3" fill="#6c7cff" opacity="0.6"/>
-                <circle cx="51" cy="41" r="3" stroke="#6c7cff" stroke-width="2"/>
-              </svg>
-            </div>
-            <div>
-              <h3>Shape Crack</h3>
-              <p class="gc-tag">Crack the hidden shape code · 30 shapes</p>
-            </div>
-          </div>
-          <p>A code-breaking puzzle. A hidden row of unique coloured shapes is waiting; you guess a full sequence and get two clues back — how many shapes are in the <strong>right place</strong>, and how many are the right shape in the wrong place. Deduce the code before your attempts run out. Against the app you pick Easy, Medium or Hard (a bigger code and shape pool each step). With a friend you swap secret codes on one phone and both have a go; over Wi-Fi each player's code stays private to its author.</p>
-          <ul class="gc-facts">
-            <li><b>1–2</b> players</li>
-            <li>vs puzzle · pass &amp; play · Wi-Fi</li>
-            <li>Easy · Medium · <b>Hard</b></li>
-          </ul>
-        </article>
-
+        </div>
+        <ul class="dp-dash-stats">
+          <li><b>12</b><span>Matches</span></li>
+          <li><b>5</b><span>Wins</span></li>
+          <li><b>6/10</b><span>Explored</span></li>
+          <li><b>13</b><span>Best</span></li>
+        </ul>
+        <p class="dp-dash-foot">Illustrative numbers. Your own stats are stored on your device — there is no account or cloud profile.</p>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="dp-cta-line reveal">
+        <h3>Track Your Progress. Share Your Achievements.</h3>
+        <p class="muted">Your gaming journey deserves to be celebrated.</p>
       </div>
     </div>
   </section>
 
-  <!-- FEATURES -->
-  <section class="section" id="features">
+  <!-- WAYS TO PLAY -->
+  <section class="dp-section" id="modes">
     <div class="wrap">
       <div class="section-head reveal">
-        <p class="eyebrow">Why it feels good</p>
-        <h2>Built for actual game nights</h2>
-        <p class="lede">Small download, no logins, and every mode you'd want for two people and a phone — or a room full of devices.</p>
+        <p class="eyebrow">Ways to play</p>
+        <h2>Your Game. Your Rules. Your Opponent.</h2>
       </div>
-
       <div class="grid grid-3">
-        <div class="card feature reveal">
-          <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 8 3 12l4 4"/><path d="M17 8l4 4-4 4"/><path d="M14 4 10 20"/></svg></div>
-          <h3>Play your way</h3>
-          <p>Every game does solo play, two-player pass-and-play on one device, and Wi-Fi play — up to four devices in Ludo, two in the rest. Switch modes in a tap.</p>
-        </div>
-        <div class="card feature reveal d1">
+        <div class="card dp-mode reveal">
           <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg></div>
-          <h3>Opponents that think</h3>
-          <p>Easy, Medium and Hard tiers. Tic Tac Toe and Bagh-Bandi go all the way to alpha-beta minimax; Dots and Boxes plays real endgame theory; Four in a Row's Hard bot looks several moves ahead; Memory Match bots remember only the cards they've seen. Shape Crack's levels set the size of the puzzle.</p>
+          <h3>Play Against Bots</h3>
+          <p>Practice your skills against opponents ranging from beginner-friendly to seriously challenging. Bot matches are the ones that build your rating.</p>
+          <p class="dp-avail">Android &amp; browser</p>
         </div>
-        <div class="card feature reveal d2">
+        <div class="card dp-mode reveal d1">
+          <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3 20a6 6 0 0 1 12 0M15 20a4.5 4.5 0 0 1 6 0"/></svg></div>
+          <h3>Play With Friends</h3>
+          <p>Share one device, take turns, and enjoy classic competition together — no setup, no accounts.</p>
+          <p class="dp-avail">Android &amp; browser</p>
+        </div>
+        <div class="card dp-mode reveal d2">
           <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 8.5a16 16 0 0 1 20 0"/><path d="M5 12a11 11 0 0 1 14 0"/><path d="M8.5 15.5a6 6 0 0 1 7 0"/><circle cx="12" cy="19" r="1.2" fill="currentColor"/></svg></div>
-          <h3>Wi-Fi multiplayer, no setup</h3>
-          <p>Same Wi-Fi or a hotspot — devices just find each other. No room codes, no server, no accounts. The join list previews each match before you tap in. Phones on different app versions can still play together — and if a room is running a game yours doesn't have yet, Dual Play tells you to update instead of failing to connect.</p>
-        </div>
-        <div class="card feature reveal">
-          <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4M9 21h6"/></svg></div>
-          <h3>Talk while you play</h3>
-          <p>Turn on in-match voice during any Wi-Fi game. It runs straight between your devices, the mic starts muted, and nothing is ever recorded.</p>
-        </div>
-        <div class="card feature reveal d1">
-          <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor" stroke="none"/></svg></div>
-          <h3>Dark by default, light if you like</h3>
-          <p>Dual Play opens in a calm, easy-on-the-eyes dark theme. Switch to light, or follow the system — the whole app re-themes instantly, and it remembers your choice.</p>
-        </div>
-        <div class="card feature reveal d2">
-          <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M9 18h6"/><path d="M9.5 8.5 11 10l3.5-3.5"/></svg></div>
-          <h3>Yours, on your device</h3>
-          <p>A local profile, per-game win/loss records, streaks, match history and win confetti — all stored on your phone. See the <a href="/dual-play/privacy/">Privacy Policy</a> for the full picture.</p>
-        </div>
-        <div class="card feature reveal">
-          <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></div>
-          <h3>Sound and feel</h3>
-          <p>Sound effects and light haptic feedback make moves and wins feel good, with simple toggles to switch sound or win confetti off.</p>
-        </div>
-        <div class="card feature reveal d1">
-          <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9a6 6 0 0 1 12 0c0 6 2 7 2 7H4s2-1 2-7"/><path d="M10 20a2 2 0 0 0 4 0"/></svg></div>
-          <h3>Gentle, optional reminders</h3>
-          <p>If you've been away for a while, the app can nudge you back with a reminder scheduled on your own phone — no server, no account. Turn it off any time in Android's notification settings.</p>
-        </div>
-        <div class="card feature reveal d2">
-          <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M5 12.9a10 10 0 0 1 3.2-2"/><path d="M2 8.8a15 15 0 0 1 4.2-2.7"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></div>
-          <h3>No account, works offline</h3>
-          <p>There's nothing to sign up for, and solo and pass-and-play games need no internet connection at all.</p>
+          <h3>Play Over Local Wi-Fi</h3>
+          <p>Connect supported devices on the same Wi-Fi network or hotspot and enjoy local multiplayer — up to four devices in Ludo, two in every other game.</p>
+          <p class="dp-avail">Android app only</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- HOW WI-FI WORKS -->
-  <section class="section" id="how">
+  <!-- LOCAL WI-FI -->
+  <section class="dp-section" id="how">
     <div class="wrap">
-      <div class="section-head reveal center" style="margin-inline:auto;max-width:640px;">
+      <div class="section-head reveal center" style="margin-inline:auto;max-width:700px;">
         <p class="eyebrow">Local multiplayer</p>
-        <h2>How Wi-Fi play works</h2>
-        <p class="lede" style="margin-inline:auto;">Three taps from "same room" to "playing and chatting". No internet required.</p>
+        <h2>Together in the Same Room. Connected in the Game.</h2>
+        <p class="lede" style="margin-inline:auto;">Turn your local Wi-Fi network into a multiplayer playground. Host a game, invite nearby friends, and enjoy competitive matches without relying on an internet game server.</p>
       </div>
 
       <div class="wifi-anim reveal" aria-hidden="true">
         <svg viewBox="0 0 420 150" fill="none">
-          <rect x="24" y="35" width="70" height="120" rx="12" fill="#1c1d24" stroke="#3c4150" stroke-width="2"/>
-          <rect x="326" y="35" width="70" height="120" rx="12" fill="#1c1d24" stroke="#3c4150" stroke-width="2"/>
-          <rect x="34" y="49" width="50" height="78" rx="6" fill="#101a30"/>
-          <rect x="336" y="49" width="50" height="78" rx="6" fill="#101a30"/>
-          <g stroke="#a855f7" stroke-width="2.5" fill="none">
+          <rect x="24" y="35" width="70" height="120" rx="12" fill="#17243a" stroke="#2d3f5c" stroke-width="2"/>
+          <rect x="326" y="35" width="70" height="120" rx="12" fill="#17243a" stroke="#2d3f5c" stroke-width="2"/>
+          <rect x="34" y="49" width="50" height="78" rx="6" fill="#0d1526"/>
+          <rect x="336" y="49" width="50" height="78" rx="6" fill="#0d1526"/>
+          <g stroke="#35c5e8" stroke-width="2.5" fill="none">
             <circle class="pulse" cx="210" cy="95" r="16"/>
             <circle class="pulse p2" cx="210" cy="95" r="16"/>
             <circle class="pulse p3" cx="210" cy="95" r="16"/>
           </g>
-          <circle cx="210" cy="95" r="6" fill="#8ec2ff"/>
+          <circle cx="210" cy="95" r="6" fill="#9564e8"/>
         </svg>
       </div>
 
       <ol class="steps" style="list-style:none;padding:0;">
         <li class="step card reveal">
           <div class="sn">1</div>
-          <h3>Get on the same Wi-Fi</h3>
-          <p>Any shared Wi-Fi network works — or have one player start a phone hotspot the others join. You never leave the local network.</p>
+          <h3>Connect to the same network</h3>
+          <p>Put your devices on the same Wi-Fi network, or have one player start a phone hotspot the others join.</p>
         </li>
         <li class="step card reveal d1">
           <div class="sn">2</div>
-          <h3>One hosts, others see it</h3>
-          <p>The host picks the game and settings. Everyone else opens the same game and the host appears in a list, with the board and rules previewed.</p>
+          <h3>Host a supported game</h3>
+          <p>The host picks the game and settings. Everyone else opens the same game and sees the host in a list, with the board and rules previewed.</p>
         </li>
         <li class="step card reveal d2">
           <div class="sn">3</div>
-          <h3>Tap to join — then talk</h3>
-          <p>Join and the match starts. Flip on voice chat from the top bar and you're playing and chatting, all over the local Wi-Fi.</p>
+          <h3>Join and start playing</h3>
+          <p>Tap to join and the match starts. Talk while you play with in-match voice chat on supported Android Wi-Fi games.</p>
         </li>
       </ol>
     </div>
   </section>
 
-  <!-- MAKER -->
+  <!-- FEATURES -->
+  <section class="dp-section" id="features">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">What's new</p>
+        <h2>Made for Better Game Nights.</h2>
+      </div>
+      <div class="grid grid-4 dp-feat-grid">
+        <div class="card feature reveal d0">
+          <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7.5" height="7.5" rx="2"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="2"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="2"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="2"/></svg></div>
+          <h3>Beautiful New Game Library</h3>
+          <p>Explore your favorite games through a refreshed card-based interface with colorful game previews.</p>
+        </div>
+        <div class="card feature reveal d1">
+          <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg></div>
+          <h3>Achievement Ranks</h3>
+          <p>Earn rating points and progress through eight distinctive ranks.</p>
+        </div>
+        <div class="card feature reveal d2">
+          <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></div>
+          <h3>Personal Performance</h3>
+          <p>See your match statistics, gaming progress, and achievements in one place.</p>
+        </div>
+        <div class="card feature reveal d3">
+          <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg></div>
+          <h3>Smarter Opponents</h3>
+          <p>Challenge bots with different difficulty levels and game-specific strategies — from random moves up to minimax search.</p>
+        </div>
+        <div class="card feature reveal d0">
+          <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3l18 18"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M5 12.9a10 10 0 0 1 3.2-2"/><path d="M2 8.8a15 15 0 0 1 4.2-2.7"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></div>
+          <h3>Offline-First Gameplay</h3>
+          <p>Enjoy bots and pass-and-play without an internet connection.</p>
+        </div>
+        <div class="card feature reveal d1">
+          <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor" stroke="none"/></svg></div>
+          <h3>Light &amp; Dark Themes</h3>
+          <p>Choose the appearance that feels right for you — or follow your system setting.</p>
+        </div>
+        <div class="card feature reveal d2">
+          <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 10.6l6.8-4M8.6 13.4l6.8 4"/></svg></div>
+          <h3>Easy Achievement Sharing</h3>
+          <p>Create a beautiful achievement card and share your progress with friends.</p>
+        </div>
+        <div class="card feature reveal d3">
+          <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M9 18h6"/><path d="M9.5 8.5 11 10l3.5-3.5"/></svg></div>
+          <h3>No Account Required</h3>
+          <p>Start playing without creating an account. Your profile and stats stay on your device.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
   <section class="section-tight">
     <div class="wrap split">
       <div class="reveal">
-        <p class="eyebrow">Made in Dhaka</p>
-        <h2>One developer, sweating the details</h2>
-        <p class="muted">Dual Play is built and maintained by <strong>Md. Risul Islam Munna</strong> — a full-stack developer and founder of the e-commerce SaaS platform Bee&nbsp;Hook, with 7+ years shipping web and mobile products. Dual Play is his take on what a phone game collection should be: fast, private, and genuinely fun with people in the same room.</p>
+        <p class="eyebrow">About Dual Play</p>
+        <h2>Built With Care. Designed for Play.</h2>
+        <p class="muted">Dual Play is an independently developed collection of classic and strategy games, built to make playing with friends simple, enjoyable, and accessible. It is made and maintained by <strong>Md. Risul Islam Munna</strong>.</p>
         <p style="margin-top:1.1rem;"><a href="/dual-play/about/">Read more about the app &amp; developer →</a></p>
       </div>
       <div class="card maker-card reveal d1">
@@ -603,7 +770,7 @@
   </section>
 
   <!-- FAQ -->
-  <section class="section" id="faq">
+  <section class="dp-section" id="faq">
     <div class="wrap">
       <div class="section-head reveal">
         <p class="eyebrow">Good to know</p>
@@ -611,64 +778,72 @@
       </div>
       <div class="faq reveal">
         <details>
+          <summary>How many games are available in Dual Play?</summary>
+          <div class="faq-body"><p>Ten: Tic Tac Toe, Four in a Row, Memory Match, Ludo, Dots and Boxes, Color Connect, Wall Block, Shape Crack, Sholo Guti and Bagh-Bandi. The Android app has all ten. The browser version currently covers nine of them — Color Connect is in the Android app.</p></div>
+        </details>
+        <details>
           <summary>Is Dual Play free?</summary>
-          <div class="faq-body"><p>Yes — free to download and play. It's supported by ads. There's no paid account, no subscription and no "premium" games locked away.</p></div>
+          <div class="faq-body"><p>Yes — free to download and play. It is supported by ads. There is no paid account, no subscription and no premium games locked away.</p></div>
         </details>
         <details>
-          <summary>Do I need internet to play?</summary>
-          <div class="faq-body"><p>No. Playing a bot or passing one phone between two players is completely offline. Wi-Fi multiplayer needs the devices on the same Wi-Fi network or hotspot, but still no internet connection. Internet is only used to load ads and to fetch in-app announcements.</p></div>
+          <summary>Can I play without an internet connection?</summary>
+          <div class="faq-body"><p>Yes. Playing against a bot or passing one phone between two players works fully offline. Wi-Fi multiplayer needs the devices on the same Wi-Fi network or hotspot, but still no internet connection. Internet is only used to load ads and to fetch in-app announcements.</p></div>
         </details>
         <details>
-          <summary>Can I play Dual Play in my browser?</summary>
-          <div class="faq-body"><p>Yes — <a href="/dual-play/play/">open the browser version</a> and play instantly, no install or account. It covers solo vs bots and pass-and-play on one screen. Local Wi-Fi multiplayer and in-match voice chat need the Android app.</p></div>
+          <summary>Can I play with friends on the same device?</summary>
+          <div class="faq-body"><p>Yes. Every game has a same-device mode where players take turns on one screen. In Color Connect, one player builds a puzzle and hands the phone over for the other to solve.</p></div>
         </details>
         <details>
-          <summary>Does Wi-Fi play use my mobile data?</summary>
-          <div class="faq-body"><p>No. Multiplayer moves travel directly between devices on your local network, and voice chat normally does too (on some hotspots it may briefly use a public connection-assistance service to get started). Ads use data.</p></div>
+          <summary>How does local Wi-Fi multiplayer work?</summary>
+          <div class="faq-body"><p>Put the devices on the same Wi-Fi network or a phone hotspot. One player hosts a game, the others open the same game and see the host in a list, then tap to join. Ludo rooms hold up to four devices; every other game is two players. Wi-Fi multiplayer is in the Android app.</p></div>
         </details>
         <details>
-          <summary>What data does the app collect?</summary>
-          <div class="faq-body"><p>Your game profile, settings, match history and the small bits of state behind reminders and the occasional rating request stay on your device and are removed when you uninstall. The app does show ads via Google AdMob and uses Firebase Cloud Messaging to deliver broadcast announcements. It does not include a separate analytics or crash-reporting service. The full breakdown is in the <a href="/dual-play/privacy/">Privacy Policy</a>.</p></div>
+          <summary>Does Dual Play support voice chat?</summary>
+          <div class="faq-body"><p>Yes, in supported Wi-Fi matches on the Android app. Voice runs directly between the devices on your network, the microphone starts muted and audio is never recorded or stored. On some hotspots the connection may briefly use a public connection-assistance service to get started. Color Connect Wi-Fi games do not have voice chat.</p></div>
         </details>
         <details>
-          <summary>Does the app send notifications?</summary>
-          <div class="faq-body"><p>It can. Occasional broadcast messages tell you about new games, updates, tips, and the odd promotion or offer (which may link to another app, a store listing, or a website); the same message goes to everyone, nothing is targeted to you and no messaging token is collected. Separately, if you allow notifications the app can show a friendly reminder, scheduled on your own phone, when you haven't opened it for a while — that needs no server or account, and the information behind it stays on your device. On Android&nbsp;13 and newer the app asks permission first, and you can turn notifications off any time in your phone's settings for Dual Play — the games still work exactly the same. See the <a href="/dual-play/privacy/">Privacy Policy</a>.</p></div>
+          <summary>What are Achievement Ranks?</summary>
+          <div class="faq-body"><p>Eight ranks — Rookie, Explorer, Challenger, Skilled Player, Expert, Master, Champion and Legend — that reflect your overall rating from 0 to 100. Higher ranks also ask you to explore more of the games, so progress comes from variety as well as wins.</p></div>
         </details>
         <details>
-          <summary>How many players can join?</summary>
-          <div class="faq-body"><p>Tic Tac Toe, Four in a Row, Dots and Boxes, Bagh-Bandi, Bagh-Bandi Extended, Wall Block, Memory Match and Shape Crack are one or two players. Ludo is two to four, and four players can play 2v2 Team Match. A local Wi-Fi room holds up to four devices.</p></div>
+          <summary>How can I improve my rating?</summary>
+          <div class="faq-body"><p>Win matches against the bots, try harder difficulty levels (they are worth more) and play more of the games in the collection. Only matches against bots and puzzle solves count toward your rating; Wi-Fi and same-device matches are for fun and do not change it. Ranks follow your current performance, so they can move down as well as up.</p></div>
         </details>
         <details>
-          <summary>Is there voice chat?</summary>
-          <div class="faq-body"><p>Yes, during Wi-Fi matches. It's peer-to-peer over your Wi-Fi, the microphone starts muted, and audio is never recorded or stored. On some hotspots the connection may use a public connection-assistance (STUN/relay) service to get going — see the <a href="/dual-play/privacy/">Privacy Policy</a>.</p></div>
+          <summary>Can I share my achievements?</summary>
+          <div class="faq-body"><p>Yes. From the Achievement &amp; Performance screen you can create a shareable card showing your rank, rating and key stats, then send it through any app on your phone.</p></div>
         </details>
         <details>
-          <summary>Which Android version do I need?</summary>
-          <div class="faq-body"><p>Dual Play targets modern Android devices. <!-- TODO: state the exact minimum Android version from app/android/app/build.gradle.kts once finalised, e.g. "Android 8.0 (API 26) and newer." --></p></div>
+          <summary>Is an account required?</summary>
+          <div class="faq-body"><p>No. There is nothing to sign up for. Your profile, settings, ratings and match history are stored on your device.</p></div>
+        </details>
+        <details>
+          <summary>Can I play in my browser?</summary>
+          <div class="faq-body"><p>Yes — open the browser version and play instantly, no install. It covers solo play against bots and pass-and-play for nine of the ten games. Wi-Fi multiplayer, voice chat, Color Connect, achievement ranks and performance tracking are in the Android app. <a href="/dual-play/play/">Open the browser version</a>.</p></div>
+        </details>
+        <details>
+          <summary>Which platforms are supported?</summary>
+          <div class="faq-body"><p>Dual Play is available for Android on Google Play, and you can play the browser version on any modern desktop or mobile browser. There is no iPhone or iPad release at the moment.</p></div>
+        </details>
+        <details>
+          <summary>Does Dual Play collect personal information?</summary>
+          <div class="faq-body"><p>Your game profile, settings, match history and rating stay on your device. The app shows ads through Google AdMob and uses Firebase Cloud Messaging for broadcast announcements; it does not include a separate analytics or crash-reporting service. Full details are in the Privacy Policy. Read the <a href="/dual-play/privacy/">Privacy Policy</a>.</p></div>
         </details>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
+  <!-- FINAL CTA -->
   <section class="section-tight">
     <div class="wrap">
-      <div class="cta-band reveal">
-        <h2>Bring it to your next game night</h2>
-        <p class="lede">Play it right now in your browser, or install it from Google Play for Android. iPhone and iPad users can install it too.</p>
+      <div class="cta-band dp-cta reveal">
+        <h2>Ready for Your Next Challenge?</h2>
+        <p class="lede">Pick a game, challenge your friends, and start your journey from Rookie to Legend.</p>
         <div class="btn-row">
-          <a class="btn btn-primary btn-play" href="/dual-play/play/"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>Play in browser</a>
-          <a class="store-badge" href="https://play.google.com/store/apps/details?id=dev.munna.games.dualplay" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d9ff" d="M3.6 2.1 13 11.5 3.9 20.6a1.7 1.7 0 0 1-.3-1V3a1.7 1.7 0 0 1 0-.9z"/><path fill="#00f076" d="M14.1 12.6 4.6 22a1.6 1.6 0 0 0 1.7 0l11.2-6.4z"/><path fill="#ffd800" d="M20.9 10.7 17.5 8.8l-3.6 3.6 3.6 3.6 3.4-2a1.7 1.7 0 0 0 0-3.3z"/><path fill="#ff3a44" d="M4.6 2 14.1 11.4l3.4-3.4L6.3 1.6a1.6 1.6 0 0 0-1.7.4z"/></svg>
-            <span><span class="sb-top">Get it on</span><span class="sb-main">Google Play</span></span>
-          </a>
-          <button class="store-badge" type="button" data-open-ios aria-haspopup="dialog" aria-controls="ios-dialog">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M16.37 1.43c0 1.13-.46 2.22-1.22 3.01-.81.86-2.15 1.53-3.27 1.44-.13-1.09.43-2.24 1.15-2.99.81-.85 2.24-1.49 3.34-1.46zM20.9 17.14c-.55 1.27-.81 1.83-1.52 2.95-1 1.56-2.4 3.52-4.14 3.53-1.55.02-1.95-1.01-4.05-1s-2.53 1.02-4.09 1c-1.74-.03-3.06-1.79-4.06-3.35-2.8-4.42-3.09-9.6-1.37-12.36 1.22-1.96 3.15-3.11 4.96-3.11 1.85 0 3.01 1.02 4.53 1.02 1.48 0 2.38-1.02 4.52-1.02 1.61 0 3.32.88 4.54 2.4-3.99 2.19-3.34 7.88.15 9.95z"/></svg>
-            <span><span class="sb-top">Also on</span><span class="sb-main">iPhone &amp; iPad</span></span>
-          </button>
-          <a class="btn btn-ghost" href="https://www.youtube.com/@games-munna-dev" target="_blank" rel="noopener">Watch gameplay</a>
-          <a class="btn btn-ghost" href="/dual-play/contact/">Ask a question</a>
+          <a class="store-badge" href="https://play.google.com/store/apps/details?id=dev.munna.games.dualplay" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d9ff" d="M3.6 2.1 13 11.5 3.9 20.6a1.7 1.7 0 0 1-.3-1V3a1.7 1.7 0 0 1 0-.9z"/><path fill="#00f076" d="M14.1 12.6 4.6 22a1.6 1.6 0 0 0 1.7 0l11.2-6.4z"/><path fill="#ffd800" d="M20.9 10.7 17.5 8.8l-3.6 3.6 3.6 3.6 3.4-2a1.7 1.7 0 0 0 0-3.3z"/><path fill="#ff3a44" d="M4.6 2 14.1 11.4l3.4-3.4L6.3 1.6a1.6 1.6 0 0 0-1.7.4z"/></svg><span><span class="sb-top">Get it on</span><span class="sb-main">Get Dual Play on Google Play</span></span></a>
+          <a class="btn btn-primary btn-play" href="/dual-play/play/"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>Play in Your Browser</a>
         </div>
+        <p class="dp-cta-note">Free to play. No account required. Wi-Fi multiplayer, voice chat and achievement ranks are in the Android app.</p>
       </div>
     </div>
   </section>
@@ -681,30 +856,32 @@
       <div class="f-brand">
         <a class="brand" href="/dual-play/" aria-label="Dual Play home">
           <svg viewBox="0 0 64 64" width="28" height="28" aria-hidden="true" fill="none">
-            <rect x="3" y="3" width="58" height="58" rx="14" fill="#0e0f13" stroke="#3c4150"/>
-            <g stroke="#8ec2ff" stroke-width="3.4" stroke-linecap="round">
-              <line x1="25" y1="12" x2="25" y2="52"/><line x1="39" y1="12" x2="39" y2="52"/>
-              <line x1="12" y1="25" x2="52" y2="25"/><line x1="12" y1="39" x2="52" y2="39"/>
-            </g>
-            <g stroke="#c084fc" stroke-width="4" stroke-linecap="round">
-              <line x1="15" y1="15" x2="21" y2="21"/><line x1="21" y1="15" x2="15" y2="21"/>
-            </g>
-            <circle cx="45.5" cy="45.5" r="4.4" stroke="#8ec2ff" stroke-width="4"/>
-          </svg>
+        <rect x="3" y="3" width="58" height="58" rx="14" fill="#0e0f13" stroke="#3c4150"/>
+        <g stroke="#8ec2ff" stroke-width="3.4" stroke-linecap="round">
+          <line x1="25" y1="12" x2="25" y2="52"/><line x1="39" y1="12" x2="39" y2="52"/>
+          <line x1="12" y1="25" x2="52" y2="25"/><line x1="12" y1="39" x2="52" y2="39"/>
+        </g>
+        <g stroke="#c084fc" stroke-width="4" stroke-linecap="round">
+          <line x1="15" y1="15" x2="21" y2="21"/><line x1="21" y1="15" x2="15" y2="21"/>
+        </g>
+        <circle cx="45.5" cy="45.5" r="4.4" stroke="#8ec2ff" stroke-width="4"/>
+      </svg>
           <span class="wordmark"><b>DUAL</b>&nbsp;<span>PLAY</span></span>
         </a>
-        <p>Nine classic and original games in one app — play offline against smart bots, pass &amp; play, or pair up over Wi-Fi with voice chat.</p>
+        <p>Ten classic and strategy games in one app — play offline against smart bots, take turns on one device, or pair up over Wi-Fi with voice chat.</p>
         <div class="socials">
           <a href="https://github.com/risul-islam-munna" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg></a>
           <a href="https://www.linkedin.com/in/risul-islam-munna/" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
           <a href="https://www.facebook.com/munna.dev.bd/" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
           <a href="https://www.youtube.com/@games-munna-dev" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
         </div>
+
       </div>
       <div>
         <h4>Dual Play</h4>
         <ul>
           <li><a href="/dual-play/#games">Games</a></li>
+          <li><a href="/dual-play/#ranks">Achievement ranks</a></li>
           <li><a href="/dual-play/#features">Features</a></li>
           <li><a href="/dual-play/#how">Wi-Fi play</a></li>
           <li><a href="/dual-play/#faq">FAQ</a></li>
@@ -728,22 +905,6 @@
     </div>
   </div>
 </footer>
-
-<dialog id="ios-dialog" class="ios-dialog" aria-labelledby="ios-dialog-title">
-  <div class="ios-panel">
-    <button class="ios-close" type="button" data-close aria-label="Close">&times;</button>
-    <h2 id="ios-dialog-title">Dual Play on iPhone &amp; iPad</h2>
-    <p>Dual Play isn't on the Apple App Store. iOS has no "download the file and tap to install" like Android, so the iPhone / iPad build is shared with you directly. Follow whichever matches the link you were given:</p>
-    <ol>
-      <li><strong>Open the build link.</strong> The current iOS build is in a Google&nbsp;Drive folder:
-        <a href="https://drive.google.com/" target="_blank" rel="noopener">drive.google.com/&hellip;</a>
-        <em>— temporary placeholder; the real link is coming soon.</em></li>
-      <li><strong>If it's a TestFlight invite</strong> (a <code>testflight.apple.com</code> link): open it on your iPhone or iPad, install Apple's free <strong>TestFlight</strong> app when asked, then tap <em>Install</em> for Dual Play inside TestFlight. Works on any device, nothing to plug in.</li>
-      <li><strong>If it's an <code>.ipa</code> file:</strong> your device must be registered on the build first. Send your device UDID to <a href="mailto:hello@munna.dev?subject=Dual%20Play%20iOS%20access">hello@munna.dev</a> and you'll get a build that installs on it.</li>
-    </ol>
-    <p class="ios-note">A full App Store release may come later. Stuck? <a href="/dual-play/contact/">Contact us</a>.</p>
-  </div>
-</dialog>
 
 </body>
 </html>
