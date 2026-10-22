@@ -1,13 +1,13 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-16T00:00:00Z",
+  "updatedAt": "2026-10-23T00:00:00Z",
 
   "apps": {
     "dualplay": {
       "androidAppId": "dev.munna.games.dualplay",
       "iosAppId": "dev.munna.games.dualplay",
       "minSupportedBuildNumber": 1,
-      "latestBuildNumber": 11,
+      "latestBuildNumber": 12,
       "versions": {
         "1": "0.1.0",
         "3": "1.0.0",
@@ -18,7 +18,8 @@
         "8": "1.4.0",
         "9": "1.5.0",
         "10": "1.6.0",
-        "11": "1.7.0"
+        "11": "1.7.0",
+        "12": "1.7.1"
       },
       "forceUpdate": false,
       "androidUpdateUrl": "https://play.google.com/store/apps/details?id=dev.munna.games.dualplay",
