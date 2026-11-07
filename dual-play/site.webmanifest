@@ -1,7 +1,7 @@
 {
   "name": "Dual Play",
   "short_name": "Dual Play",
-  "description": "Ten games in one Android app: Tic Tac Toe, Four in a Row, Memory Match, Ludo, Dots and Boxes, Color Connect, Wall Block, Shape Crack, Sholo Guti and Bagh-Bandi. Play offline vs smart bots, take turns on one device, or play over Wi-Fi. Earn ranks from Rookie to Legend.",
+  "description": "Eleven games in one Android app: Tic Tac Toe, Four in a Row, Memory Match, Ludo, Dots and Boxes, Color Connect, Sliding Puzzle, Wall Block, Shape Crack, Sholo Guti and Bagh-Bandi. Play offline vs smart bots, take turns on one device, or play over Wi-Fi. Climb eight leagues from Rookie to Legend.",
   "start_url": "/dual-play/",
   "scope": "/dual-play/",
   "display": "standalone",
