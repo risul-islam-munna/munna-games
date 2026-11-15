@@ -133,11 +133,17 @@ body.dp .wordmark span { background-image: linear-gradient(90deg, #7fd6ee, #9564
 }
 .dp-featured-grid > li { min-width: 0; }
 .dp-feat-card {
-  display: block; height: 100%; padding: .7rem .7rem 1rem; text-decoration: none; color: var(--text);
+  position: relative; display: block; height: 100%; padding: .7rem .7rem 1rem; text-decoration: none; color: var(--text);
   border-radius: var(--r-lg); background: var(--surface); border: 1px solid var(--border);
   transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
 }
 .dp-feat-card:hover { transform: translateY(-4px); border-color: color-mix(in srgb, var(--ga) 60%, var(--border)); box-shadow: 0 22px 44px -26px var(--ga); color: var(--text); }
+.dp-feat-new {
+  position: absolute; top: 1.15rem; right: 1.15rem; z-index: 1;
+  padding: .22rem .6rem; border-radius: 999px;
+  font-family: var(--font-display); font-weight: 700; font-size: .7rem; letter-spacing: .08em; text-transform: uppercase;
+  color: #fff; background: color-mix(in srgb, var(--ga) 82%, #000); box-shadow: 0 6px 16px -8px var(--ga);
+}
 .dp-art { width: 100%; height: auto; aspect-ratio: 1; border-radius: 18px; margin-bottom: .8rem; }
 .dp-feat-name { display: block; font-family: var(--font-display); font-weight: 700; font-size: 1.08rem; padding-inline: .3rem; }
 .dp-feat-line { display: block; font-size: .88rem; color: var(--text-muted); padding-inline: .3rem; margin-top: .15rem; }

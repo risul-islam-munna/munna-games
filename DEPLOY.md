@@ -193,9 +193,11 @@ self-unregistering stub (no offline cache), so there is no stale service-worker 
   `manifest.json?v=ID` (in `index.html`) and `main.dart.js?v=ID` (in `flutter_bootstrap.js`).
   Same build → same id; any code or asset change → new id. `index.html` itself is cached
   ~10 min by GitHub Pages, so returning players get the new build within minutes.
-- *Website CSS/JS* — `tools/stamp-assets.sh` stamps `?v=<sha256[:10]>` on every root-absolute
-  `.css`/`.js` reference in the site's HTML (skips `/*/play/` and `/push-admin/`).
-  `deploy_web.sh` runs it automatically; run it yourself after editing any CSS/JS, and
+- *Website CSS/JS/images* — `tools/stamp-assets.sh` stamps `?v=<sha256[:10]>` on every
+  root-absolute `.css`/`.js`/image reference (`href`, `src`, `srcset`, `imagesrcset`) in the
+  site's HTML (skips `/*/play/` and `/push-admin/`), so a replaced screenshot or tile that keeps
+  its file name is refetched too.
+  `deploy_web.sh` runs it automatically; run it yourself after changing any CSS, JS or image, and
   `tools/stamp-assets.sh --check` before committing (exit 1 = a stamp is stale).
 
 **Local preview:** `cd /Users/munna/Herd/munna-games && python3 -m http.server 8765`, then
