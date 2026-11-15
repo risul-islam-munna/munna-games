@@ -175,8 +175,38 @@ the same `web/index.html` treatment (noindex, title), then reuse `deploy_web.sh`
 page stays the single indexable page. Do not add Disallow rules for `/play/` in
 `robots.txt` — crawlers must be able to fetch the page to see `noindex`.
 
-**Caching:** GitHub Pages serves `main.dart.js` with a short cache (~10 min), so a new
-build can take a few minutes to reach returning players.
+**Prerequisites:** macOS with `fvm` (Flutter pinned in the app repo's `.fvmrc`), `rsync`,
+`python3`, `shasum`; both repos checked out side by side (override the site path with
+`MUNNA_GAMES_SITE=/path/to/munna-games`).
+
+**What the script checks:** `version.json` matches `app/pubspec.yaml` (no stale build),
+every font in `FontManifest.json` was shipped, nothing from `reference_media/` is bundled,
+no `.dart/.map`/keys/credentials/local paths. `rsync --delete` removes assets the new build
+no longer has, so no bootstrap/manifest can point at a removed file. Saved browser data
+(localStorage) is never touched; the bundled `flutter_service_worker.js` is Flutter's
+self-unregistering stub (no offline cache), so there is no stale service-worker cache.
+
+**Caching / revisions (reproducible, no per-request busting):**
+
+- *Flutter app* — `deploy_web.sh` hashes the whole build (every file except `index.html` and
+  `flutter_bootstrap.js`) into a 12-char id and stamps `flutter_bootstrap.js?v=ID`,
+  `manifest.json?v=ID` (in `index.html`) and `main.dart.js?v=ID` (in `flutter_bootstrap.js`).
+  Same build → same id; any code or asset change → new id. `index.html` itself is cached
+  ~10 min by GitHub Pages, so returning players get the new build within minutes.
+- *Website CSS/JS* — `tools/stamp-assets.sh` stamps `?v=<sha256[:10]>` on every root-absolute
+  `.css`/`.js` reference in the site's HTML (skips `/*/play/` and `/push-admin/`).
+  `deploy_web.sh` runs it automatically; run it yourself after editing any CSS/JS, and
+  `tools/stamp-assets.sh --check` before committing (exit 1 = a stamp is stale).
+
+**Local preview:** `cd /Users/munna/Herd/munna-games && python3 -m http.server 8765`, then
+`http://localhost:8765/dual-play/` and `http://localhost:8765/dual-play/play/`.
+
+**Release order for an app update** (see the app repo's `docs/RELEASE_<version>.md`):
+build + sync the web app and update the site locally → upload the AAB and publish on Google
+Play → only once the new version is live on Play, commit + push the site (pages that describe
+the new version's games, `dual-play/play/`, `dev-config.json`) → then apply the production
+`app-config/config.json` version bump. Pushing the site or `config.json` earlier advertises an
+update Android users cannot get yet.
 
 ---
 

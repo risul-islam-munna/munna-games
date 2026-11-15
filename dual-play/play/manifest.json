@@ -5,7 +5,7 @@
     "display": "standalone",
     "background_color": "#14131B",
     "theme_color": "#6C5CE7",
-    "description": "Dual Play — a multi-game platform shell.",
+    "description": "Twelve classic and strategy games in one app. Play against bots or a friend on one screen.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

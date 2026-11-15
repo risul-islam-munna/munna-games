@@ -33,6 +33,8 @@ Separate from any app's source code — this repo is only public marketing conte
 
 /app-config/            hosted JSON the apps fetch on launch (What's New feed, update check)
   config.json           production      dev-config.json   debug builds
+
+/tools/stamp-assets.sh  stamps ?v=<content hash> on CSS/JS references (see DEPLOY.md §10)
 ```
 
 | URL | Purpose |

@@ -6,7 +6,7 @@
     "dualplay": {
       "androidAppId": "dev.munna.games.dualplay",
       "iosAppId": "dev.munna.games.dualplay",
-      "minSupportedBuildNumber": 1,
+      "minSupportedBuildNumber": 6,
       "latestBuildNumber": 16,
       "versions": {
         "1": "0.1.0",

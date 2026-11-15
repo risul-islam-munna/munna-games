@@ -1,12 +1,12 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-11-07T12:00:00Z",
+  "updatedAt": "2026-11-15T12:00:00Z",
 
   "apps": {
     "dualplay": {
       "androidAppId": "dev.munna.games.dualplay",
       "iosAppId": "dev.munna.games.dualplay",
-      "minSupportedBuildNumber": 1,
+      "minSupportedBuildNumber": 6,
       "latestBuildNumber": 16,
       "versions": {
         "1": "0.1.0",
@@ -23,7 +23,8 @@
         "13": "1.7.2",
         "14": "1.7.2",
         "15": "1.7.3",
-        "16": "1.8.0"
+        "16": "1.8.0",
+        "17": "1.9.0"
       },
       "forceUpdate": false,
       "androidUpdateUrl": "https://play.google.com/store/apps/details?id=dev.munna.games.dualplay",
@@ -115,7 +116,7 @@
       "regions": ["*"],
       "trigger": "launch",
       "title": "Play Dual Play too",
-      "body": "Eleven classic and strategy games in one app, with smart bots, Wi-Fi play and leagues from Rookie to Legend. Play offline or with friends.",
+      "body": "Twelve classic and strategy games in one app, with smart bots, Wi-Fi play and leagues from Rookie to Legend. Play offline or with friends.",
       "imageUrl": "https://games.munna.dev/app-config/img/promo-dual-play.png",
       "linkUrl": "https://play.google.com/store/apps/details?id=dev.munna.games.dualplay",
       "linkLabel": "Get it on Google Play",
@@ -130,7 +131,7 @@
       "regions": ["*"],
       "trigger": "launch",
       "title": "Play Dual Play too",
-      "body": "Eleven classic and strategy games in one app, with smart bots, Wi-Fi play and leagues from Rookie to Legend. Play offline or with friends.",
+      "body": "Twelve classic and strategy games in one app, with smart bots, Wi-Fi play and leagues from Rookie to Legend. Play offline or with friends.",
       "imageUrl": "https://games.munna.dev/app-config/img/promo-dual-play.png",
       "linkUrl": "https://apps.apple.com/app/id0000000000",
       "linkLabel": "Download on the App Store",
