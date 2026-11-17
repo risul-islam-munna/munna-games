@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Play Tic Tac Toe on Dual Play</title>
+<meta name="description" content="Open Tic Tac Toe in Dual Play, or get Dual Play free on Google Play.">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#0e0f13">
+<link rel="canonical" href="https://games.munna.dev/dual-play/">
+<link rel="icon" href="/assets/favicon.svg?v=5d6193cf63" type="image/svg+xml">
+<!-- If scripts are blocked (some in-app browsers), still move on to Play. -->
+<noscript><meta http-equiv="refresh" content="2;url=https://play.google.com/store/apps/details?id=dev.munna.games.dualplay"></noscript>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: grid; place-items: center;
+    padding: 24px 16px; background: #0e0f13; color: #e8ecf4;
+    font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans Bengali", sans-serif;
+  }
+  main { width: 100%; max-width: 420px; text-align: center; }
+  .mark { width: 72px; height: 72px; margin: 0 auto 16px; }
+  h1 { font-size: 1.5rem; margin: 0 0 6px; }
+  p { margin: 0 0 20px; color: #aeb8cc; }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    width: 100%; min-height: 52px; padding: 12px 20px; border-radius: 14px;
+    background: #4fd1f0; color: #071018; font-weight: 800; text-decoration: none;
+  }
+  .btn:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+  .small { margin-top: 14px; font-size: .85rem; }
+  .small a { color: #8ec2ff; }
+</style>
+</head>
+<body>
+<main>
+  <svg class="mark" viewBox="0 0 64 64" aria-hidden="true" fill="none">
+    <rect x="3" y="3" width="58" height="58" rx="14" fill="#0e0f13" stroke="#3c4150"/>
+    <g stroke="#8ec2ff" stroke-width="3.4" stroke-linecap="round">
+      <line x1="25" y1="12" x2="25" y2="52"/><line x1="39" y1="12" x2="39" y2="52"/>
+      <line x1="12" y1="25" x2="52" y2="25"/><line x1="12" y1="39" x2="52" y2="39"/>
+    </g>
+    <g stroke="#c084fc" stroke-width="4" stroke-linecap="round">
+      <line x1="15" y1="15" x2="21" y2="21"/><line x1="21" y1="15" x2="15" y2="21"/>
+    </g>
+  </svg>
+  <h1>Play Tic Tac Toe on Dual Play</h1>
+  <p id="status">Taking you to Google Play…</p>
+  <a class="btn" id="play" href="https://play.google.com/store/apps/details?id=dev.munna.games.dualplay">Get Dual Play on Google Play</a>
+  <p class="small">Already installed? Open Dual Play and choose Tic Tac Toe.<br>
+    <a href="/dual-play/">About Dual Play</a></p>
+</main>
+<script>
+  // This page only loads when the link did NOT open the installed app
+  // (app not installed, not yet verified, or an in-app browser). Send the
+  // visitor to the Play listing; the button above stays as the fallback if
+  // the redirect is blocked. No data is read from or added to the URL.
+  (function () {
+    var play = document.getElementById('play').href;
+    setTimeout(function () {
+      try { window.location.replace(play); } catch (e) {}
+      setTimeout(function () {
+        var s = document.getElementById('status');
+        if (s) s.textContent = 'Tap the button to get Dual Play.';
+      }, 1500);
+    }, 900);
+  })();
+</script>
+</body>
+</html>

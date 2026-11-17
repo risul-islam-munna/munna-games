@@ -14,7 +14,11 @@ Both apps fetch `config.json` on **every launch** and sync it into a small
 on-device database: Dual Play (key `dualplay`, Flutter repo's
 `app/lib/game_catalog.dart` → `kRemoteConfigUrl`) and Bricks Crusher (key
 `brickscrusher`, `lib/src/app_config.dart` → `kRemoteConfigUrl`). Debug builds
-read `dev-config.json` instead, so testing never affects real users. No app release is needed to change announcements or
+read `dev-config.json` instead, so testing never affects real users.
+Dual Play release/profile builds never request `dev-config.json` at all; Dual
+Play debug builds also fetch `config.json`, but only for emergency home banners
+(a `dev-config.json` entry with the same `id` overrides it, `enabled: false`
+included). No app release is needed to change announcements or
 push a force-update — just edit `config.json` (and the images beside it) and
 commit; GitHub Pages redeploys the site.
 
@@ -171,6 +175,69 @@ otherwise it just waits for the next sync to pick the item up.
 
 Use it for genuinely time-critical, "right now" moments (a flash sale, a live
 event starting) where waiting for the next app launch is too slow.
+
+### `homeBanner` — emergency banner on the Dual Play home screen
+
+Add an optional `homeBanner` block to an announcement and it also shows as a
+banner directly under the home screen's top bar (above the Overall Score card).
+It is the **same** announcement — still in the feed, same targeting, dates and
+`enabled` switch. Builds without banner support simply ignore the block.
+
+```json
+"homeBanner": {
+  "enabled": true,
+  "kind": "emergency",
+  "mode": "static",
+  "dismissible": true,
+  "revision": 1,
+  "marquee": { "direction": "rightToLeft", "speedDpPerSecond": 24, "pauseSeconds": 2 },
+  "colors": {
+    "light": { "background": "#FFF3D6", "text": "#382600", "link": "#075EA8" },
+    "dark":  { "background": "#302616", "text": "#FFF0C2", "link": "#69D5F3" }
+  }
+}
+```
+
+| field | default | meaning |
+|---|---|---|
+| `enabled` | `true` | `false` keeps the item in the feed but not as a banner |
+| `kind` | `"emergency"` | only `emergency` is shown; other kinds are ignored |
+| `mode` | `"static"` | `static` (wrapped, up to 4 lines + "Read full announcement") or `marquee` (one slowly scrolling line, only if it doesn't fit) |
+| `dismissible` | `true` | `false` hides the close button (and ignores earlier dismissals) |
+| `revision` | `0` | dismissal is remembered per `id` + `revision`; bump it to show a dismissed banner again |
+| `marquee.direction` | reading direction | `leftToRight` or `rightToLeft` (movement) |
+| `marquee.speedDpPerSecond` | `30` | clamped 8–120 |
+| `marquee.pauseSeconds` | `2` | hold at the start of each loop, 0–30 |
+| `title` | announcement `title` | teaser heading, one line on Home |
+| `summary` | shortened body | teaser text, two lines on Home (plain; links are not tappable there) |
+| `startAt` / `expireAt` | announcement's dates | banner-only window (ISO-8601 UTC); narrows the banner, never removes the feed entry |
+| `colors.light` / `colors.dark` | built-in amber | `#RRGGBB` / `#AARRGGBB`; invalid or unreadable (low-contrast) values fall back to the defaults |
+
+The banner is a **teaser**: tapping it opens Announcements scrolled to this same
+announcement (matched by `id`) and highlights it for a moment; the close button
+only dismisses. Put the full text, image, links and any `emailAction` in the
+announcement itself. Supported formatting: `**bold**`, `*italic*` / `_italic_`,
+`[label](https://…)` and line breaks. HTML is shown as plain text, images are
+never loaded, and only `http`/`https` links are clickable. Highest `priority`
+wins, one banner at a time. A malformed `startAt`/`expireAt` (e.g.
+`2026-02-31`) means the banner never shows — fix the date. `trigger: "push"`
+items are never banners.
+
+### `emailAction` — a "Send here" button in the announcement
+
+```json
+"emailAction": {
+  "label": "Send here",
+  "to": "hello@munna.dev",
+  "subject": "Dual Play Showcase — November 2026",
+  "body": "Game:\nWhat happened:\nPermission to publish (write YES or NO):\n"
+}
+```
+
+Opens the player's email app with this draft (Bengali and symbols are encoded
+correctly); they attach files and send it themselves. `to` must be a single
+plain address or the button is hidden. If no email app opens, the app shows the
+address, subject and message with copy buttons. Never prefill consent.
 
 ## How the player sees announcements
 

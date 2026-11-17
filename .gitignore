@@ -4,6 +4,8 @@
 .idea/
 node_modules/
 Thumbs.db
+.well-known/*
+.claude/*
 
 # Credentials — never commit (Push Admin uses short-lived tokens only)
 *service-account*.json

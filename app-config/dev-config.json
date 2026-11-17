@@ -48,6 +48,58 @@
 
   "announcements": [
     {
+      "id": "showcase-2026-11",
+      "enabled": false,
+      "audience": [
+        "dualplay"
+      ],
+      "platform": "all",
+      "regions": [
+        "*"
+      ],
+      "trigger": "launch",
+      "title": "Monthly Player Showcase — November",
+      "body": "Share your best **Dual Play** moment: a big win, a clever comeback or a funny draw.\n\n**How to enter:** tap *Send here*, attach a screenshot or a short screen recording, and send the email from your own mail app.\n\nআপনার সেরা মুহূর্তের স্ক্রিনশট বা ছোট ভিডিও পাঠান — ইমেইলে ফাইল যুক্ত করে নিজেই পাঠাবেন।\n\nSelected submissions may be featured on the [Dual Play website](https://games.munna.dev/dual-play/), Facebook and YouTube — **only if you give explicit permission** in your email. Entries without a clear YES are never published.",
+      "imageUrl": "https://games.munna.dev/app-config/img/promo-dual-play.png",
+      "priority": 100,
+      "startAt": "2026-11-17T00:00:00Z",
+      "expireAt": "2026-12-31T00:00:00Z",
+      "emailAction": {
+        "label": "Send here",
+        "to": "hello@munna.dev",
+        "subject": "Dual Play Showcase — November 2026",
+        "body": "Hi Dual Play team,\n\nGame:\nWhat happened:\nName to show (or \"anonymous\"):\n\nPermission to publish on the website, Facebook and YouTube (write YES or NO):\n\nআমি ফাইল যুক্ত করেছি।\n"
+      },
+      "homeBanner": {
+        "enabled": false,
+        "kind": "emergency",
+        "mode": "static",
+        "dismissible": true,
+        "revision": 1,
+        "title": "Show us your best Dual Play moment",
+        "summary": "Send a screenshot or short clip — selected entries may be featured, with your permission.",
+        "startAt": "2026-11-17T00:00:00Z",
+        "expireAt": "2026-11-30T23:59:59Z",
+        "marquee": {
+          "direction": "rightToLeft",
+          "speedDpPerSecond": 24,
+          "pauseSeconds": 2
+        },
+        "colors": {
+          "light": {
+            "background": "#FFF3D6",
+            "text": "#382600",
+            "link": "#075EA8"
+          },
+          "dark": {
+            "background": "#302616",
+            "text": "#FFF0C2",
+            "link": "#69D5F3"
+          }
+        }
+      }
+    },
+    {
       "id": "rate-dual-play-2026-09",
       "audience": ["dualplay"],
       "platform": "android",
