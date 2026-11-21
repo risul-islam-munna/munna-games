@@ -1,0 +1,19 @@
+Tic Tac Toe flag artwork
+
+Only country/region flags ship as images; every other emoji is drawn with the
+device's own emoji font. These images are the fallback used when a device
+can't draw a flag natively.
+
+Source: the region-flags collection bundled with Noto Emoji
+(https://github.com/googlefonts/noto-emoji, commit
+99701e07d3d1fe1bdbcdb14964547f0fd592966f, third_party/region-flags/png).
+The flags are in the public domain or otherwise exempt from copyright (see
+LICENSE-region-flags.txt). Modified: resized so the longest side is 160 px
+(proportions kept, no padding) and converted to WebP.
+
+Upstream aliases (the collection itself maps these regions to the flag in
+official use there; kept as-is, not substituted by this app):
+  BV, SJ -> NO    CP, MF -> FR    DG -> IO    EA -> ES    HM -> AU    UM -> US
+
+Files are named flag_<region>.webp (ISO 3166-1 alpha-2, lower case; the
+subdivision flags use their tag: flag_gbeng, flag_gbsct, flag_gbwls).

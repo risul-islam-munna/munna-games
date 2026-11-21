@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Dual Play original: Dark Walnut striker aim glow (ember halo + brass rays). -->
+  <defs>
+    <radialGradient id="h" cx="100" cy="100" r="98" gradientUnits="userSpaceOnUse">
+      <stop offset="0.40" stop-color="#FFB547" stop-opacity="0"/>
+      <stop offset="0.50" stop-color="#FFB547" stop-opacity="0.85"/>
+      <stop offset="0.70" stop-color="#E9782A" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#E9782A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="100" cy="100" r="98" fill="url(#h)"/>
+  <path d="M151.87 96.36 L196.00 100.00 L151.87 103.64 Z" fill="#FFD27A" fill-opacity="0.75"/>
+  <path d="M146.74 122.79 L169.28 140.00 L143.10 129.09 Z" fill="#FFD27A" fill-opacity="0.75"/>
+  <path d="M129.09 143.10 L148.00 183.14 L122.79 146.74 Z" fill="#FFD27A" fill-opacity="0.75"/>
+  <path d="M103.64 151.87 L100.00 180.00 L96.36 151.87 Z" fill="#FFD27A" fill-opacity="0.75"/>
+  <path d="M77.21 146.74 L52.00 183.14 L70.91 143.10 Z" fill="#FFD27A" fill-opacity="0.75"/>
+  <path d="M56.90 129.09 L30.72 140.00 L53.26 122.79 Z" fill="#FFD27A" fill-opacity="0.75"/>
+  <path d="M48.13 103.64 L4.00 100.00 L48.13 96.36 Z" fill="#FFD27A" fill-opacity="0.75"/>
+  <path d="M53.26 77.21 L30.72 60.00 L56.90 70.91 Z" fill="#FFD27A" fill-opacity="0.75"/>
+  <path d="M70.91 56.90 L52.00 16.86 L77.21 53.26 Z" fill="#FFD27A" fill-opacity="0.75"/>
+  <path d="M96.36 48.13 L100.00 20.00 L103.64 48.13 Z" fill="#FFD27A" fill-opacity="0.75"/>
+  <path d="M122.79 53.26 L148.00 16.86 L129.09 56.90 Z" fill="#FFD27A" fill-opacity="0.75"/>
+  <path d="M143.10 70.91 L169.28 60.00 L146.74 77.21 Z" fill="#FFD27A" fill-opacity="0.75"/>
+  <circle cx="100" cy="100" r="50" fill="none" stroke="#FFE3A3" stroke-width="2.5" stroke-opacity="0.9"/>
+</svg>

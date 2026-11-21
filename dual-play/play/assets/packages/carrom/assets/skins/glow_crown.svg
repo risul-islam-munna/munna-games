@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Dual Play original: Royal Marble striker aim glow (gilded star burst). -->
+  <defs>
+    <radialGradient id="h" cx="100" cy="100" r="98" gradientUnits="userSpaceOnUse">
+      <stop offset="0.45" stop-color="#FFE59A" stop-opacity="0.9"/>
+      <stop offset="0.75" stop-color="#E8B83C" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#E8B83C" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <path d="M100.00 4.00 L123.73 42.72 L167.88 32.12 L157.28 76.27 L196.00 100.00 L157.28 123.73 L167.88 167.88 L123.73 157.28 L100.00 196.00 L76.27 157.28 L32.12 167.88 L42.72 123.73 L4.00 100.00 L42.72 76.27 L32.12 32.12 L76.27 42.72 Z M149 100 A49 49 0 1 0 51 100 A49 49 0 1 0 149 100 Z" fill="url(#h)" fill-rule="evenodd"/>
+  <path d="M160 100 A60 60 0 1 0 40 100 A60 60 0 1 0 160 100 Z M149 100 A49 49 0 1 0 51 100 A49 49 0 1 0 149 100 Z" fill="url(#h)" fill-opacity="0.6" fill-rule="evenodd"/>
+  <circle cx="100" cy="100" r="51" fill="none" stroke="#FFF1C4" stroke-width="2.5" stroke-opacity="0.95"/>
+</svg>
