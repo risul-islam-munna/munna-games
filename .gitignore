@@ -5,6 +5,8 @@
 node_modules/
 Thumbs.db
 .well-known/*
+# Android App Links: the only .well-known file that is deployed.
+!.well-known/assetlinks.json
 .claude/*
 
 # Credentials — never commit (Push Admin uses short-lived tokens only)

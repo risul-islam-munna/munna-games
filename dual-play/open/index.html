@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Open Dual Play</title>
+<meta name="description" content="Open Dual Play: play in your browser, get it free on Google Play, or learn more about the games.">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#0e0f13">
+<link rel="canonical" href="https://games.munna.dev/dual-play/">
+<link rel="icon" href="/assets/favicon.svg?v=5d6193cf63" type="image/svg+xml">
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: grid; place-items: center;
+    padding: 24px 16px; background: #0e0f13; color: #e8ecf4;
+    font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans Bengali", sans-serif;
+  }
+  main { width: 100%; max-width: 420px; text-align: center; }
+  .mark { width: 72px; height: 72px; margin: 0 auto 16px; }
+  h1 { font-size: 1.5rem; margin: 0 0 6px; }
+  p { margin: 0 0 20px; color: #aeb8cc; }
+  .actions { display: grid; gap: 12px; }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    width: 100%; min-height: 52px; padding: 12px 20px; border-radius: 14px;
+    background: #4fd1f0; color: #071018; font-weight: 800; text-decoration: none;
+  }
+  .btn-ghost { background: transparent; color: #e8ecf4; border: 1px solid #3c4150; }
+  .btn:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+  .small { margin-top: 16px; font-size: .85rem; }
+  .small a { color: #8ec2ff; }
+</style>
+</head>
+<body>
+<main>
+  <svg class="mark" viewBox="0 0 64 64" aria-hidden="true" fill="none">
+    <rect x="3" y="3" width="58" height="58" rx="14" fill="#0e0f13" stroke="#3c4150"/>
+    <circle cx="23" cy="32" r="9" stroke="#8ec2ff" stroke-width="3.4"/>
+    <circle cx="41" cy="32" r="9" stroke="#c084fc" stroke-width="3.4"/>
+  </svg>
+  <h1>Open Dual Play</h1>
+  <p>Twelve games for two — play right here in your browser, or get the Android app.</p>
+  <div class="actions">
+    <a class="btn" href="https://play.google.com/store/apps/details?id=dev.munna.games.dualplay">Get Dual Play on Google Play</a>
+    <a class="btn btn-ghost" href="/dual-play/play/">Play in browser</a>
+  </div>
+  <p class="small">Already installed? Open Dual Play from your home screen.<br>
+    <a href="/dual-play/">About Dual Play</a></p>
+</main>
+</body>
+</html>

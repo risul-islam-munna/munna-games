@@ -1,0 +1,16 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "dev.munna.games.dualplay",
+      "sha256_cert_fingerprints": [
+        "10:FC:7B:A5:2E:ED:53:08:40:AA:04:1F:5E:91:5B:7E:AA:2E:9E:8E:98:A6:4F:6B:CE:9A:F1:1B:EE:A1:59:25",
+        "E1:EE:E1:F3:B0:61:89:AF:76:26:98:82:96:7A:40:45:11:6D:AF:7A:17:F6:F0:20:83:31:3A:6C:3A:6E:96:0B",
+        "E6:8A:34:33:AE:8E:A0:1E:6B:60:24:EB:B0:D3:56:B3:8C:93:71:C5:1C:C8:49:D9:04:8B:F1:B0:4D:60:43:35"
+      ]
+    }
+  }
+]
